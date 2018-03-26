@@ -1,0 +1,170 @@
+<wxs module="numfilter" src="../../filter/price.wxs"></wxs>
+<view wx:if="{{cartslist.length}}" class="bianji" bindtap='editcat'>{{edittext}}</view>  
+<view class="{{popupShow ? 'contentdet' : 'main'}}">
+    <view wx:if="{{cartslist.length}}">
+        <view class="cart-box">
+            <view class="cart-list" wx:for="{{cartslist}}" wx:key="{{index}}">
+              <!-- 库存不足 -->
+              <image src="../../img/icon/understock@3x.png" class="understock" wx:if="{{item.skuStock==0}}"></image> 
+              <view class='left'>
+                <image src='../../img/icon/common_icon_chose@3x.png' wx:if="{{item.selected}}" data-index="{{index}}"  class="cart-pro-select" bindtap="selectList"></image>
+                <image src='../../img/icon/my_collect_icon_empty@3x.png' wx:else class="cart-pro-select" data-index="{{index}}" bindtap="selectList"></image>
+                <image class="cart-thumb" src="{{item.goodDetailPicUrl}}"></image>
+              </view>
+              <view class='right'>
+                <!-- 编辑 -->
+                <view wx:if="{{item.show}}" data-index="{{index}}" bindtap='godetail'>
+                  <view class="cart-pro-name">{{item.goodName}}</view>
+                  <view class="cart-pro-style">{{item.valueText}}</view>
+                  <view class="cart-pro-price">￥{{numfilter.numfilter(item.priceNow)}}</view>
+                  <view class="cart-pro-count">X {{item.count}}</view>
+                </view>        
+                 <!-- 完成 -->
+                <view wx:else>
+                   <view class="cart-pro-name1" data-index="{{index}}" bindtap='choseGoodSt'>
+                    <view class='name1'>{{item.goodName}}</view>
+                    <image src='../../img/newicon/dbtn.png' class='dbtn'></image>
+                  </view> 
+                  <!-- <view class="cart-pro-name">{{item.goodName}}</view> -->
+                  <view class="cart-pro-style">{{item.valueText}}</view>
+                  <view class="stepper"> 
+                    <!-- 减号 -->
+                    <view class="{{item.isSmall==1?'minDisabled':'minNormal'}}" bindtap="minusCount" data-index="{{index}}">-</view> 
+                    <!-- 数值 -->
+                    <view class="shuzhi">{{item.count}}</view>
+                    <!-- 加号 -->
+                    <view class="{{item.isBig==1?'maxDisabled':'maxNormal'}}" bindtap="addCount" data-index="{{index}}">+</view> 
+                  </view> 
+                </view>
+              </view>
+            </view>
+        </view>
+        <!-- 失效商品    -->
+        <view class="cart-box" wx:if="{{xiaJia.length}}">
+            <view class='caozou'>
+              <view class='caozou1'>失效商品</view>
+              <view class='caozou2' bindtap='deleteAllShixiao'>清空失效商品</view>
+            </view>
+            <view class="cart-list" wx:for="{{xiaJia}}" wx:key="{{index}}">
+              <view class='left'>
+                <image class="cart-thumb-shixiao" src="{{item.goodDetailPicUrl}}"></image>
+              </view>
+              <view class='right'>
+                <!-- 编辑 -->
+                <view>
+                  <view class="cart-pro-name">{{item.goodName}}</view>
+                  <view class="cart-pro-style">{{item.valueText}}</view>
+                  <view class="cart-pro-price">￥{{numfilter.numfilter(item.priceNow)}}</view>
+                  <view class="cart-pro-count">X {{item.count}}</view>
+                </view>        
+              </view>
+            </view>
+        </view>
+        <view class="cart-footer">
+          <view class="xuanze">
+            <image src='../../img/icon/common_icon_chose@3x.png' wx:if="{{selectAllStatus}}"  class="cart-pro-select" bindtap="selectAll"></image>
+            <image src='../../img/icon/my_collect_icon_empty@3x.png' wx:else class="cart-pro-select" bindtap="selectAll"></image>
+            <view class="xztxt">全选</view>
+          </view>
+          <text class="cart-price" wx:if="{{!editoff}}">￥{{totalPrice}}</text>
+          <button class="button-blue" bindtap="toBuy" formType="submit" wx:if="{{!editoff}}">下单</button>
+          <button class="button-blue" bindtap="deleteGoods" formType="submit" wx:else>删除</button>
+        </view>
+    </view>
+    <view class='nogoods' wx:else>
+      <image src='http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/nogood.png'></image>
+      <view class="cart-no-data">购物车是空的哦~</view>
+    </view>
+    <!-- 猜你喜欢 -->
+    <view class='glike'>
+      <view class="guesslike">猜你喜欢</view>
+      <view class='bar'></view>
+      <view class="page_bd">
+        <view wx:for="{{guessyoulike}}" class="newGoodsContainsGood">
+          <image src="../../img/newicon/collect_yes.png" wx:if="{{item.isLike}}" class="danyuan_icon" data-index="{{index}}" bindtap='addLike'/>
+          <image src="../../img/newicon/collect_no.png" wx:else class="danyuan_icon" data-index="{{index}}" bindtap='addLike'/>
+          <navigator url="../details/details?gsid={{item.goodId}}">
+            <image src="{{item.goodPicUrl}}" class="danyuan_img" />
+            <view class="danyuan_tittle">{{item.goodName}}</view>
+            <view class="danyuan_secondName">{{item.goodSecondName}}　</view>
+            <view class="danyuan_prie">
+              <text class="newpric"> ￥{{numfilter.numfilter(item.goodMinPrice)}}</text>
+              <!-- <text class="oldpric">￥{{numfilter.numfilter(item.goodMinPrice)}}</text> -->
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+     <view class="diandi"  wx:if="{{cartslist.length}}"></view> 
+</view>
+
+
+<!-- 遮罩 -->
+<view class="{{popupShow ? 'mask' : ''}}" catchtouchmove="preventTouchMove" bindtap="popClose"></view>
+<view class="popdown {{popupShow ? 'popup' : ''}}">
+  <view class="gegeshi">
+    <view class="popgoodsImg">
+      <image src='{{skclassimgs}}'></image>
+    </view>
+    <view class="popInfo">
+      <image src='../../img/newicon/close.png' class="popclose" bindtap="popClose"></image>
+      <view class="aa11"></view>
+      <view class="popgoodsPri newpricpop">￥{{skprices}}</view>
+      <view class="popgoodsStyle" wx:if="{{skclassifys != '规格属性'}}">已选:{{skclassifys}}</view>
+      <view class="popgoodsStyle" wx:else>请选择{{skclassifys}}</view>
+    </view>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+    <!-- 样式1 -->
+    <view class="poplist" wx:for="{{goodsPropertyList1}}"  wx:for-index="idxs" wx:for-item="item">
+        <view class="pltittle">{{item.propertyName}}</view>
+        <view class="yangshi" data-hl="{{item.propertyid}}" bindtap="checkChange1">
+          <span wx:for="{{item.valueList}}" data-hi="{{item.valueid}}" data-id="{{item.valueid}}" class="yang {{currentItem1==item.valueid?'yanged':''}}">{{item.valueName}}</span>
+        </view>
+    </view>
+    <!-- 样式2 -->
+    <view class="poplist" wx:for="{{goodsPropertyList2}}"  wx:for-index="idxs" wx:for-item="item">
+        <view class="pltittle">{{item.propertyName}}</view>
+        <view class="yangshi" data-hl="{{item.propertyid}}" bindtap="checkChange2">
+          <span wx:for="{{item.valueList}}" data-hi="{{item.valueid}}" data-id="{{item.valueid}}" class="yang {{currentItem2==item.valueid?'yanged':''}}">{{item.valueName}}</span>
+        </view>
+    </view>
+    <!-- 样式3 -->
+    <view class="poplist" wx:for="{{goodsPropertyList3}}"  wx:for-index="idxs" wx:for-item="item">
+        <view class="pltittle">{{item.propertyName}}</view>
+        <view class="yangshi" data-hl="{{item.propertyid}}" bindtap="checkChange3">
+          <span wx:for="{{item.valueList}}" data-hi="{{item.valueid}}" data-id="{{item.valueid}}" class="yang {{currentItem3==item.valueid?'yanged':''}}">{{item.valueName}}</span>
+        </view>
+    </view>
+    <!-- 样式4 -->
+    <view class="poplist" wx:for="{{goodsPropertyList4}}"  wx:for-index="idxs" wx:for-item="item">
+        <view class="pltittle">{{item.propertyName}}</view>
+        <view class="yangshi" data-hl="{{item.propertyid}}" bindtap="checkChange4">
+          <span wx:for="{{item.valueList}}" data-hi="{{item.valueid}}" data-id="{{item.valueid}}" class="yang {{currentItem4==item.valueid?'yanged':''}}">{{item.valueName}}</span>
+        </view>
+    </view>
+    <!-- 样式5 -->
+    <view class="poplist" wx:for="{{goodsPropertyList5}}"  wx:for-index="idxs" wx:for-item="item">
+        <view class="pltittle">{{item.propertyName}}</view>
+        <view class="yangshi" data-hl="{{item.propertyid}}" bindtap="checkChange5">
+          <span wx:for="{{item.valueList}}" data-hi="{{item.valueid}}" data-id="{{item.valueid}}" class="yang {{currentItem5==item.valueid?'yanged':''}}">{{item.valueName}}</span>
+        </view>
+    </view>
+    <view class="poplist">
+        <view class="pltittle">数量</view>
+        <view class='skunum'>
+          <view class="stepperpop"> 
+            <!-- 减号 -->
+            <view class="{{minusStatus}}" bindtap="bindMinus">-</view> 
+            <!-- 数值 -->
+             <view class="shuzhi">{{num}}</view>
+            <!-- 加号 -->
+            <view class="{{maxusStatus}}" bindtap="bindPlus">+</view> 
+          </view> 
+        </view> 
+    </view>
+  </view>
+  
+  <view class="enterBuyOrAdd" bindtap="enterBuyOrAdd">确定</view>
+  
+</view>

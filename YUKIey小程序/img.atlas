@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "tabbar.png": {
+            "frame": {
+                "h": 127,
+                "idx": 0,
+                "w": 222,
+                "x": 284,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 127,
+                "w": 222
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "warehouse.png": {
+            "frame": {
+                "h": 256,
+                "idx": 0,
+                "w": 283,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 256,
+                "w": 283
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "img.png",
+        "prefix": "YUKIey小程序/img/"
+    }
+}

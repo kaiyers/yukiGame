@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/twoPlayer/twoPlayer",
+    "pages/rankingList/rankingList",
+    "pages/selectCoin/selectCoin",
+    "pages/selectNumber/selectNumber",
+    "pages/MatchingMore/MatchingMore"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor":"#322978",
+    "navigationBarTitleText": "全民答题",
+    "navigationBarTextStyle":"#fff"
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "downloadFile": 20000
+  }
+}

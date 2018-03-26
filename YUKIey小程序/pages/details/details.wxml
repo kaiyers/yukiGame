@@ -1,0 +1,182 @@
+<!--pages/details/details.wxml-->
+<wxs module="m1">
+  var getString = function(value,type){
+    var dataTime="";
+    var data = getDate(value);
+    var year   =  data.getFullYear();
+    var month  =  data.getMonth() + 1;
+    var day    =  data.getDate();
+    var hour   =  data.getHours();
+    var minute =  data.getMinutes();
+    var second =  data.getSeconds();
+    month  =  month>9?month:'0'+month;
+    day    =  day>9?day:'0'+day;
+    hour   =  hour>9?hour:'0'+hour;
+    minute =  minute>9?minute:'0'+minute;
+    second =  second>9?second:'0'+second;
+    if(type == "YMD"){
+      dataTime =  year + "年"+ month + "月" + day + "日";
+    }else if(type == "YMDHMS"){
+      dataTime = year + "年"+month + "月" + day + "日 " +hour+ ":"+minute+":" +second;
+    }else if(type == "HMS"){
+      dataTime = hour + ":" + minute + ":" + second;
+    }else if(type == "YM") {
+      dataTime = year + "年" + month + "月";
+    }else if(type == "Y-M") {
+      dataTime = year + "-"+month + "-" + day + " " +hour+ ":"+minute+":" +second;
+    }else if(type == "MM-SS") {
+      dataTime = minute+"分" +second+"秒";
+    }
+    return dataTime;
+  }
+  module.exports.getString = getString;
+</wxs>
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="{{popupShow ? 'contentdet' : ''}}">
+  <view style='position:relative'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{bannerList}}" wx:for-index="idxs" wx:for-item="item">
+        <swiper-item>
+          <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="timebuy" wx:if="{{isTimebuy}}">
+      <view>限时抢购中</view>
+      <view>距离结束还剩 {{countdowns}}</view>
+    </view>
+  </view>
+  <scroll-view scroll-y="true">
+    <view class="detail">
+      <view class="price"><span>￥{{goodsPrice}}</span> <span class="tag">{{goodsTag}}</span></view>
+      <view class="title">{{goodsName}}</view>
+    </view>
+    <!-- sku选择 -->
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+          <view class="weui-cell__bd">促销: <span style="color:red">{{orderSale}}</span> </view>
+      </view>
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='chooseStyle'>
+          <view class="weui-cell__bd">选择款式数量</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+    <view class="parting_line"></view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="../getAppraise/getAppraise?goodid={{goodsID}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">宝贝评价</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">查看全部</view>
+      </navigator>
+      <view class="weui-cell">  
+          <view wx:if="{{singleComment}}">
+              <view class="comment_main">
+                <view class="comment_main_header clearfix">
+                  <image src="{{singleComment.userAvatar}}" class="fl"></image>
+                  <span class="comment_main_name" class="fl">{{singleComment.userName}}</span>
+                  <span class="comment_main_time" class="fr">{{m1.getString(singleComment.createTime,'Y-M')}}</span>
+                </view>
+                <view class="comment_main_texts">
+                  <view class="comment_main_textsF">{{singleComment.commentText}}</view>
+                  <view class="comment_main_textsST">
+                    <span>{{itemName.skuText}}</span>
+                  </view>
+                </view>
+              </view>
+          </view>
+          <view class="orderList-null" wx:else>
+            <view class="orderList-null-title">暂无评论</view>
+          </view> 
+      </view>
+    </view>
+    <view class="parting_line"></view>
+    <view class="desctittle">商品详情</view>
+    <view class="wxParse" wx:if='{{descShow}}'>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+    <view class="temp"></view>
+  </scroll-view>
+  <!-- 底部悬浮栏 -->
+  <view class="detail-nav">
+    <!-- <image bindtap="toCar" src="../../img/warehouse/toolbar_icon_kefu@3x.png" />
+    <view class="line_nav"></view> -->
+    <image bindtap="toCar" src="../../img/tabbar/bag_n.png" />
+    <view class="line_nav"></view>
+    <image bindtap="addLike" src="{{!isLike?'../../img/warehouse/toolbar_icon_collect_n@3x.png':'../../img/warehouse/toolbar_icon_collect_p@3x.png'}}" />
+    <button class="button-buy" bindtap="immeBuy">立即购买</button>
+    <button class="button-car" bindtap="addCar">加入购物车</button>
+  </view>
+</view>
+
+
+<!-- 遮罩 -->
+<view class="{{popupShow ? 'mask' : ''}}" catchtouchmove="preventTouchMove"></view>
+<view class="popdown {{popupShow ? 'popup' : ''}}">
+  <view class="popgoodsImg" bindtap="showDialogBtn">
+    <image src='{{skclassimgs}}'></image>
+  </view>
+  <view class="popInfo">
+    <view class="weui-media-box__title">{{goodsName}}</view>
+    <view class="popgoodsPri">￥{{skprices}}</view>
+    <view class="popgoodsStyle">已选:{{skclassifys}}</view>
+  </view>
+  <view class="popclose" bindtap="popClose">X</view>
+  <view class="weui-cells weui-cells_after-title">
+    <!-- 样式1 -->
+    <view class="poplist" wx:for="{{goodsPropertyList1}}"  wx:for-index="idxs" wx:for-item="item">
+        <view style="width:100%">{{item.propertyName}}</view>
+        <view class="yangshi" data-hl="{{item.propertyid}}" bindtap="checkChange1">
+          <span wx:for="{{item.valueList}}" data-hi="{{item.valueid}}" data-id="{{item.valueid}}" class="yang {{currentItem1==item.valueid?'yanged':''}}">{{item.valueName}}</span>
+        </view>
+    </view>
+    <!-- 样式2 -->
+    <view class="poplist" wx:for="{{goodsPropertyList2}}"  wx:for-index="idxs" wx:for-item="item">
+        <view style="width:100%">{{item.propertyName}}</view>
+        <view class="yangshi" data-hl="{{item.propertyid}}" bindtap="checkChange2">
+          <span wx:for="{{item.valueList}}" data-hi="{{item.valueid}}" data-id="{{item.valueid}}" class="yang {{currentItem2==item.valueid?'yanged':''}}">{{item.valueName}}</span>
+        </view>
+    </view>
+    <!-- 样式3 -->
+    <view class="poplist" wx:for="{{goodsPropertyList3}}"  wx:for-index="idxs" wx:for-item="item">
+        <view style="width:100%">{{item.propertyName}}</view>
+        <view class="yangshi" data-hl="{{item.propertyid}}" bindtap="checkChange3">
+          <span wx:for="{{item.valueList}}" data-hi="{{item.valueid}}" data-id="{{item.valueid}}" class="yang {{currentItem3==item.valueid?'yanged':''}}">{{item.valueName}}</span>
+        </view>
+    </view>
+    <!-- 样式4 -->
+    <view class="poplist" wx:for="{{goodsPropertyList4}}"  wx:for-index="idxs" wx:for-item="item">
+        <view style="width:100%">{{item.propertyName}}</view>
+        <view class="yangshi" data-hl="{{item.propertyid}}" bindtap="checkChange4">
+          <span wx:for="{{item.valueList}}" data-hi="{{item.valueid}}" data-id="{{item.valueid}}" class="yang {{currentItem4==item.valueid?'yanged':''}}">{{item.valueName}}</span>
+        </view>
+    </view>
+    <!-- 样式5 -->
+    <view class="poplist" wx:for="{{goodsPropertyList5}}"  wx:for-index="idxs" wx:for-item="item">
+        <view style="width:100%">{{item.propertyName}}</view>
+        <view class="yangshi" data-hl="{{item.propertyid}}" bindtap="checkChange5">
+          <span wx:for="{{item.valueList}}" data-hi="{{item.valueid}}" data-id="{{item.valueid}}" class="yang {{currentItem5==item.valueid?'yanged':''}}">{{item.valueName}}</span>
+        </view>
+    </view>
+    <view class="poplist">
+        <view>数量</view>
+        <view class='skunum'>
+          <view class="stepper"> 
+            <!-- 减号 -->
+            <text class="{{minusStatus}}" bindtap="bindMinus">-</text> 
+            <!-- 数值 -->
+             <view class="shuzhi">{{num}}</view>
+            <!-- 加号 -->
+            <text class="{{maxusStatus}}" bindtap="bindPlus">+</text> 
+          </view> 
+          <text>库存: {{skstockNum}}</text>
+        </view> 
+    </view>
+  </view>
+  <view class='geshiA'></view>
+</view>
+
+
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}" bindtap="hideModal">
+  <image src='{{skclassimgs}}' bindtap="hideModal"></image>
+</view>

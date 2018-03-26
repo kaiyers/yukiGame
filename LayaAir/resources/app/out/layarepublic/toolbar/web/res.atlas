@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "pop.png": {
+            "frame": {
+                "h": 38,
+                "idx": 0,
+                "w": 44,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 55,
+                "w": 44
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 7
+            }
+        }
+    },
+    "meta": {
+        "image": "res.png",
+        "prefix": "LayaAir/resources/app/out/layarepublic/toolbar/web/res/"
+    }
+}

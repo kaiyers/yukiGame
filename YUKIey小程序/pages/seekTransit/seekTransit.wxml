@@ -1,0 +1,33 @@
+<view >
+  <view class="headerSeach">
+    <view class="headerSeachLeft" bindtap="toSerch">
+      <icon type="search" size="16"></icon>
+      <view class="section">
+        <!-- <input type='text' value="{{searchinput}}" class="headerSeachLeftText" bindfocus="methfoc" bindblur="methblur" bindinput="textF"/> -->
+        <input type='text' placeholder="Yuki原创" class="headerSeachLeftText"  bindinput="textF"/>
+      </view>
+    </view>
+    <view class='headerSeachRight' bindtap="seachClick">搜索</view>
+  </view>
+  <view class="SeachContents">
+    <!-- 历史搜索 -->
+    <view class='historySeach'  wx:if="{{histroyShow}}">
+      <view class='historySeachTitle'>
+        <view class="historySeachTitleL">历史搜索</view>
+        <image src="../../img/warehouse/search_icon_clear@3x.png" class="historySeachTitleR" bindtap="delMes"></image>
+      </view>
+      <view class="historycontent clearfix" >
+        <view wx:for="{{histroyDatas}}" wx:key="idx" wx:for-item="itemName">
+          <navigator url="../seekDetail/seekDetail?seachKey={{itemName}}" hover-class="navigator-hover">{{itemName}}</navigator>
+        </view> 
+      </view>
+    </view>
+    <!-- 热门搜索 -->
+    <view class='hotSeach'>
+      <view class="hotSeachTitle">热门搜索</view>
+      <view class="hotSeachContent" wx:for="{{hotDatas}}" wx:key="idx" wx:for-item="itemName">
+        <navigator url="../seekDetail/seekDetail?seachKey={{itemName.keyWord}}" hover-class="navigator-hover">{{itemName.keyWord}}</navigator> 
+      </view>
+    </view>
+  </view>
+</view>

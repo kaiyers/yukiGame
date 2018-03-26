@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<wxs module="m2">
+  var getString = function(s){
+    var asting=s.join(' 、')
+    return asting
+  }
+  module.exports.getString = getString;
+</wxs>
+<view class="container">
+  <view class="mask" wx:if="{{mask}}">
+    <image src='http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/loading.gif'></image>
+    <span>发表中...</span>
+  </view>
+  <form bindsubmit="bindFormSubmit">
+    <view class="containerContent" wx:for="{{goodsList}}"  wx:for-index="idx" wx:for-item="itemNamex" >
+      <view class="orderM ">
+        <view class="containTop clearfix">
+          <image class="fl orderMPic" src="{{itemNamex.skuPic}}"></image>
+          <view class="fr containTopR">
+            <view class="orderMF">{{itemNamex.name}}</view>
+            <view class="goodPrice clearfix">
+              <view class="goodPriceL fl">{{m2.getString(itemNamex.skuText)}}</view>
+              <view class="goodPriceR fr">X{{itemNamex.count}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="choooseIcon" >
+        <view class="choooseIconI choooseIcons {{look[idx]==3?'active':''}}" bindtap='swichNav'   data-index="{{idx}}"  data-cur='3'>
+          <span class="choooseIconsF" ></span>
+          <span class="choooseIconsS">好评</span>
+        </view>
+        <view class="choooseIconII choooseIcons {{look[idx]==2?'active':''}}" bindtap='swichNav'  data-index="{{idx}}"  data-cur='2'>
+          <span class="choooseIconsF"></span>
+          <span class="choooseIconsS">中评</span>
+        </view>
+        <view class="choooseIconIII choooseIcons {{look[idx]==1?'active':''}}" bindtap='swichNav'  data-index="{{idx}}"  data-cur='1'>
+          <span class="choooseIconsF"></span>
+          <span class="choooseIconsS">差评</span>
+        </view>
+      </view>
+      <view class="write">
+        <textarea  class="writeIn" placeholder="选填：输入您的评论(不超过200字)" bindinput='textF' maxlength="{{maxlength}}" value='{{comment[idx]}}' data-index="{{idx}}"/>
+      </view>
+      <view class="fileIf">
+        <view class="clearfix fileIfPIC">
+            <view  class="pushL"  wx:for="{{pics[idx]}}" wx:for-index="idxs" wx:for-item="itemName" wx:if="{{picsNum[idx]>0}}" >
+                <image src='{{itemName}}' data-index="{{idxs}}" bindtap='previewImage' class="previewImage"></image>
+                <image bindtap="decparent" data-index="{{idx}}" data-curparent="{{idxs}}" class='decparent' src='../../img/icon/deletePic.png'></image>
+            </view>
+            <view class="pushL" bindtap='upload' wx:if="{{dePic[idx]}}" data-index="{{idx}}">添加照片</view>
+        </view>
+      </view>
+      <view class="spacing" wx:if="{{idx!=count}}"></view>
+    </view>
+    <button form-type="submit" class="issue"> 发布 </button>
+  </form>
+</view>

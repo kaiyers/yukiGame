@@ -1,0 +1,15 @@
+<!--pages/authentication/authentication.wxml-->
+<view class='ch-header'>
+  <image src='../../img/newicon/phoneheader1.png'></image>
+</view>
+<view class='main'>
+  <input type='number' maxlength='11' class='inp' placeholder='{{showPhone}}' disabled="disabled"></input>
+  <input type='number' class='inp1' placeholder='请输入原手机号' bindinput="verification"></input>
+  <view class='shuoming'>
+    <view class="qiu"></view>
+    <view class="wenzi">请输入你完整的原手机号，以便完成验证。</view>
+  </view>
+  <view bindtap='nextBtn' class="{{btnvfShow ? 'tijiao-h':'tijiao'}}">下一步</view>
+</view>
+ 
+ 

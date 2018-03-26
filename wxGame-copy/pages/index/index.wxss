@@ -1,0 +1,349 @@
+ .contain{
+  width:100%;
+  height:1222rpx;
+  background-image:url('http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/indexBg.jpg');
+   background-size: 100% 100%; 
+  /* background-repeat:round; */
+} 
+.popUpContent_login{
+  position: fixed;
+  width:560rpx;
+  height: 486rpx;
+  left:50%;
+  top:50%;
+  margin-top:-243rpx;
+  margin-left:-280rpx;
+}
+.popUpContent_login .title{
+  font-size:47rpx;
+  color:#fff;
+  font-weight: 900;
+  margin-top:162rpx;
+  text-align: center;
+}
+.popUpContent_login .popUpContentS{
+  width:210rpx;
+  height:58rpx;
+  margin:29rpx auto 0;
+}
+.popUpContent_login .popUpContentS image{
+  width:44rpx;
+  height: 58rpx;
+  margin-right: 32rpx;
+}
+.popUpContent_login .popUpContentS span{
+  font-size: 36rpx;
+  color:#fff;
+  font-weight: 900;
+  line-height: 58rpx;
+}
+.popUpContent_lackCoin{
+  position: fixed;
+  width:564rpx;
+  height: 460rpx;
+  left:50%;
+  top:50%;
+  margin-left:-282rpx;
+  margin-top:-230rpx;
+}
+.popUpContent_inviteFriend{
+  position: fixed;
+  width:564rpx;
+  height: 660rpx;
+  left:50%;
+  top:50%;
+  margin-left:-282rpx;
+  margin-top:-294rpx;
+}
+.userInfo{
+  position: relative;
+  width:100%;
+  height: 300rpx;
+}
+.accountCoins{
+  position: absolute;
+  right:0;
+  top:45rpx;
+  width:269rpx;
+  height: 119rpx;
+  background:#2f2673;
+  border:2px solid #5246ac;
+  border-right:none;
+  border-radius: 57rpx 0 0 57rpx;
+}
+image.accountCoins_Image{
+  position: absolute;
+  top:50%;
+  left:27rpx;
+  margin-top:-36.5rpx;
+  width:54rpx;
+  height: 73rpx;
+}
+.accountCoins_quantity{
+  display: inline-block;
+  margin-left:90rpx;
+  width:175rpx;
+  font-size:35rpx;
+  color:#fff;
+  line-height: 119rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.VS{
+  position: absolute;
+  width:171rpx;
+  height: 143rpx;
+  top:-72rpx;
+  left:50%;
+  margin-left:-85.5rpx;
+}
+.inviteTitle{
+  position:relative;
+  width:100%;
+  height: 66rpx;
+  text-align: center;
+  line-height: 66rpx;
+  font-size:41rpx;
+  color:#3bc87c;
+  font-weight: 900;
+  margin-top:50rpx;
+}
+.nail{
+  position: absolute;
+  width:330rpx;
+  height: 11rpx;
+  top:50%;
+  left:50%;
+  margin-left:-165rpx;
+  margin-top:-5.5rpx;
+}
+.inviteUser{
+  width:300rpx;
+  height: 64rpx;
+  margin:32rpx auto 24rpx;
+}
+.inviteUser .sface{
+  position: relative;
+  width:64rpx;
+  height: 64rpx;
+  background:#fff;
+  border-radius: 50%;
+}
+.inviteUser .slogo{
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin-left:-30rpx;
+  margin-top:-30rpx;
+  width:60rpx;
+  height: 60rpx;
+}
+.roomCoin{
+  width:126rpx;
+  height: 58rpx;
+}
+.roomCoins{
+  width:44rpx;
+  height: 58rpx;
+}
+.roomCoin view{
+  font-size:36rpx;
+  font-weight: 900;
+  color:#fff;
+  line-height: 58rpx;
+}
+.inviteRoom{
+  width:300rpx;
+  height:64rpx;
+  margin:20rpx auto 0;
+}
+.invitePeoples{
+  font-size:36rpx;
+  font-weight: 900;
+  color:#fff;
+  line-height: 58rpx;
+  text-align: right;
+}
+.userNameIn{
+  width:175rpx;
+  height:64rpx;
+  font-size:30rpx;
+  color:#fff;
+  font-weight:900;
+  margin-left:25rpx;
+  line-height:60rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  text-align: right;
+}
+.userInfos{
+  position: absolute;
+  left:29rpx;
+  top:45rpx;
+}
+.circleContain{
+  position: relative;
+  width:140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+}
+.face{
+  position: absolute;
+  left:0;
+  top:0;
+  width:140rpx;
+  height:140rpx;
+  border-radius:50%;  
+  background:#fff;
+  transform:scale(0.85);
+}
+.logo{
+  position: absolute;
+  left:0;
+  top:0;
+  width:140rpx;
+  height:140rpx;
+  border-radius:50%; 
+  transform:scale(0.77);
+}
+.smove{
+  position: absolute;
+  left:-1rpx;
+  top:-1rpx;
+  width:140rpx;
+  height:140rpx;
+  border:1rpx solid #6b659b;
+   border-radius:50%; 
+  transform-origin:50% 50%;
+  animation:circleRoate 2s infinite;
+  animation-timing-function:linear; 
+}
+.smove span {
+  position:absolute;
+  left:50%;
+  top:-3rpx;
+  margin-left:-3rpx;
+  width:8rpx;
+  height:8rpx;
+  background:#6b659b;
+  border-radius:50%;
+}
+.userName{
+  width:175rpx;
+  height: 142rpx;
+  font-size:30rpx;
+  color:#fff;
+  font-weight: 900;
+  margin-left:25rpx;
+  line-height: 142rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.treeCoin{
+  position: relative;
+  width:369rpx;
+  height: 254rpx;
+  background:url('http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/TreeBg.png');
+background-repeat: round;
+}
+.content_L,.content_R{
+  width:369rpx;
+}
+.content_L .sPartFirst{
+  width:369rpx;
+  height:226rpx;
+}
+.content_L .sPartSecond{
+  width:369rpx;
+  height:299rpx;
+}
+.content_L .sPartThird{
+  width:369rpx;
+  height:175rpx;
+}
+.content_L .sPartForthd{
+  width:369rpx;
+  height:162rpx;
+}
+.content_R .sPartFirst{
+  width:369rpx;
+  height:286rpx;
+}
+.sPartSecondImg{
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-left:-162.5rpx;
+  margin-top:-105rpx;
+  width:325rpx;
+  height:210rpx;
+}
+.content_R .sPartSecond{
+  position: absolute;
+  top:0;
+  left:0;
+  width:325rpx;
+  height:210rpx;
+}
+.content_R .sPartThird{
+  width:369rpx;
+  height:356rpx;
+}
+view.taxtMsg{
+  position: relative;
+  display: inline-block;
+  height:46rpx;
+  padding-left:29rpx;
+  margin-top:100rpx;
+  margin-bottom:4rpx;
+}
+.secondCoin{
+  width:36rpx;
+  height: 46rpx;
+}
+.texts{
+  display: inline-block;
+  height: 46rpx;
+  margin-left:10rpx;
+  font-size:34rpx;
+  color:#fff;
+  font-weight: 900;
+  transform: scale(0.5);
+  line-height: 46rpx;
+}
+.progress{
+  position: relative;
+  width:106rpx;
+  height: 20rpx;
+  padding:3rpx;
+  background:#21a143;
+  margin-left:37rpx;
+  border-radius: 9rpx;
+  margin-top:-10rpx;
+}
+.progressIn{
+  width:100%;
+  height: 100%;
+  background:#ffb71d;
+  border-radius: 8rpx;
+}
+.Msg{
+  position: absolute;
+  left:0;
+  top:0;
+  width:106rpx;
+  height: 26rpx;
+  font-size:24rpx;
+  color:#fff;
+  font-weight: 900;
+  transform: scale(0.5) ;
+  text-align: center;
+  line-height: 28rpx;
+}
+@keyframes circleRoate{  
+                from{transform: rotate(0deg) }  
+                to{transform: rotate(360deg);}  
+            }   

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+	<title>发布项目</title>
+</head>
+
+<body>
+	<div class="list" style="margin-top:30px">
+		<span id="spanPf">发布平台</span>
+		<select id="selPf" class="select" style="width:200px;height:26px">
+			<option value="webnative">Web/Native</option>
+			<option value="wxnimigame">微信小游戏</option>
+			<option value="qqwanyiwan">QQ玩一玩</option>
+		</select>
+		<a href="javascript:void(0)" target="_blank" id="linkHelp"><img src="help.png" style="margin-left:20px" title="帮助" id="imgHelp" /></a>
+	</div>
+	<div class="list">
+		<span id="spanSrcDir">源根目录</span>
+		<input class="input" type="text" id="inputSrcDir" placeholder="设置游戏根目录，一般指index.html所在的目录">
+		<button class="btn" id="btnBrowseSrc">浏览</button>
+	</div>
+	<div class="list">
+		<span id="spanPubDir">发布目录</span>
+		<input class="input" type="text" id="inputPubDir" placeholder="设置发布目录">
+		<button class="btn" id="btnBrowsePub">浏览</button>
+	</div>
+	<div class="list">
+		<span id="spanExDir">排除文件</span>
+		<input class="input" type="text" id="inputExDir" placeholder="排除某些目录或者文件，用分号隔开">
+		<button class="btn" id="btnBrowseEx">浏览</button>
+	</div>
+	<div class="list">
+		<label>
+			<input type="checkbox" id="cbMergeJs"> <span id="spanMergeJs">是否合并index.html内的所有js文件（小游戏必选）</span>
+		</label>
+	</div>
+	<div class="list">
+		<label>
+			<input type="checkbox" id="cbCompressPng"> <span id="spanCompressPng">是否压缩 PNG (耗时)</span>
+		</label>
+		<div class="rightDiv"><span id="spanQualityPngLow">最小质量</span>
+			<input class="input" style="width:40px;" type="number" min="10" max="100" step="1" value="65" id="inputCompressPngLow">
+		</div>
+		<div class="rightDiv"><span id="spanQualityPngHigh">最大质量</span>
+			<input class="input" style="width:40px;" type="number" min="50" max="100" step="1" value="80" id="inputCompressPngHigh">
+		</div>
+	</div>
+	<div class="list">
+		<label>
+			<input type="checkbox" id="cbCompressJpg"> <span id="spanCompressJpg">是否压缩 JPG (非常耗时，但效果很好)</span>
+		</label>
+		<div class="rightDiv">&nbsp;&nbsp;&nbsp;<span id="spanQualityJpg">质量</span>
+			<input class="input" style="width:50px;" type="number" min="30" max="100" step="1" value="80" id="inputCompressJpg">
+		</div>
+	</div>
+	<div class="list">
+		<label>
+			<input type="checkbox" id="cbCompressJson"> <span id="spanCompressJson">是否压缩 JSON</span>
+		</label>
+		<div class="rightDiv"><span id="spanSuffix">后缀</span>
+			<input class="input" style="width:243px" type="text" id="inputJsonTypes" value="json,atlas,ls,lh,lmat,lav">
+		</div>
+	</div>
+	<div class="list">
+		<label>
+			<input type="checkbox" id="cbCompressJs"> <span id="spanCompressJs">是否压缩混淆 JS (耗时)</span>
+		</label>
+	</div>
+	<div class="list">
+		<label>
+			<input type="checkbox" id="cbEnableVer"> <span id="spanEnableVer">是否启用版本管理，启用后，会重命名变化的文件</span>（<a id="howToUse" href="javascript:void(0)" target="_blank">如何用</a>）
+		</label>
+	</div>
+	<div class="list" style="margin-top: 39px;float: right;margin-right: 160px;">
+		<button class="subBtn" id="btnPub">发布</button>
+	</div>
+	<div id="divBgWait" style="display:none" class="waitbg">
+		<div id="divWaiting" class="waitting"><span id="spanWaiting">正在处理，请稍候...</span>
+			<br>
+			<progress id="progress" max="100"></progress>
+		</div>
+		<div id="divResult" style="display:none" class="result">
+			<span id="spanResult">发布成功</span><br><br><br><br><br>
+			<button class="subBtn" style="width:150px; position: relative;" id="btnOpen">打开发布文件夹</button>
+		</div>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "star.png": {
+            "frame": {
+                "h": 54,
+                "idx": 0,
+                "w": 56,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 64,
+                "w": 64
+            },
+            "spriteSourceSize": {
+                "x": 4,
+                "y": 5
+            }
+        }
+    },
+    "meta": {
+        "image": "res.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/renders/particle/res/"
+    }
+}

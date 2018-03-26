@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "res.png": {
+            "frame": {
+                "h": 126,
+                "idx": 0,
+                "w": 146,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 126,
+                "w": 146
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "Navigator.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/template/IOS/Navigator/"
+    }
+}

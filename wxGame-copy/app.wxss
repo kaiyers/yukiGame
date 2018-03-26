@@ -1,0 +1,58 @@
+/**app.wxss**/
+.clearfix:after { content: ""; display: block; clear: both; }
+.clearfix { zoom: 1; }
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}
+.popUp{
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height: 100%;
+  z-index: 99;
+}
+.curtain{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  background:#000;
+  opacity: 0.6;
+}
+.popUpContent_lackCoin{
+  position: fixed;
+  width:564rpx;
+  height: 460rpx;
+  left:50%;
+  top:50%;
+  margin-left:-282rpx;
+  margin-top:-230rpx;
+}
+image.popUpContent_loginBg,.popUPContent_loginCon,.popUpContent_lackCoinBg,.popUPContent_lackCoinCon,.popUpContent_inviteFriendBg,.popUPContent_inviteFriendCon{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  left:0;
+  top:0;
+}
+.triangle{
+  display: block;
+  width:89rpx;
+  height: 75rpx;
+  margin:62rpx auto 49rpx;
+}
+.confirmBtn,.backBtn{
+  display: block;
+  width:440rpx;
+  height: 174rpx;
+  margin:0 auto;
+}
+.lackCoinCue{
+  font-size:41rpx;
+  font-weight:900;
+  color:#fff;
+  text-align: center
+}

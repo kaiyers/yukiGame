@@ -1,0 +1,16 @@
+<wxs module="m1">
+  var dealString = function(s){
+    var asting=(s/100).toFixed(2)
+    return asting
+  }
+  module.exports.dealString = dealString;
+</wxs>
+<view class="container">
+   <scroll-view class='guessLikeContain clearfix'  scroll-y="true" bindscrolltolower="pullUpLoad" bindscroll="scroll"  style="height: {{winHeight}}px" >
+      <navigator url="../details/details?gsid={{itemName.goodId}}" wx:for="{{newGoodsList}}" wx:key="idx" wx:for-item="itemName" class="fl" >
+        <image src="{{itemName.goodPicUrl}}"></image>
+        <view class="guessLikeContainText1">{{itemName.goodName}}</view>
+        <view class="guessLikeContainText2">{{m1.dealString(itemName.goodMinPrice)}}</view>
+      </navigator>
+  </scroll-view>
+</view>

@@ -1,0 +1,93 @@
+{
+    "frames": {
+        "icon.png": {
+            "frame": {
+                "h": 272,
+                "idx": 0,
+                "w": 264,
+                "x": 445,
+                "y": 481
+            },
+            "sourceSize": {
+                "h": 272,
+                "w": 264
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "qr.png": {
+            "frame": {
+                "h": 249,
+                "idx": 0,
+                "w": 444,
+                "x": 0,
+                "y": 389
+            },
+            "sourceSize": {
+                "h": 254,
+                "w": 444
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 5
+            }
+        },
+        "small.png": {
+            "frame": {
+                "h": 480,
+                "idx": 0,
+                "w": 218,
+                "x": 512,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 480,
+                "w": 218
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "toolbar.png": {
+            "frame": {
+                "h": 57,
+                "idx": 0,
+                "w": 80,
+                "x": 0,
+                "y": 639
+            },
+            "sourceSize": {
+                "h": 57,
+                "w": 80
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "wifi.png": {
+            "frame": {
+                "h": 388,
+                "idx": 0,
+                "w": 511,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 512,
+                "w": 512
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 62
+            }
+        }
+    },
+    "meta": {
+        "image": "ide.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/res/ide/"
+    }
+}

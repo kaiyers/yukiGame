@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "dhxtoolbar_arrow.gif": {
+            "frame": {
+                "h": 4,
+                "idx": 0,
+                "w": 7,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 5,
+                "w": 7
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 1
+            }
+        },
+        "dhxtoolbar_arrow_dis.gif": {
+            "frame": {
+                "h": 4,
+                "idx": 0,
+                "w": 7,
+                "x": 8,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 5,
+                "w": 7
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 1
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxtoolbar_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxtoolbar_material/"
+    }
+}

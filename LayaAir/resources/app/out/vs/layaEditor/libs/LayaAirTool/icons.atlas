@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "Laya128.png": {
+            "frame": {
+                "h": 125,
+                "idx": 0,
+                "w": 108,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 128,
+                "w": 128
+            },
+            "spriteSourceSize": {
+                "x": 10,
+                "y": 1
+            }
+        }
+    },
+    "meta": {
+        "image": "icons.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/libs/LayaAirTool/icons/"
+    }
+}

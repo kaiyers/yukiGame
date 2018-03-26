@@ -1,0 +1,55 @@
+<!--pages/alterAddress/alterAddress.wxml-->
+<view class="main">
+  <form bindsubmit="formSubmit">
+    <view class="form-box">
+      <view class="addlist">
+        <image src="../../img/newicon/contacts.png"></image>
+        <input type="text" value="{{adrName}}" name="adrName" placeholder="姓名" bindchange="addname"/>
+      </view>
+      <view class="addlist">
+        <image src="../../img/newicon/tel.png"></image>
+         <input type="number" value="{{adrPhone}}" name="adrPhone" placeholder="手机号码" bindchange="addphone"/>
+      </view>
+      <view class="addlist">
+        <image src="../../img/newicon/add1.png"></image>
+         <input type="text" disabled="disabled" name="pct" value="{{areaInfo}}" placeholder="省份、城市、区县" bindtap="selectDistrict"/>
+      </view>
+      <view class="addlist">
+        <image src="../../img/newicon/address.png"></image>
+        <textarea value="{{adrDetail}}" name="adrDetail" auto-height placeholder="详细地址，如街道、楼牌号等" bindblur="addDetail"></textarea>
+      </view>
+    </view>
+
+    <button form-type="submit" class="tijiao">保存</button>  
+      
+  </form>     
+</view> 
+
+<!-- 城市地址选择 -->
+<view class="dialog-mask " style="visibility:{{isVisible ? 'visible': 'hidden'}}" bindtap="hideMenuTap " />
+<view class="dialog-mask " style="z-index:11;visibility:{{addressMenuIsShow ? 'visible': 'hidden'}}" bindtap="hideCitySelected" />
+<!--城市三级联动-->
+<!--使用动画时不能wx:if="{{city.length>0&&isVisible}}" ，不能hidden=''属性否则无动画效果-->
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view style="height:10% ;width:95%;margin-top:10rpx">
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right" catchtap="citySure">确定</text>
+  </view>
+  <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+  <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" class="picker-item">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{areas}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+

@@ -1,0 +1,63 @@
+<view class="pheader">
+  <navigator url="../setting/setting">
+    <image src="../../img/newicon/setting.png" class="setting"></image>
+  </navigator>
+  <image src="{{uimg}}" class='uimg'></image>
+  <view class="uinfo">
+    <view class="btn1">{{uNickName}}</view>
+    <view class="btn2">
+      <image src="{{vlogo}}" class="logo"></image>
+      {{vName}}
+    </view>
+  </view>
+</view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="../myOrder/myOrder?orderState=0" class="weui-cell">
+      <view class="weui-cell__bd">我的订单</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">查看全部订单</view>
+    </navigator>
+    <view class="weui-cell ttyt">
+      <navigator url="../myOrder/myOrder?orderState=1" class='ordertag ' >
+        <image src='../../img/newicon/play.png' class="listiconk"></image>
+        <view class="staktxt">待付款</view>
+        <view class="rednum" wx:if="{{qpA}}">{{qpA}}</view>
+      </navigator>
+      <navigator url="../myOrder/myOrder?orderState=2" class='ordertag'>
+        <image src='../../img/newicon/shipments.png' class="listiconk"></image>
+        <view class="staktxt">待发货</view>
+        <view class="rednum"  wx:if="{{qpB}}">{{qpB}}</view>
+      </navigator>
+      <navigator url="../myOrder/myOrder?orderState=3" class='ordertag'>
+        <image src='../../img/newicon/takegoods.png' class="listiconk"></image>
+        <view class="staktxt">待收货</view>
+        <view class="rednum" wx:if="{{qpC}}">{{qpC}}</view>
+      </navigator>
+      <navigator url="../myOrder/myOrder?orderState=4" class='ordertag'>
+        <image src='../../img/newicon/evaluate.png' class="listiconk"></image>
+        <view class="staktxt">待评价</view>
+        <view class="rednum" wx:if="{{qpD}}">{{qpD}}</view>
+      </navigator>
+      <!-- <view class='ordertag'>
+        <image src='../../img/newicon/payment.png' class="listiconk"></image>
+        <view class="staktxt">售后服务</view>
+      </view> -->
+    </view>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="../Coupon/Coupon?userId={{userID}}" class="weui-cell">
+      <view class="weui-cell__bd">我的优惠券</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="../collect/collect" class="weui-cell">
+      <view class="weui-cell__bd">我的收藏</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <view url="../../pages/address/address" class="weui-cell" bindtap='goAdress'>
+      <view class="weui-cell__bd">地址管理</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <!-- <view url="" class="weui-cell">
+      <view class="weui-cell__bd">在线客服</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view> -->
+  </view>

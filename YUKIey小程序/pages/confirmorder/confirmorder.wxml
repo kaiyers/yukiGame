@@ -1,0 +1,83 @@
+<!--pages/confirmorder/confirmorder.wxml-->
+<wxs module="numfilter" src="../../filter/price.wxs"></wxs>
+<view class="main">
+    <!-- <navigator url="../address/address?skuids={{skuids}}&sid={{skuid}}&num={{num}}" open-type="redirect"  wx:if="{{hasAddress}}"> -->
+      <view  class="orders-address" wx:if="{{hasAddress}}" bindtap='goAddress'>
+        <view>
+          <image src='../../img/icon/my_orderdetail_icon_add@3x.png' class='listicon'></image>
+          <text class="orders-address-name">{{address.name}}  {{address.phone}}</text>
+          <text class="orders-address-phone" wx:if="{{address.isAvalible}}">默认</text>
+        </view>
+        <view class="orders-address-detail">{{address.address}}</view>
+      </view>
+    <!-- </navigator> -->
+    <view bindtap='goAddress'  wx:else> 
+      <view class="orders-no-address">添加收货地址</view>
+    </view>
+    
+    <view class="parting_line"></view>
+    <view class="cart-box">
+      <view class="cart-list" wx:for="{{orders}}">
+        <image class="cart-thumb" src="{{item.skuPic}}"></image>
+        <view class="cart-pro-name">{{item.name}}</view>
+        <view class="cart-pro-style">款式: {{item.skuText}}</view>
+        <view class="cart-pro-price">￥{{numfilter.numfilter(item.price)}}</view>
+        <view class="cart-pro-count">X {{item.count}}</view>
+      </view>
+    </view>
+
+    <view class="parting_line"></view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">商品总价</view>
+      <text class='orders-address-discount' wx:if="{{discount != 10}}">会员{{discount}}折</text>
+      <text wx:else></text>
+      <view class="weui-cell__ft">￥ {{numfilter.numfilter(orderinfo.totalPriceNow)}}</view>
+    </view>                         
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">运费</view>
+      <view class="weui-cell__ft">￥ {{orderinfo.freight}}.00</view>
+    </view>
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">
+        优惠
+        <text class='orders-address-phone' wx:if="{{youhuiName!='kong'}}">{{youhuiName}}</text>
+      </view>
+      <view class="weui-cell__ft" wx:if='{{couponsList.length == 0}}'>{{youhuiInfo}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"  bindtap="actionSheetTap" wx:else>{{youhuiInfo}}</view>
+    </view>
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">买家留言</view>
+      <view class="weui-cell__ft">
+        <input type='text' placeholder='选填：对本次交易的说明' bindchange="leaveMessage" value='{{leaveMessage}}'></input>
+      </view>
+    </view>
+  </view>
+  <view class='diandi'></view>
+  <view class="orders-footer clearfix">
+      <view class="orders-footer-total fl">合计：<text style="color:red">￥{{numfilter.numfilter(needpay)}}</text></view>
+      <!-- <view class="orders-footer-btn" bindtap="toPay">提交订单</view> -->
+      <form bindsubmit="toPay" report-submit class="fr">
+        <button formType="submit" class="orders-footer-btn">提交订单</button>
+      </form>
+  </view>
+</view>
+<!-- 遮罩 -->
+<view class="{{popShow ? 'mask' : ''}}" catchtouchmove="preventTouchMove"></view>
+<!-- 弹出框 -->
+<view class='popupMenu' wx:if='{{popShow}}'> 
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd xuaze">选择</view>
+      <view class="weui-cell__ft queding"  bindtap='coloser'>确定</view>
+    </view>        
+  </view>
+  <radio-group bindchange="radiogroupBindchange">
+    <view class='coupenList' wx:if='{{manJianName}}'>
+      <radio value="manjian">{{manJianName}}</radio>
+    </view>
+    <view class='coupenList' wx:for="{{couponsList}}">
+      <radio value="{{item.id}}">{{item.couponName}}</radio>
+    </view>
+  </radio-group>
+</view>

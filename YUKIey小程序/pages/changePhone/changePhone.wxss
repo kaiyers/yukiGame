@@ -1,0 +1,52 @@
+/* pages/changePhone/changePhone.wxss */
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: #f0f0f0;  
+}  
+.main{
+  padding:10rpx 20rpx;
+}
+.explain{
+  font-size: 14px;
+}
+.input{
+  font-size: 16px;
+  background: #fff;
+  text-align: center;
+  padding:10rpx
+}
+.division{
+  margin: 20rpx 0;
+}
+.primary{
+  background: #4595e5;
+  color:#fff;
+  width:96%;
+  line-height: 2;
+  margin-top: 55rpx
+}
+.yamz{
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+.input1{
+  padding-left: 10rpx;
+  text-align: left;
+}
+.jia{
+  padding:10rpx;
+  background: #999;
+  font-size: 16px;
+}
+.getverify{
+  color:#fff;
+  line-height: 2;
+  border-radius: 0;
+  margin-left:0;
+  margin-right:0;
+  font-size: 16px;
+}

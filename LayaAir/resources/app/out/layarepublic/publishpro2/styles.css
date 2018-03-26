@@ -1,0 +1,73 @@
+body{
+    background-color:#303030;
+    color:#c5c5c5;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe WPC, Segoe UI, HelveticaNeue-Light, Noto Sans, Microsoft YaHei, PingFang SC, Hiragino Sans GB, Source Han Sans SC, Source Han Sans CN, Source Han Sans, sans-serif;
+}
+.input{
+    padding: 5px;
+    width: 300px;
+    line-height: 12px;
+    -webkit-font-smoothing: antialiased;
+    background-color: #282828;
+    border: 0px;
+    color: #909090;
+    font-size: 14px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#909090;
+}
+.btn{
+    background-color: #494949;
+    border: none;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    height: 29px;
+    width: 54px;
+    font-size: 14px;
+    color: #c5c5c5;
+}
+.select{
+    outline-color: #595757;
+    font-size: 14px;
+    border: #595757 1px solid;
+    height: 21px;
+    background: #212121 0px 0px;
+    color: #909090;
+    outline: medium
+}
+.rightDiv{
+    margin-left: 10px;
+    display:inline;
+}
+.list{
+    margin:20px 10px 20px 45px;
+}
+.subBtn{
+    border-radius: 4px;
+    background-color: #1e7ac3;
+    border: none;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    height: 32px;
+    width: 100px;
+    position: absolute;
+    font-size: 16px;
+    color: azure;
+    text-align: center;    
+}
+.waitbg{
+    position: absolute;width:100%;height:100%;top:0;left:0;background-color: #303030;
+}
+.waitting{
+    text-align:center;
+    padding-top: 260px;
+}
+.result{
+    text-align:center;
+    padding-top: 80px;
+}
+a:link {
+    color:#3c97da;
+}
+
+

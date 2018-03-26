@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "res.png": {
+            "frame": {
+                "h": 151,
+                "idx": 0,
+                "w": 211,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 151,
+                "w": 211
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "Tab.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/template/IOS/Tab/"
+    }
+}

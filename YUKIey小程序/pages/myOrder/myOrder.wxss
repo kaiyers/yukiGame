@@ -1,0 +1,156 @@
+.container{
+  overflow: hidden;
+}
+.guessLikeContain{
+  width: 100%;
+  padding-top:90rpx;
+  overflow: hidden;
+}
+swiper-item{
+  overflow-y: auto;
+}
+.swiper-tab{ 
+  position:fixed;
+  top:0;
+  left:0; 
+  height: 90rpx;
+  display:-webkit-box;
+  width: 100%;   
+  z-index: 99;
+  }  
+.swiper-tab-list{ 
+  height: 90rpx;
+  -webkit-box-flex:1;
+  font-size: 30rpx;   
+  color: #000;  
+  line-height: 90rpx;
+  text-align: center;
+  background:#e6e6e6;
+}  
+.on{ 
+  color: #26a2ff;
+  margin-bottom: 3px;
+  border-bottom: 3px solid #26a2ff;
+}  
+.swiper-box{ 
+  display: block; 
+  overflow: hidden;
+}  
+/* .swiper-box view{  
+    text-align: center;  
+}   */
+.orderHeader{
+  height: 80rpx;
+  padding: 0 32rpx;
+  background:#fff;
+}
+.orderHeaderL{
+  font-size: 26rpx;
+  line-height: 80rpx;
+  color:#2c3e50;
+}
+.orderHeaderR{
+  font-size: 26rpx;
+  line-height: 80rpx;
+  color: rgb(69, 149, 229);
+}
+.containTop{
+  padding: 24rpx 32rpx;
+  background: #fafafa;
+  color: #000000;
+}
+.orderMPic{
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 20rpx;
+}
+.containTopR{
+  width:506rpx;
+  overflow: hidden;
+}
+.swiper-box view.orderMF{
+  text-align: left;
+  font-size: 25rpx;
+  color:#333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.swiper-box view.orderMS{
+  font-size: 26rpx;
+  color: #999;
+  text-align: left
+}
+.goodPriceL,.goodPriceR{
+  font-size: 26rpx;
+  line-height: 80rpx;
+}
+.containBot{
+  font-size: 25rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background:#fff;
+}
+.coin{
+  text-align: right;
+  height: 71rpx;
+  line-height: 71rpx;
+}
+.coinDetail{
+  display: inline-block;
+  font-weight: bold;
+  color:red
+}
+.msgL,.msgR{
+  display: inline-block;
+  color: #333;
+  height: 60rpx;
+  border: 2rpx solid #ccc;
+  margin-bottom: 0;
+  padding-left:20rpx;
+  padding-right:20rpx;
+  border-radius: 6rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+}
+.msgR{
+  color: #fff;
+  border: 1px solid #007aff;
+  background-color: #007aff;
+  margin-left:20rpx;
+}
+.msgR span{
+  display: inline-block;
+  font-size: 28rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  vertical-align: top;
+  margin-right:10rpx;
+}
+time-compent{
+  display: inline-block;
+  font-size: 28rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  vertical-align: middle
+}
+.checks{
+  text-align: right;
+  padding-bottom:15rpx;
+}
+.orderList-null{
+    width: 300rpx;
+    margin: 300rpx auto 0 ;
+}
+image.orderList-null-icon{
+    width: 300rpx;
+    height: 300rpx;
+}
+.orderList-null-title{
+    width: 100%;
+    margin-top: 20rpx;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    color: #666;
+    text-align: center;
+}

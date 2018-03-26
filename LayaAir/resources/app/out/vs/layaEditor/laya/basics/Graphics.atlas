@@ -1,0 +1,195 @@
+{
+    "frames": {
+        "circle.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "curves.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 0,
+                "y": 21
+            },
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "filltext.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 0,
+                "y": 42
+            },
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "filltexture.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 21,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "graphic.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 21,
+                "y": 21
+            },
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "line.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 21,
+                "y": 42
+            },
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "lines.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 42,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "pie.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 63,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "poly.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 42,
+                "y": 21
+            },
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "rect.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 42,
+                "y": 42
+            },
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "texture.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 63,
+                "y": 21
+            },
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "Graphics.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/basics/Graphics/"
+    }
+}

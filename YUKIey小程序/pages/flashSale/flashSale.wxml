@@ -1,0 +1,110 @@
+<wxs module="m1">
+  var dealString = function(s){
+    var asting=(s/100).toFixed(2)
+    return asting
+  }
+  module.exports.dealString = dealString;
+</wxs>
+<view class="container">
+  <view class='guessLikeContain'>
+    <view class="swiper-tab ">  
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}} " data-current="0" bindtap="swichNav">昨日</view>  
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}} " data-current="1" bindtap="swichNav">今日</view>  
+      <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">明日</view> 
+    </view>
+    <!-- 轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="idx" wx:for-item="itemName">
+      <swiper-item>
+        <image src="{{itemName.picUrl}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="limitTimeMes">距离本场结束 {{countdowns}}</view>
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange">  
+    
+    <!-- 昨日 -->  
+        <swiper-item>  
+          <view>
+          <view  wx:if="{{!yesterdayList}}" class="activeBlank">亲，没有优惠活动哦</view>
+            <navigator url="../details/details?gsid={{itemName.goodId}}" class="clearfix limitGoods   {{yesterdayList.length>1?'':'limitGoodN'}}" wx:for="{{yesterdayList}}" wx:key="idx" wx:for-item="itemName" wx:if="{{yesterdayList}}">
+              <view class="fl limitGoodsImage" style="background:url({{itemName.goodPicUrl}}); background-repeat:round;">
+                <view >已抢光</view>
+              </view>
+              <view class="fr limitGoodsMesPr">
+                <view class="saleListGoodsName">{{itemName.goodName}}</view>
+                <view class="clearfix limPrice">
+                  <view class="fl">限时价 ￥</view>
+                  <view  class="fl">{{m1.dealString(itemName.newPrice)}}</view>
+                </view>
+                <view class="clearfix purchasePrice">
+                  <view  class="fl">原价 ￥</view>
+                  <view class="fl purchasePriceTh">{{m1.dealString(itemName.oldPrice)}}</view>
+                </view>
+                <view class="clearfix limitGoodsMes">
+                  <view class="fl limitGoodsMesL">
+                    <view class="progressM" style="width:165rpx"></view>
+                    <view class="progressPer">已结束</view>
+                  </view>
+                  <view class="fr limitGoodsMesR">去看看</view>
+                </view>
+              </view>
+            </navigator>
+          </view>  
+        </swiper-item>  
+        <!-- 今日 -->  
+        <swiper-item>  
+          <navigator url="../details/details?gsid={{itemName.goodId}}" class="clearfix limitGoods {{todayList.length>1?'':'limitGoodN'}}" wx:for="{{todayList}}" wx:key="idx" wx:for-item="itemName">
+            <view class="fl limitGoodsImage" style="background:url({{itemName.goodPicUrl}}); background-repeat:round;">
+              <view wx:if="{{itemName.stockCount==0}}">已抢光</view>
+            </view>
+            <view class="fr limitGoodsMesPr">
+              <view class="saleListGoodsName">{{itemName.goodName}}</view>
+              <view class="clearfix limPrice">
+                <view class="fl">限时价 ￥</view>
+                <view  class="fl">{{m1.dealString(itemName.newPrice)}}</view>
+              </view>
+              <view class="clearfix purchasePrice">
+                <view  class="fl">原价 ￥</view>
+                <view class="fl purchasePriceTh">{{m1.dealString(itemName.oldPrice)}}</view>
+              </view>
+              <view class="clearfix limitGoodsMes">
+                <view class="fl limitGoodsMesL">
+                  <view class="progressM" style="width:{{progressS[index]*1.65}}rpx"></view>
+                  <view class="progressPer">剩余{{progressS[index]}}%</view>
+                </view>
+                <view class="fr limitGoodsMesR">{{itemName.stockCount==0?"已抢完":"马上抢"}}</view>
+              </view>
+            </view>
+          </navigator>  
+        </swiper-item>  
+        <!-- 明日 -->  
+        <swiper-item>  
+          <view>
+            <view  wx:if="{{!tomorrowList}}" class="activeBlank">亲，暂时没有优惠活动哦</view>
+            <navigator url="../details/details?gsid={{itemName.goodId}}" class="clearfix limitGoods  {{tomorrowList.length>1?'':'limitGoodN'}}" wx:for="{{tomorrowList}}" wx:key="idx" wx:for-item="itemName" wx:if="{{tomorrowList}}" >
+              <view class="fl limitGoodsImage" style="background:url({{itemName.goodPicUrl}}); background-repeat:round;"></view>
+              <view class="fr limitGoodsMesPr">
+                <view class="saleListGoodsName">{{itemName.goodName}}</view>
+                <view class="clearfix limPrice">
+                  <view class="fl">限时价 ￥</view>
+                  <view  class="fl">{{m1.dealString(itemName.newPrice)}}</view>
+                </view>
+                <view class="clearfix purchasePrice">
+                  <view  class="fl">原价 ￥</view>
+                  <view class="fl purchasePriceTh">{{m1.dealString(itemName.oldPrice)}}</view>
+                </view>
+                <view class="clearfix limitGoodsMes">
+                  <view class="fl limitGoodsMesL">
+                    <view class="progressM" style="width:165rpx"></view>
+                    <view class="progressPer">限量{{itemName.stockCount}}件</view>
+                  </view>
+                  <view class="fr limitGoodsMesR">即将开始</view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+        </swiper-item>  
+    </swiper>  
+  </view>
+</view>

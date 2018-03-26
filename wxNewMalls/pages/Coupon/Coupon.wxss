@@ -1,0 +1,236 @@
+page{
+  background:#fafafa;
+}
+.container{
+  overflow: hidden;
+  background: none;
+}
+.guessLikeContain{
+  background: none;
+  width: 100%;
+  overflow: hidden;
+}
+.swiper-tab{  
+  display:-webkit-box;
+  width: 100%;   
+  text-align: center; 
+  padding-top:18rpx;
+  padding-bottom:14rpx; 
+  border-top:2rpx solid #e0e0e0;
+  border-bottom:2rpx solid #e0e0e0;
+  background:#fcfcfc;
+  } 
+swiper-item{
+  overflow-y: auto;
+}
+.swiper-tab-list{ 
+  -webkit-box-flex:1;
+  font-size: 28rpx;   
+  color: #666;  
+  font-weight: 900;
+  height: 62rpx;
+  line-height: 62rpx; 
+}  
+.on .swiper-tab-lists{
+  background:#ffc800;
+}
+.swiper-tab-lists{ 
+  width:112rpx;
+  height: 8rpx;
+  background: #fcfcfc;
+  border-radius: 4rpx;
+  margin:0 auto;
+}  
+.on{ 
+  color: #ffc800;
+}  
+.swiper-box{ 
+  display: block; 
+  height: 100%;
+  overflow: hidden;
+}  
+.swiper-box view{  
+    text-align: center;  
+}  
+.headerSeach{
+  height: 64rpx;
+  overflow: hidden;
+  padding:16rpx 30rpx 14rpx;
+  border-bottom:2rpx solid #e0e0e0;
+}
+.mplaceholder{
+  font-size:26rpx;
+  color:#ccc;
+}
+.headerSeachLeft{
+  position: relative;
+  height: 60rpx;
+  float:left;
+  padding-left: 80rpx;
+  overflow: hidden;
+  width: 396rpx;
+  border: 2rpx solid #d4d4d4;
+  border-radius: 30rpx;
+  background: #fff;
+}
+/* .qrCode{
+  position: absolute;
+  top:50%;
+  left:10rpx;
+  width:58rpx;
+  height: 48rpx;
+  margin-top:-24rpx;
+} */
+.headerSeachLeft icon{
+  position: absolute;
+  top: 16rpx;
+  left: 16rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.headerSeachLeftText{
+  color: #8f8f94;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: left;
+  font-size: 30rpx;
+}
+.headerSeachRight{
+  float: right;
+  width:192rpx;
+  height: 64rpx;
+  font-size: 28rpx;
+  line-height: 64rpx;
+  color: #fff;
+  border-radius: 26rpx;
+  background-color: #ccc;
+}
+.tipsShowa,.coupenContain{
+  padding:32rpx 30rpx 0;
+}
+.orderList-null-icon{
+  width: 226rpx;
+  height: 147rpx;
+}
+.orderListNullTitle{
+  width: 100%;
+  margin-top: 60rpx;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #999;
+  text-align: center;
+}
+.coupenStyle{
+    margin-bottom: 32rpx;
+}
+view.top{
+  position: relative;
+  display: block;
+  height: 192rpx;
+  width:100%;
+  border-bottom:2rpx solid #e0e0e0;
+  border-radius:12rpx 12rpx 0 0;
+  overflow: hidden;
+}
+view.top.topSecond{
+  background:#ccc;
+}
+.unuserCoupon{
+  position: absolute;
+  height: 192rpx;
+  width:690rpx;
+  top:0;
+  left:0;
+}
+.coupenPrice {
+  margin: 68rpx 0 0 32rpx;
+}
+.descriptCoupen{
+  margin: 92rpx 0 0 34rpx;
+}
+.descriptCoupen .CoupenName{
+  color: #fff;
+  font-size: 26rpx;
+  line-height: 26rpx;
+}
+.nouse .descriptCoupen .CoupenName{
+  color:#000;
+}
+.swiper-box view.expiry{
+  color: #fff;
+  font-size: 24rpx;
+  padding-left:32rpx;
+  text-align:left;
+  line-height: 24rpx;
+  margin-top:20rpx;
+}
+.swiper-box .topSecond view.expiry{
+  background:#ccc;
+  color:#f5f5f5;
+}
+.nouse .swiper-box view.expiry,.swiper-box .nouse view.noactive{
+  color:#9a9a9a;
+}
+.bont{
+    position: relative;
+    background: #b6babf;
+    border-radius: 0 0 12rpx 12rpx;
+    padding: 5rpx 0 10rpx 35rpx;
+}
+.bont.bontF{
+  background:#fff;
+}
+.clickIcn{
+  position: absolute;
+  right:20rpx;
+  top:10rpx;
+  width:34rpx;
+  height:34rpx;
+  font-size:30rpx;
+  color:#999;
+  line-height: 34rpx;
+}
+.swiper-box view.noactive{
+  font-size: 24rpx;
+  color: #fff;
+  width: 90%;
+  text-align: left;
+  overflow: hidden;
+}
+.swiper-box view.noactive.newDescript{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+.detailPrice{
+  height: 20rpx;
+  font-size: 52rpx;
+  color: #fff;
+  border-bottom:32rpx solid #eee;
+  line-height: 52rpx;
+  display:inline-block;
+}
+.topSecond .detailPrice{
+  color:fff;
+}
+.nouse .detailPrice{
+  color:#000;
+}
+.topF{
+  background:#fff;
+}
+.topF .detailPrice{
+  border-bottom:32rpx solid #fff0be;
+}
+.swiper-box .topF view.expiry{
+  color:#999; 
+}
+.bontSecond .clickIcn {
+  color:#fff;
+}
+.bontSecond.bont{
+  background: #ccc;
+}
+.swiper-box .bontSecond view.noactive{
+  color:#efefef;
+}

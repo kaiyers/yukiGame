@@ -1,0 +1,135 @@
+/* pages/payment/payment.wxss */
+page{
+  background: #fafafa
+}
+.main{
+  padding: 0 30rpx;
+  background: #fff;
+}
+.listPay{
+  padding: 30rpx 0;
+  width:690rpx;
+  border-bottom: 2rpx solid #e0e0e0;
+  overflow: hidden;
+}
+.listPay:last-child{
+  padding: 30rpx 0;
+  width:690rpx;
+  border-bottom: 2rpx solid #fff;
+  overflow: hidden;
+}
+.listPay image{
+  width: 60rpx;
+  height:70rpx;
+  margin: 18rpx 50rpx 0 20rpx;
+  float: left;
+}
+.tips view{
+  line-height: 40rpx;
+}
+.tips{
+  float: left;
+  font-size: 23rpx;
+  color: #666666;
+}
+.tips01{
+  font-size: 30rpx;
+  color: #222222;
+  font-weight: bold;
+}
+.needpay{
+  font-size: 28rpx;
+  color: #222222;
+  font-weight: bold;
+}
+.newpric{
+  height:16rpx;
+  border-bottom: 16rpx solid #fff0be;
+  line-height: 28rpx;
+  display: inline-block;
+  margin-left: 30rpx
+}
+.orderInfo{
+  border-top: 16rpx solid #ffc800;
+  border-radius: 15rpx;
+  background: #fafafa;
+  padding: 30rpx;
+  font-size: 25rpx;
+  color: #222222;
+  font-weight: bold;
+}
+.radd{
+  color: #999999;
+  font-weight: normal;
+  display: inline-block;
+}
+.oif-up{
+  border-bottom: 2rpx solid #e0e0e0;
+  padding-bottom: 30rpx
+}
+.oif-up view{
+  line-height: 45rpx;
+}
+.oif-down view{
+  line-height: 45rpx;
+}
+.left{
+  width:100rpx;
+  display: inline-block;
+  margin-right: 28rpx;
+}
+.right{
+  width:490rpx;
+}
+.oif-down{
+  overflow: hidden;
+  padding-top: 30rpx;
+}
+.left-d{
+  width:100rpx;
+  margin-right: 28rpx;
+  float: left
+}
+.right-d{
+  width:490rpx;
+  float: left
+}
+.goodsStely{
+  color: #999999;
+  font-size: 25rpx;
+  font-weight: normal;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height:78rpx;
+  border-top:2rpx solid #e0e0e0;
+  background: #fcfcfc;
+  overflow: hidden;
+  padding-top: 18rpx
+}
+.play{
+  float: right;
+  margin-right: 30rpx;
+  width: 192rpx;
+  height:64rpx;
+  line-height: 64rpx;
+  background: #ffc800;
+  border-radius: 64rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color:#fff;
+}
+.quxiao{
+  float: right;
+  margin-right: 30rpx;
+  width: 188rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  border: 2rpx solid #999999;
+  border-radius: 64rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color:#999999;
+}

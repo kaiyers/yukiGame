@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "icon.png": {
+            "frame": {
+                "h": 68,
+                "idx": 0,
+                "w": 103,
+                "x": 105,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 72,
+                "w": 108
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 4
+            }
+        },
+        "res.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 104,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 104
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "Switcher.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/template/IOS/Switcher/"
+    }
+}

@@ -1,0 +1,22 @@
+<!--pages/collect/collect.wxml-->
+<wxs module="numfilter" src="../../filter/price.wxs"></wxs>
+<view class="list-box">
+  <view wx:if='{{collectList.length == 0}}' class='nopage'>
+    <image src='http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/nocollect.png' class='nocollectImg'></image>
+    <view class='noText'>还没有任何收藏呢~</view>
+  </view>
+  <view  wx:else>
+    <view wx:for='{{collectList}}' class="{{item.isShow ? 'newest-list' : 'newest-list-levea'}}"  bindtap='godetail' data-index="{{index}}">
+      <image src="{{item.goodPicUrl}}" class="goodsImg"></image>
+      <view class='newest' >
+        <view class="newest-text">{{item.goodName}}</view>
+        <view class="newest-textSc" wx:if="{{item.discountText!=null}}">{{item.discountText}}</view>
+        <view class="newest-price">
+          ￥ {{numfilter.numfilter(item.nowPrice)}}
+        </view>
+        <image src="../../img/newicon/collect_yes.png" wx:if="{{item.isShow}}" class="danyuan_icon" data-index="{{index}}" catchtap='addLike'/>
+        <image src="../../img/newicon/collect_no.png" wx:else class="danyuan_icon" /> 
+      </view>         
+    </view>
+  </view>
+</view>

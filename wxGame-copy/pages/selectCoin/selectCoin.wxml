@@ -1,0 +1,37 @@
+<view class="contain">
+  <view class="circleContain">
+    <view class="face"></view>
+    <image src="{{vlogo}}" class="logo"></image>
+    <view class="smove">
+      <span></span>
+    </view>
+  </view>
+  <view class="userName">{{playerName}}</view>
+  <view class="accountCoins">
+    <image class="accountCoinsBg" src="../../img/{{selectCoinb}}"></image>
+    <view class="accountBox">
+      <image src="../../img/smallGold.png" class="accountCoins_Image"></image>
+      <span class="accountCoins_quantity">{{accountCoins_quantity}}</span>
+    </view>
+  </view> 
+  <view class="inviteTitle">
+      请选择投币数
+    <image src="../../img/selectCoinNail.png" class="nail"></image>
+  </view>
+  <view class="stakes">
+    <view class="singleCoins" bindtouchstart='touchStart' bindtouchend='touchEnd' data-idx="1" data-count="100">
+      <image src="../../img/{{judgingBigBtnfr}}" class="singleCoin"></image>
+    </view>
+    <view class="singleCoins" bindtouchstart='touchStart' bindtouchend='touchEnd' data-idx="2" data-count="200">
+      <image src="../../img/{{judgingBigBtns}}" class="singleCoin"></image>
+    </view>
+    <view class="singleCoins"  bindtouchstart='touchStart' bindtouchend='touchEnd' data-idx="3" data-count="300">
+      <image src="../../img/{{judgingBigBtnt}}" class="singleCoin"></image>
+    </view>
+    <view class="singleCoins"  bindtouchstart='touchStart' bindtouchend='touchEnd' data-idx="4" data-count="400">
+      <image src="../../img/{{judgingBigBtnf}}" class="singleCoin"></image>
+    </view>
+  </view>
+</view>
+<import src="../../utils/util.wxml"/>
+<template is="coinPopup" data="{{lackCoin: lackCoin,popTips:popTips,confirm:confirm}}"/>

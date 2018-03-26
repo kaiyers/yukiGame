@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "res.png": {
+            "frame": {
+                "h": 376,
+                "idx": 0,
+                "w": 271,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 376,
+                "w": 271
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "Warn.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/template/IOS/Warn/"
+    }
+}

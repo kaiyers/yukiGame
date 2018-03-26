@@ -1,0 +1,44 @@
+<!--pages/address/address.wxml-->
+<view class='main'>
+  <view class='addressInfo' wx:if="{{addrss.length}}">
+    <view class="{{item.isAvalible ? 'saddress':'saddress-no'}}" wx:for='{{addrss}}'>
+      <view class='addInfo'>
+        <view class="addName">{{item.name}}</view>
+        <view class="addPA">
+          <view class="addInfo">
+            <view class="addName">{{item.phone}}</view>
+            <navigator url="../../pages/alterAddress/alterAddress?adid={{item.addrid}}">
+              <image src='../../img/newicon/redact.png' class='listicon'></image>
+            </navigator>
+          </view>
+          <text class="addA">{{item.address}}</text>
+        </view>
+      </view>
+      <!-- ---------------------------------------------------------  -->
+      <view class='operation'>
+        <view class='flexs' bindtap='setDefault' data-index="{{index}}">
+          <image src='../../img/icon/my_collect_icon_empty@3x.png' class="addicon" wx:if="{{!item.isAvalible}}"></image>
+          <image src='../../img/icon/common_icon_chose@3x.png' class="addicon" wx:else></image>
+          <view class="{{item.isAvalible ? 'moren' : 'moren-no'}}">默认</view>
+        </view>
+        <view class='flexs del'  bindtap='delAddress' data-index="{{index}}">
+          <image src='../../img/newicon/delete.png' class="addicon1"></image>
+          <view class="text">删除</view>
+        </view>
+      </view> 
+    </view>
+  </view>
+  <view wx:else class='nopage'>
+    <image src='http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/noaddress.png' class='nocollectImg'></image>
+    <view class='noText'>你还没有收货地址哦~添加一个吧！</view>
+  </view>
+</view>
+<view class="diandi"></view>
+<view class='foot'>
+  <navigator url="../../pages/newlyAddress/newlyAddress">
+    <view class='tijiao'>
+      <image src='../../img/newicon/add2.png' class='addicon2'></image>
+      新增收货地址
+    </view>
+  </navigator>  
+</view>                  

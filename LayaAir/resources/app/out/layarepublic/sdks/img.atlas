@@ -1,0 +1,127 @@
+{
+    "frames": {
+        "arrow_normal.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 7,
+                "x": 606,
+                "y": 74
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 2
+            }
+        },
+        "arrow_selected.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 7,
+                "x": 614,
+                "y": 74
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 2
+            }
+        },
+        "btn_close_01.png": {
+            "frame": {
+                "h": 28,
+                "idx": 0,
+                "w": 30,
+                "x": 513,
+                "y": 74
+            },
+            "sourceSize": {
+                "h": 28,
+                "w": 30
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "btn_close_02.png": {
+            "frame": {
+                "h": 28,
+                "idx": 0,
+                "w": 30,
+                "x": 544,
+                "y": 74
+            },
+            "sourceSize": {
+                "h": 28,
+                "w": 30
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "btn_close_03.png": {
+            "frame": {
+                "h": 28,
+                "idx": 0,
+                "w": 30,
+                "x": 575,
+                "y": 74
+            },
+            "sourceSize": {
+                "h": 28,
+                "w": 30
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "defaultIcon.png": {
+            "frame": {
+                "h": 512,
+                "idx": 0,
+                "w": 512,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 512,
+                "w": 512
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "loading.png": {
+            "frame": {
+                "h": 73,
+                "idx": 0,
+                "w": 123,
+                "x": 513,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 180,
+                "w": 180
+            },
+            "spriteSourceSize": {
+                "x": 17,
+                "y": 17
+            }
+        }
+    },
+    "meta": {
+        "image": "img.png",
+        "prefix": "LayaAir/resources/app/out/layarepublic/sdks/img/"
+    }
+}

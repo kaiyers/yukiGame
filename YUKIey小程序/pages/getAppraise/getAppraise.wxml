@@ -1,0 +1,188 @@
+<!--index.wxml-->
+<wxs module="m1">
+  var getString = function(value,type){
+    var dataTime="";
+    var data = getDate(value);
+    var year   =  data.getFullYear();
+    var month  =  data.getMonth() + 1;
+    var day    =  data.getDate();
+    var hour   =  data.getHours();
+    var minute =  data.getMinutes();
+    var second =  data.getSeconds();
+    month  =  month>9?month:'0'+month;
+    day    =  day>9?day:'0'+day;
+    hour   =  hour>9?hour:'0'+hour;
+    minute =  minute>9?minute:'0'+minute;
+    second =  second>9?second:'0'+second;
+    if(type == "YMD"){
+      dataTime =  year + "年"+ month + "月" + day + "日";
+    }else if(type == "YMDHMS"){
+      dataTime = year + "年"+month + "月" + day + "日 " +hour+ ":"+minute+":" +second;
+    }else if(type == "HMS"){
+      dataTime = hour + ":" + minute + ":" + second;
+    }else if(type == "YM") {
+      dataTime = year + "年" + month + "月";
+    }else if(type == "Y-M") {
+      dataTime = year + "-"+month + "-" + day + " " +hour+ ":"+minute+":" +second;
+    }else if(type == "MM-SS") {
+      dataTime = minute+"分" +second+"秒";
+    }
+    return dataTime;
+  }
+  module.exports.getString = getString;
+</wxs>
+<view class="container">
+  <view class='guessLikeContain'>
+    <view class="swiper-tab clearfix"> 
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}} fl" data-current="0" data-haspic="0" data-level="0" bindtap="swichNav">全部 ({{allcount}})</view>  
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}} fl" data-current="1"  data-haspic="0" data-level="3" bindtap="swichNav">好评 ({{goodcount}})</view>  
+      <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}} fl" data-current="2" data-haspic="0"  data-level="2"  bindtap="swichNav">中评 ({{midcount}})</view>       
+      <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}} fl" data-current="3" data-haspic="0" data-level="1"  bindtap="swichNav">差评({{badcount}})</view>  
+      <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}} fl" data-current="4" data-haspic="2" data-level="0"  bindtap="swichNav">有图({{hascount}})</view> 
+    </view> 
+    <view class='appraiseNew'></view>
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+      <!-- 全部 -->  
+      <swiper-item >
+        <scroll-view  scroll-y="true" bindscrolltolower="pullUpLoad"  bindscroll="scroll"  style="height:{{winHeight - 31}}px">
+          <view class="orderList-null" wx:if="{{!tipsShow}}">
+            <view class="orderList-null-title">暂无评论</view>
+          </view>  
+          <view wx:for="{{proCopyright}}" wx:for-index="idxs" wx:for-item="itemName" style="margin-bottom:34rpx;" wx:if="{{tipsShow}}" >
+              <view class="comment_main">
+                <view class="comment_main_header clearfix">
+                  <image src="{{itemName.userAvatar}}" class="fl"></image>
+                  <span class="comment_main_name" class="fl">{{itemName.userName}}</span>
+                  <span class="comment_main_time" class="fr">{{m1.getString(itemName.createTime,'Y-M')}}</span>
+                </view>
+                <view class="comment_main_texts">
+                  <!-- <view class="comment_main_textsF">{{itemName.commentText}}</view> -->
+                  <view class="comment_main_textsF">{{itemName.commentText}}</view>
+                  <view class="clearfix comment_main_textsS" wx:if="{{itemName.picNum==0?false:true}}">
+                    <view  class="comment_main_textsSs fl" wx:for="{{itemName.picNum}}" wx:for-index="idx" wx:for-item="itemNames">
+                        <image src="{{itemName['skuPic'+(itemNames+1)]}}" data-src="{{itemName['skuPic'+(itemNames+1)]}}" bindtap="previewImage" data-index="{{idxs}}"></image>
+                    </view>
+                  </view>
+                  <view class="comment_main_textsST">
+                    <span>{{itemName.skuText}}</span>
+                  </view>
+                </view>
+              </view>
+          </view>
+        </scroll-view>
+      </swiper-item>  
+      <!-- 好评 -->  
+       <swiper-item >
+        <scroll-view  scroll-y="true" bindscrolltolower="pullUpLoad"  bindscroll="scroll"  style="height:{{winHeight - 31}}px">
+          <view class="orderList-null" wx:if="{{!tipsShow}}">
+            <view class="orderList-null-title">暂无评论</view>
+          </view>  
+          <view wx:for="{{proCopyright}}" wx:for-index="idxs" wx:for-item="itemName" style="margin-bottom:34rpx;" wx:if="{{tipsShow}}" >
+              <view class="comment_main">
+                <view class="comment_main_header clearfix">
+                  <image src="{{itemName.userAvatar}}" class="fl"></image>
+                  <span class="comment_main_name" class="fl">{{itemName.userName}}</span>
+                  <span class="comment_main_time" class="fr">{{m1.getString(itemName.createTime,'Y-M')}}</span>
+                </view>
+                <view class="comment_main_texts">
+                  <view class="comment_main_textsF">{{itemName.commentText}}</view>
+                  <view class="clearfix comment_main_textsS" wx:if="{{itemName.picNum==0?false:true}}">
+                    <view  class="comment_main_textsSs fl" wx:for="{{itemName.picNum}}" wx:for-index="idx" wx:for-item="itemNames">
+                        <image src="{{itemName['skuPic'+(itemNames+1)]}}" data-src="{{itemName['skuPic'+(itemNames+1)]}}" bindtap="previewImage" data-index="{{idxs}}"></image>
+                    </view>
+                  </view>
+                  <view class="comment_main_textsST">
+                    <span>{{itemName.skuText}}</span>
+                  </view>
+                </view>
+              </view>
+          </view>
+        </scroll-view>
+      </swiper-item>  
+      <!--中评-->  
+       <swiper-item >
+        <scroll-view  scroll-y="true" bindscrolltolower="pullUpLoad"  bindscroll="scroll"  style="height:{{winHeight - 31}}px">
+          <view class="orderList-null" wx:if="{{!tipsShow}}">
+            <view class="orderList-null-title">暂无评论</view>
+          </view>  
+          <view wx:for="{{proCopyright}}" wx:for-index="idxs" wx:for-item="itemName" style="margin-bottom:34rpx;" wx:if="{{tipsShow}}" >
+              <view class="comment_main">
+                <view class="comment_main_header clearfix">
+                  <image src="{{itemName.userAvatar}}" class="fl"></image>
+                  <span class="comment_main_name" class="fl">{{itemName.userName}}</span>
+                  <span class="comment_main_time" class="fr">{{m1.getString(itemName.createTime,'Y-M')}}</span>
+                </view>
+                <view class="comment_main_texts">
+                  <view class="comment_main_textsF">{{itemName.commentText}}</view>
+                  <view class="clearfix comment_main_textsS" wx:if="{{itemName.picNum==0?false:true}}">
+                    <view  class="comment_main_textsSs fl" wx:for="{{itemName.picNum}}" wx:for-index="idx" wx:for-item="itemNames">
+                        <image src="{{itemName['skuPic'+(itemNames+1)]}}" data-src="{{itemName['skuPic'+(itemNames+1)]}}" bindtap="previewImage" data-index="{{idxs}}"></image>
+                    </view>
+                  </view>
+                  <view class="comment_main_textsST">
+                    <span>{{itemName.skuText}}</span>
+                  </view>
+                </view>
+              </view>
+          </view>
+        </scroll-view>
+      </swiper-item> 
+      <!-- 差评 -->  
+       <swiper-item >
+        <scroll-view  scroll-y="true" bindscrolltolower="pullUpLoad"  bindscroll="scroll"  style="height:{{winHeight - 31}}px">
+          <view class="orderList-null" wx:if="{{!tipsShow}}">
+            <view class="orderList-null-title">暂无评论</view>
+          </view>  
+          <view wx:for="{{proCopyright}}" wx:for-index="idxs" wx:for-item="itemName" style="margin-bottom:34rpx;" wx:if="{{tipsShow}}" >
+              <view class="comment_main">
+                <view class="comment_main_header clearfix">
+                  <image src="{{itemName.userAvatar}}" class="fl"></image>
+                  <span class="comment_main_name" class="fl">{{itemName.userName}}</span>
+                  <span class="comment_main_time" class="fr">{{m1.getString(itemName.createTime,'Y-M')}}</span>
+                </view>
+                <view class="comment_main_texts">
+                  <view class="comment_main_textsF">{{itemName.commentText}}</view>
+                  <view class="clearfix comment_main_textsS" wx:if="{{itemName.picNum==0?false:true}}">
+                    <view  class="comment_main_textsSs fl" wx:for="{{itemName.picNum}}" wx:for-index="idx" wx:for-item="itemNames">
+                        <image src="{{itemName['skuPic'+(itemNames+1)]}}" data-src="{{itemName['skuPic'+(itemNames+1)]}}" bindtap="previewImage" data-index="{{idxs}}"></image>
+                    </view>
+                  </view>
+                  <view class="comment_main_textsST">
+                    <span>{{itemName.skuText}}</span>
+                  </view>
+                </view>
+              </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <!-- 有图 --> 
+       <swiper-item >
+        <scroll-view  scroll-y="true" bindscrolltolower="pullUpLoad"  bindscroll="scroll"  style="height:{{winHeight - 31}}px">
+          <view class="orderList-null" wx:if="{{!tipsShow}}">
+            <view class="orderList-null-title">暂无评论</view>
+          </view>  
+          <view wx:for="{{proCopyright}}"  wx:for-index="idxs" wx:for-item="itemName" style="margin-bottom:34rpx;" wx:if="{{tipsShow}}" >
+              <view class="comment_main">
+                <view class="comment_main_header clearfix">
+                  <image src="{{itemName.userAvatar}}" class="fl"></image>
+                  <span class="comment_main_name" class="fl">{{itemName.userName}}</span>
+                  <span class="comment_main_time" class="fr">{{m1.getString(itemName.createTime,'Y-M')}}</span>
+                </view>
+                <view class="comment_main_texts">
+                  <view class="comment_main_textsF">{{itemName.commentText}}</view>
+                  <view class="clearfix comment_main_textsS" wx:if="{{itemName.picNum==0?false:true}}">
+                    <view  class="comment_main_textsSs fl" wx:for="{{itemName.picNum}}" wx:for-index="idx" wx:for-item="itemNames">
+                        <image src="{{itemName['skuPic'+(itemNames+1)]}}" data-src="{{itemName['skuPic'+(itemNames+1)]}}" bindtap="previewImage" data-index="{{idxs}}"></image>
+                    </view>
+                  </view>
+                  <view class="comment_main_textsST">
+                    <span>{{itemName.skuText}}</span>
+                  </view>
+                </view>
+              </view>
+            </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>  
+  </view>
+</view>

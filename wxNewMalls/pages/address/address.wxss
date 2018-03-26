@@ -1,0 +1,144 @@
+/* pages/address/address.wxss */
+page {  
+  display: block;  
+  background-color: #fafafa;
+}  
+.nopage{
+  margin: 410rpx auto;
+  text-align: center;
+}
+.nocollectImg{
+  width:210rpx;
+  height:180rpx;
+  margin-bottom: 20rpx
+}
+.noText{
+  font-size: 26rpx;
+  color: #999999;
+}
+.main{
+  padding:30rpx;
+}
+.saddress{
+  background: #fff;
+  margin-bottom: 30rpx;
+  width: 630rpx;
+  border-top: 17rpx solid #ffc800;
+  border-radius: 15rpx;
+  padding: 30rpx 30rpx 0 30rpx;
+}
+.saddress-no{
+  background: #fff;
+  margin-bottom: 30rpx;
+  width: 630rpx;
+  border-top: 17rpx solid #fff0be;
+  border-radius: 15rpx;
+  padding: 30rpx 30rpx 0 30rpx;
+}
+.addInfo{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start
+}
+.addName{
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #222222
+}
+.addPA{
+  width: 510rpx
+}
+.addA{
+  margin: 20rpx 0;
+  font-size: 25rpx;
+  color: #999999;
+  line-height: 35rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /*行数*/
+  -webkit-box-orient: vertical;
+}
+.listicon{
+  display: block;
+  width:32rpx; 
+  height: 32rpx;
+}
+
+.flexs{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.moren{
+  width:80rpx;
+  height:40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 40rpx;
+  background: #ffc800;
+  color: #fff;
+}
+.moren-no{
+  width:76rpx;
+  height:36rpx;
+  text-align: center;
+  line-height: 36rpx;
+  border-radius: 40rpx;
+  border: 2rpx solid #cccccc;
+  color: #cccccc;
+}
+.operation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16rpx 0;
+  border-top: 2rpx solid #e0e0e0;
+  font-size: 25rpx
+}
+.addicon{
+  width:32rpx; 
+  height: 32rpx;
+  margin-right: 32rpx
+}
+.addicon1{
+  width:32rpx; 
+  height: 32rpx;
+  margin-right: 17rpx
+}
+.addicon2{
+  width:32rpx; 
+  height: 35rpx;
+}
+
+.foot{
+  position: fixed;
+  background: #fafafa;
+  bottom:0;
+  width:100%;
+  height:140rpx;
+}
+.tijiao{
+  width: 690rpx;
+  height:80rpx;
+  border: 2rpx solid #ff9701;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  border-radius: 80rpx;
+  position: absolute;
+  bottom: 32rpx;
+  left:30rpx;
+  color: #ffc800
+}
+.diandi{
+  height:140rpx;
+  background: #fafafa;  
+}
+.play{
+  background: #4595e5;
+  color:#fff;
+  width:90%;
+  line-height: 2;
+  margin-top: 15rpx
+}

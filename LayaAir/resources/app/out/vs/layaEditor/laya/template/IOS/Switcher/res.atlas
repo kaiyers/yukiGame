@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "checkbox_switch.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 104,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 144,
+                "w": 108
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 4
+            }
+        }
+    },
+    "meta": {
+        "image": "res.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/template/IOS/Switcher/res/"
+    }
+}

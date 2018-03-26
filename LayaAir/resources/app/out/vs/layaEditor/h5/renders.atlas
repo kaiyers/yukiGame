@@ -1,0 +1,59 @@
+{
+    "frames": {
+        "particle.png": {
+            "frame": {
+                "h": 54,
+                "idx": 0,
+                "w": 113,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 54,
+                "w": 113
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "particle3d.png": {
+            "frame": {
+                "h": 54,
+                "idx": 0,
+                "w": 113,
+                "x": 0,
+                "y": 55
+            },
+            "sourceSize": {
+                "h": 54,
+                "w": 113
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "particlepoly.png": {
+            "frame": {
+                "h": 54,
+                "idx": 0,
+                "w": 112,
+                "x": 0,
+                "y": 110
+            },
+            "sourceSize": {
+                "h": 54,
+                "w": 112
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "renders.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/renders/"
+    }
+}

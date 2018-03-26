@@ -1,0 +1,9 @@
+<!--pages/feedback/feedback.wxml-->
+<view class='mian'>
+  <textarea bindinput="leaveMessage" maxlength='500' placeholder="请填写你对Yuki的宝贵意见，我们将不断改进，感谢支持！" class="liuyan"/>
+  <input type='text' class='inp' placeholder='请留下你的手机号或微信号，我们将尽快与你联系。' bindinput="inputChange"></input>
+  <view class='jishu'>{{zishu}}/500</view>
+</view>
+
+
+<view bindtap='onConfirm' class='tijiao'>提交</view>

@@ -1,0 +1,28 @@
+<wxs module="m1">
+  var dealString = function(s){
+    var asting=(s/100).toFixed(2)
+    return asting
+  }
+  module.exports.dealString = dealString;
+</wxs>
+<view class="container">
+  <scroll-view class='guessLikeContain clearfix'  scroll-y="true" bindscrolltolower="pullUpLoad" bindscroll="scroll"  style="height: {{winHeight}}px" >
+    <view class="headerPic">
+      <image src="http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/humanqi.jpg"></image>
+    </view>
+    <view class="Pics">
+      <view class="newGoodsContainsGood fl  {{idx%2==1?'noGoodMargin':''}}" wx:for="{{newGoodsList}}" wx:for-index="idx" wx:for-item="itemName">
+        <navigator url="../details/details?gsid={{itemName.goodId}}&idx={{idx+1}}">
+          <image src="{{itemName.goodPicUrl}}"  class="danyuan_img"></image>
+          <view class="danyuan_tittle">{{itemName.goodName}}</view>
+          <view class="danyuan_secondName">{{itemName.goodSecondName}}　</view>
+          <view class="danyuan_prie"> 
+              <text class="newpric">￥{{m1.dealString(itemName.goodMinPrice)}}</text>
+          </view> 
+        </navigator>
+        <image src="../../img/newicon/collect_no.png" class='danyuan_icon' wx:if="{{itemName.isCollected=='0'}}" data-goodId="{{itemName.goodId}}" data-isCollected="0" data-idx="{{idx}}" data-name="listnews" bindtap='addLike'></image>
+        <image src="../../img/newicon/collect_yes.png" class='danyuan_icon' wx:if="{{itemName.isCollected=='1'}}"  data-goodId="{{itemName.goodId}}" data-isCollected="1" data-idx="{{idx}}" data-name="listnews" bindtap='addLike'></image>
+      </view>
+    </view>
+  </scroll-view>
+</view>

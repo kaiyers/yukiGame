@@ -1,0 +1,136 @@
+ .contain{
+  width:100%;
+  height:1222rpx;
+  background-image:url('http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/selectBg.jpg');
+  background-repeat: round;
+  overflow: hidden;
+} 
+.contain{
+  overflow: hidden;
+}
+.circleContain{
+  position: relative;
+  width:140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  margin: 45rpx auto 20rpx;
+}
+.face{
+  position: absolute;
+  left:0;
+  top:0;
+  width:140rpx;
+  height:140rpx;
+  border-radius:50%;  
+  background:#fff;
+  transform:scale(0.85);
+}
+.logo{
+  position: absolute;
+  left:0;
+  top:0;
+  width:140rpx;
+  height:140rpx;
+  border-radius:50%; 
+  transform:scale(0.77);
+}
+.smove{
+  position: absolute;
+  left:-1rpx;
+  top:-1rpx;
+  width:140rpx;
+  height:140rpx;
+  border:1rpx solid #67619d;
+   border-radius:50%; 
+  transform-origin:50% 50%;
+  animation:circleRoate 2s infinite;
+  animation-timing-function:linear; 
+}
+.smove span {
+  position:absolute;
+  left:50%;
+  top:-3rpx;
+  margin-left:-3rpx;
+  width:8rpx;
+  height:8rpx;
+  background:#dddce9;
+  border-radius:50%;
+}
+@keyframes circleRoate{  
+                from{transform: rotate(0deg) }  
+                to{transform: rotate(360deg);}  
+            }   
+.userName {
+  height:33rpx;
+  font-size:33rpx;
+  color:#fff;
+  font-weight:900;
+  line-height:33rpx;
+  text-align: center
+}
+.accountCoins{
+  position: relative;
+  width:316rpx;
+  height:78rpx;
+  margin:45rpx auto 35rpx;
+}
+.accountCoinsBg,.accountBox{
+  position: absolute;
+  width:316rpx;
+  height:78rpx;
+  top:0;
+  left:0;
+}
+image.accountCoins_Image{
+  position:absolute;
+  top:50%;
+  left:27rpx;
+  margin-top:-36.5rpx;
+  width:54rpx;
+  height:73rpx;
+}
+.accountCoins_quantity{
+  margin-left:90rpx;
+  width:175rpx;
+  font-size:35rpx;
+  color:#fff;
+  line-height:78rpx;
+  font-weight:900;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  display: inline-block
+}
+.inviteTitle{
+  position:relative;
+  width:100%;
+  height: 66rpx;
+  text-align: center;
+  line-height: 66rpx;
+  font-size:25rpx;
+  color:#847bd3;
+  font-weight: 900;
+}
+.nail{
+  position: absolute;
+  width:330rpx;
+  height: 11rpx;
+  top:50%;
+  left:50%;
+  margin-left:-165rpx;
+  margin-top:-5.5rpx;
+}
+.singleCoins{
+  position: relative;
+  width:624rpx;
+  height: 156rpx;
+  margin:17rpx auto 0;
+}
+.singleCoin{
+  position: absolute;
+  width:624rpx;
+  height: 156rpx;
+  left:0;
+  top:0;
+}
+

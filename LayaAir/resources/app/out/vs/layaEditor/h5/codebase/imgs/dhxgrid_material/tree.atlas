@@ -1,0 +1,348 @@
+{
+    "frames": {
+        "blank.gif": {
+            "frame": {
+                "h": 18,
+                "idx": 0,
+                "w": 18,
+                "x": 27,
+                "y": 24
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "folder.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 14,
+                "x": 41,
+                "y": 43
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 3
+            }
+        },
+        "leaf.gif": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 13,
+                "x": 27,
+                "y": 43
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 1
+            }
+        },
+        "line.gif": {
+            "frame": {
+                "h": 24,
+                "idx": 0,
+                "w": 1,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 24,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 8,
+                "y": 0
+            }
+        },
+        "line1.gif": {
+            "frame": {
+                "h": 24,
+                "idx": 0,
+                "w": 1,
+                "x": 0,
+                "y": 25
+            },
+            "sourceSize": {
+                "h": 24,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 8,
+                "y": 0
+            }
+        },
+        "line2.gif": {
+            "frame": {
+                "h": 13,
+                "idx": 0,
+                "w": 10,
+                "x": 0,
+                "y": 50
+            },
+            "sourceSize": {
+                "h": 24,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 8,
+                "y": 0
+            }
+        },
+        "line3.gif": {
+            "frame": {
+                "h": 24,
+                "idx": 0,
+                "w": 10,
+                "x": 2,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 24,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 8,
+                "y": 0
+            }
+        },
+        "line4.gif": {
+            "frame": {
+                "h": 13,
+                "idx": 0,
+                "w": 10,
+                "x": 2,
+                "y": 25
+            },
+            "sourceSize": {
+                "h": 24,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 8,
+                "y": 11
+            }
+        },
+        "minus.gif": {
+            "frame": {
+                "h": 7,
+                "idx": 0,
+                "w": 12,
+                "x": 34,
+                "y": 8
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 6
+            }
+        },
+        "minus1.gif": {
+            "frame": {
+                "h": 7,
+                "idx": 0,
+                "w": 12,
+                "x": 34,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 6
+            }
+        },
+        "minus2.gif": {
+            "frame": {
+                "h": 7,
+                "idx": 0,
+                "w": 12,
+                "x": 2,
+                "y": 39
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 6
+            }
+        },
+        "minus3.gif": {
+            "frame": {
+                "h": 7,
+                "idx": 0,
+                "w": 12,
+                "x": 21,
+                "y": 16
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 6
+            }
+        },
+        "minus4.gif": {
+            "frame": {
+                "h": 7,
+                "idx": 0,
+                "w": 12,
+                "x": 21,
+                "y": 8
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 6
+            }
+        },
+        "minus5.gif": {
+            "frame": {
+                "h": 7,
+                "idx": 0,
+                "w": 12,
+                "x": 21,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 6
+            }
+        },
+        "plus.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 7,
+                "x": 19,
+                "y": 52
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 6,
+                "y": 3
+            }
+        },
+        "plus1.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 7,
+                "x": 19,
+                "y": 39
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 6,
+                "y": 3
+            }
+        },
+        "plus2.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 7,
+                "x": 13,
+                "y": 26
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 6,
+                "y": 3
+            }
+        },
+        "plus3.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 7,
+                "x": 13,
+                "y": 13
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 6,
+                "y": 3
+            }
+        },
+        "plus4.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 7,
+                "x": 13,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 6,
+                "y": 3
+            }
+        },
+        "plus5.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 7,
+                "x": 11,
+                "y": 47
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 6,
+                "y": 3
+            }
+        }
+    },
+    "meta": {
+        "image": "tree.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxgrid_material/tree/"
+    }
+}

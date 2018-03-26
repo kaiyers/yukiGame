@@ -1,0 +1,114 @@
+<wxs module="m1">
+  var dealString = function(s){
+    var asting=(s/100).toFixed(2)
+    return asting
+  }
+  module.exports.dealString = dealString;
+</wxs>
+<view class="container">
+  <view class="limitTimeTitle">
+    <image src='http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/limitTime.jpg'></image>
+  </view>
+  <view class='guessLikeContain'>
+    <view class="swiper-tab ">  
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}} " data-current="0" bindtap="swichNav">
+         <view class="swichNavF" data-current="0" >昨日</view>
+        <view  class="swichNavS" data-current="0" >已结束</view> 
+      </view>  
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}} " data-current="1" bindtap="swichNav">
+         <view  class="swichNavF" data-current="1" >今日</view>
+        <view class="swichNavS" data-current="1" >抢购中</view> 
+      </view>  
+      <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">
+         <view  class="swichNavF" data-current="2" >明日</view>
+        <view class="swichNavS" data-current="2">即将开始</view> 
+      </view> 
+    </view>
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange">
+      <!-- 昨日 -->  
+      <swiper-item>  
+        <view>
+          <view style="border-top:16rpx solid #eee;background:#fafafa;padding:0 30rpx 0;overflow;hidden;" wx:if="{{yesterdayList}}">
+            <navigator url="../details/details?gsid={{itemName.goodId}}" class="clearfix limitGoods   {{yesterdayList.length>1?'':'limitGoodN'}}" wx:for="{{yesterdayList}}" wx:for-index="idx" wx:for-item="itemName" wx:if="{{yesterdayList}}">
+              <view class="fl limitGoodsImage" style="background:url({{itemName.goodPicUrl}}); background-repeat:round;">
+                <view >已抢光</view>
+              </view>
+              <view class="fl limitGoodsMesPr">
+                <view class="saleListGoodsName">{{itemName.goodName}}</view>
+                <view class="saleListGoodsNameS" wx:if="{{itemName.goodSecondName}}">{{itemName.goodSecondName}}</view>
+                <view class="limPrice">
+                  <view>限时价</view>
+                  <view  class="liPrice">￥{{m1.dealString(itemName.newPrice)}}</view>
+                  <view class="poPrice">原价</view>
+                  <view class="purchasePriceTh">￥{{m1.dealString(itemName.oldPrice)}}</view>
+                </view>
+                <view class="limitGoodsMes limitGoodsMes_ye">
+                  <image src='../../img/icon/clock.png' class="limitGoodsMesIcon"></image>
+                  <view class="limitGoodsMesR">已结束</view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+        </view>  
+      </swiper-item>  
+      <!-- 今日 -->  
+      <swiper-item> 
+        <view class="clearfix Htitle">
+          <view class="overTimeTitle">距离本场结束</view>
+          <view class="overTime">{{lh}}</view>
+          <view class="colon">:</view>
+          <view class="overTime">{{lm}}</view>
+          <view class=" colon">:</view>
+          <view class="overTime">{{ls}}</view>
+        </view>
+        <view  style='border-top:16rpx solid #eee;background:#fafafa;padding:0 30rpx 0;overflow;hidden;'>
+          <navigator url="../details/details?gsid={{itemName.goodId}}" class="clearfix limitGoods {{todayList.length>1?'':'limitGoodN'}}" wx:for="{{todayList}}" wx:for-index="idx" wx:for-item="itemName">
+            <view class="fl limitGoodsImage" style="background:url({{itemName.goodPicUrl}}); background-repeat:round;">
+              <view wx:if="{{itemName.stockCount==0}}">已抢光</view>
+            </view> 
+            <view class="fl limitGoodsMesPr">
+              <view class="saleListGoodsName">{{itemName.goodName}}</view>
+              <view class="saleListGoodsNameS" wx:if="{{itemName.goodSecondName}}">{{itemName.goodSecondName}}</view>
+              <view class="limPrice">
+                <view>限时价</view>
+                <view  class="liPrice">￥{{m1.dealString(itemName.newPrice)}}</view>
+                <view class="poPrice">原价</view>
+                <view class="purchasePriceTh">￥{{m1.dealString(itemName.oldPrice)}}</view>
+              </view>
+              <view class="limitGoodsMes">
+                <image src='../../img/icon/clock.png' class="limitGoodsMesIcon"></image>
+                <view class="limitGoodsMesR">{{itemName.stockCount==0?"已抢完":"马上抢"}}</view>
+              </view>
+            </view>
+          </navigator>
+        </view>  
+      </swiper-item>  
+      <!-- 明日 -->  
+      <swiper-item>  
+        <view>
+          <view style="border-top:16rpx solid #eee;background:#fafafa;padding:0 30rpx 0;overflow;hidden;"  wx:if="{{tomorrowList}}">
+            <navigator url="../details/details?gsid={{itemName.goodId}}" class="clearfix limitGoods  {{tomorrowList.length>1?'':'limitGoodN'}}" wx:for="{{tomorrowList}}" wx:for-index="idx" wx:for-item="itemName" wx:if="{{tomorrowList}}" >
+              <view class="fl limitGoodsImage" style="background:url({{itemName.goodPicUrl}}); background-repeat:round;">
+                <view wx:if="{{itemName.stockCount==0}}">已抢光</view>
+              </view> 
+              <view class="fl limitGoodsMesPr">
+                <view class="saleListGoodsName">{{itemName.goodName}}</view>
+                <view class="saleListGoodsNameS" wx:if="{{itemName.goodSecondName}}">{{itemName.goodSecondName}}</view>
+                <view class="limPrice">
+                  <view>限时价</view>
+                  <view  class="liPrice">￥{{m1.dealString(itemName.newPrice)}}</view>
+                  <view class="poPrice">原价</view>
+                  <view class="purchasePriceTh">￥{{m1.dealString(itemName.oldPrice)}}</view>
+                </view>
+                <view class="limitGoodsMes limitGoodsMes_to">
+                  <image src='../../img/icon/clock.png' class="limitGoodsMesIcon"></image>
+                  <view class="limitGoodsMesR">即将开始</view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>   
+  </view>
+</view>

@@ -1,0 +1,96 @@
+/* pages/collect/collect.wxss */
+page{
+  background: #fafafa;
+}
+.nopage{
+  margin: 425rpx auto;
+  text-align: center;
+}
+.nocollectImg{
+  width:204rpx;
+  height:134rpx;
+  margin-bottom: 50rpx
+}
+.noText{
+  font-size: 26rpx;
+  color: #999999;
+}
+.list-box{
+  padding:30rpx;
+}
+.newest-list{
+    display: block;
+    width: 630rpx;
+    padding: 30rpx;
+    height: 210rpx;
+    margin-bottom:30rpx;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15rpx;
+}
+.newest-list-levea{
+  transform:scaleY(0.1);
+  opacity: 0;
+  display: block;
+  width: 630rpx;
+  padding: 0rpx;
+  height: 0rpx;
+  margin-bottom:0rpx;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15rpx;
+  transition: .5s all ease;
+}
+ 
+.newest-list .goodsImg{
+    width: 215rpx;
+    height: 210rpx;
+    margin-right: 38rpx;
+    float: left
+}
+.newest-list .newest{
+  float: left;
+  position: relative;
+  height:210rpx;
+}
+.newest-list .newest-text{
+    font-size: 26rpx;
+    line-height: 45rpx;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    width:358rpx;
+    margin-top: 20rpx;
+}
+.newest-list .newest-textSc{
+    font-size: 23rpx;
+    line-height: 45rpx;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    width:358rpx;
+    color: #999999;
+}
+.newest-list .newest-price{
+  position: absolute;
+  bottom:0;
+  left:0;
+  color:#222222;
+  font-size: 20rpx;
+  height:16rpx;
+  border-bottom: 16rpx solid #fff0be;
+  line-height: 32rpx;
+  display: inline-block;
+}
+.danyuan_icon{
+  width:42rpx;
+  height:42rpx;
+  position: absolute;
+  bottom:10rpx;
+  right:0;
+  z-index: 100
+}

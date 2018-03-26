@@ -1,0 +1,67 @@
+/* pages/classify/classify.wxss */
+/* .classify_list{float:left;width:20%;padding:.5rem;background: red}
+.classify_content{float:right;width:68%;background: yellow;padding:.5rem} */
+
+/*左侧栏主盒子*/  
+.nav_left{
+  padding-top:8px;
+   /*只设右边线*/  
+  border-right: 1px solid #dedede;   
+  /*设置行内块级元素（没使用定位）*/  
+  display: inline-block;  
+  width: 24%;   
+  /*主盒子设置背景色为灰色*/  
+  background: #fff;  
+  text-align: center;  
+}  
+/*左侧栏list的item*/
+.nav_left{padding-top:8px;}  
+.nav_left .nav_left_items{  
+  /*每个高30px*/  
+  height: 40px;  
+  /*垂直居中*/  
+  line-height: 40px;  
+  /*再设上下padding增加高度，总高42px*/  
+  padding: 6px 0;   
+  /*文字14px*/  
+  font-size: 14px;  
+}  
+/*左侧栏list的item被选中时*/  
+.nav_left .nav_left_items.active{  
+  /*字体变成蓝色*/ 
+  color:#4595e5; 
+}  
+/*右侧栏主盒子*/  
+.nav_right{  
+  /*右侧盒子使用了浮动*/  
+  float:right;
+  /*宽度75%，高度占满，并使用百分比布局*/  
+  width: 75%;   
+  padding: 10px;  
+  box-sizing: border-box;  
+  background: #fff;  
+}  
+/*右侧栏list的item*/  
+.nav_right .nav_right_items{  
+  /*浮动向左*/  
+  float: left;  
+  /*每个item设置宽度是33.33%*/  
+  width: 33.33%;  
+   height: 110px;   
+  text-align: center;  
+}  
+.nav_right .nav_right_items image{  
+  /*被图片设置宽高*/  
+  width: 50px;  
+  height: 60px;  
+}  
+.nav_right .nav_right_items text{  
+  /*给text设成块级元素*/  
+  display: block;  
+  margin-top: 5px;  
+  font-size: 12px;  
+  /*设置文字溢出部分为...*/  
+  overflow: hidden;  
+  white-space: nowrap;  
+  text-overflow: ellipsis;  
+}  

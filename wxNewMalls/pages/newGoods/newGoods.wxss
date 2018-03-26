@@ -1,0 +1,41 @@
+Page {
+  background: #fafafa;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.container{
+  overflow: hidden;
+}
+.guessLikeContain{
+  position: relative;
+  background: none;
+  overflow: hidden;
+}
+swiper{
+  position: absolute;
+  top:0;
+  left:0;
+  width:750rpx;
+  height: 420rpx;
+  /* border-top:2rpx solid #eee; */
+  border-bottom:16rpx solid #eee;
+  overflow:hidden;
+}
+.Pics{
+  margin-top:436rpx;
+  padding-top:32rpx;
+  padding-left:30rpx;
+  padding-right: 30rpx;
+}
+swiper image{
+  width:750rpx;
+  height: 420rpx;
+}
+.newGoodsContainer {
+  width:720rpx;
+}
+.noGoodMargin.newGoodsContainsGood{
+  margin-right: 0;
+}

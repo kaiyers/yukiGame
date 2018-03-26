@@ -1,0 +1,35 @@
+<view class="contain">
+  <view class="circleContain">
+    <view class="face"></view>
+    <image src="{{vlogo}}" class="logo"></image>
+    <view class="smove">
+      <span></span>
+    </view>
+  </view>
+  <view class="userName">{{playerName}}</view>
+  <view class="accountCoins clearfix">
+    <view class="fl already">已投入</view>
+    <view class="accountBox fr">
+      <image src="../../img/smallGold.png" class="accountCoins_Image"></image>
+      <span class="accountCoins_quantity">{{jetton}}</span>
+    </view>
+  </view> 
+  <view class="inviteTitle">
+      请选场次
+    <image src="../../img/selectCoinNail.png" class="nail"></image>
+  </view>
+  <view class="stakes">
+    <view class="singleCoins" bindtouchstart='touchStart' bindtouchend='touchEnd' data-idx="1" data-count="2">
+      <image src="../../img/{{peoplefr}}" class="singleCoin"></image>
+    </view>
+    <view class="singleCoins" bindtouchstart='touchStart' bindtouchend='touchEnd' data-idx="2" data-count="4">
+      <image src="../../img/{{peoples}}" class="singleCoin"></image>
+    </view>
+    <view class="singleCoins"  bindtouchstart='touchStart' bindtouchend='touchEnd' data-idx="3" data-count="6">
+      <image src="../../img/{{peoplet}}" class="singleCoin"></image>
+    </view>
+    <view class="singleCoins"  bindtouchstart='touchStart' bindtouchend='touchEnd' data-idx="4" data-count="8">
+      <image src="../../img/{{peoplef}}" class="singleCoin"></image>
+    </view>
+  </view>
+</view>

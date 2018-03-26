@@ -1,0 +1,8 @@
+<!--pages/bindingAccount/bindingAccount.wxml-->
+<view class="main">
+  <view class="explain">一键绑定Yuki账号，实现数据同步</view>
+  <input class="input" placeholder="Yuki账号"  type='text' bindchange="getAccount"></input>
+  <view class="line"></view>
+  <input bindchange="getPassword" class="input" placeholder="密码"></input>
+  <button bindtap="binding" class="primary"> 绑定 </button>
+</view> 

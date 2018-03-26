@@ -1,0 +1,11 @@
+/* pages/setting/setting.wxss */
+page{
+  background: #eeeeee
+}
+.weui-cells{
+  font-size: 25rpx;
+  background: #fff
+}
+.weui-cell {
+  padding:16px 0 16px 15px;
+}

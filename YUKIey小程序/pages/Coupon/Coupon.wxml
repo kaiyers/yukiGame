@@ -1,0 +1,92 @@
+<view class="container">
+  <view class='guessLikeContain'>
+    <view class="swiper-tab ">  
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}} " data-current="0" bindtap="swichNav">未使用</view>  
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}} " data-current="1" bindtap="swichNav">已使用</view>  
+      <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已过期</view>  
+</view>  
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+    <!-- 未使用 -->  
+        <swiper-item>  
+          <view>
+            <view class="headerSeach">
+                <view class="headerSeachLeft" bindtap="toSerch">
+                  <image src="../../img/icon/QRcode.png" class="qrCode" bindtap='qrCode'></image>
+                  <view class="section">
+                    <input type='text'  class="headerSeachLeftText"  bindchange="text" value="{{searchinput}}"/>
+                  </view>
+                </view>
+              <view class='headerSeachRight' bindtap="seachClick">兑换</view>
+            </view>
+            <view class="coupenStyle"  wx:for="{{usefulCoupon}}" wx:key="idx" wx:for-item="itemName"  wx:if="{{!tipsShowaF}}">
+              <view>
+                <view class="top topF clearfix" src="../../img/icon/backs.jpg">
+                  <view class="jiage fl"><span class="rmb">¥</span><span class="rmbNum">{{itemName.couponMoney}}</span></view>
+                  <view class="miaoshu fl">
+                    <view class="micheng">{{itemName.couponName}}(满{{itemName.couponLimitMoney}}元可用)</view>
+                    <view class="youxiaoqi">{{itemName.startDate}}-{{itemName.validate}}</view>
+                  </view>
+                </view>
+              </view>
+              <view class="bont bontF">
+                <view class="noactive {{!clickIcnStateF[index]?'shuoming' : ''}}">适用范围：{{itemName.couponDetail}}</view>
+                <view class="clickIcn" bindtap="clickIcnF" data-id="{{itemName.id}}">{{clickIcnStateF[index]?'︿':'﹀'}}</view>
+              </view>
+            </view>
+            <view  wx:if="{{tipsShowaF}}" class="tipsShowa">
+              <image src="../../img/icon/icon_order@3x.png" class="orderList-null-icon"></image>
+              <view class="orderListNullTitle">您没有可使用的优惠券</view>
+            </view>
+          </view>  
+        </swiper-item>  
+        <!-- 已经使用 -->  
+        <swiper-item>  
+          <view>
+            <view class="coupenStyle"  wx:for="{{usedCoupon}}" wx:key="idx" wx:for-item="itemName"  wx:if="{{!tipsShowaS}}">
+              <view>
+                <view class="top clearfix" src="../../img/icon/backs.jpg">
+                  <view class="jiage fl"><span class="rmb">¥</span><span class="rmbNum">{{itemName.couponMoney}}</span></view>
+                  <view class="miaoshu fl">
+                    <view class="micheng">{{itemName.couponName}}(满{{itemName.couponLimitMoney}}元可用)</view>
+                    <view class="youxiaoqi">{{itemName.startDate}}-{{itemName.validate}}</view>
+                  </view>
+                </view>
+              </view>
+              <view class="bont">
+                <view class="noactive {{!clickIcnStateS[index]?'shuoming' : ''}}">适用范围：{{itemName.couponDetail}}</view>
+                <view class="clickIcn" bindtap="clickIcnS" data-id="{{itemName.id}}">{{clickIcnStateS[index]?'︿':'﹀'}}</view>
+              </view>
+            </view>
+            <view  wx:if="{{tipsShowaS}}" class="tipsShowa">
+              <image src="../../img/icon/icon_order@3x.png" class="orderList-null-icon"></image>
+              <view class="orderListNullTitle">您还没有使用过优惠券</view>
+            </view>
+          </view>  
+        </swiper-item>  
+        <!-- 已经过期 -->  
+        <swiper-item>  
+          <view>
+            <view class="coupenStyle"  wx:for="{{validateCoupon}}" wx:key="idx" wx:for-item="itemName"  wx:if="{{!tipsShowaT}}">
+              <view>
+                <view class="top clearfix" src="../../img/icon/backs.jpg">
+                  <view class="jiage fl"><span class="rmb">¥</span><span class="rmbNum">{{itemName.couponMoney}}</span></view>
+                  <view class="miaoshu fl">
+                    <view class="micheng">{{itemName.couponName}}(满{{itemName.couponLimitMoney}}元可用)</view>
+                    <view class="youxiaoqi">{{itemName.startDate}}-{{itemName.validate}}</view>
+                  </view>
+                </view>
+              </view>
+              <view class="bont">
+                <view class="noactive {{!clickIcnStateT[index]?'shuoming' : ''}}">适用范围：{{itemName.couponDetail}}</view>
+                <view class="clickIcn" bindtap="clickIcnT" data-id="{{itemName.id}}">{{clickIcnStateT[index]?'︿':'﹀'}}</view>
+              </view>
+            </view>
+            <view  wx:if="{{tipsShowaT}}" class="tipsShowa">
+              <image src="../../img/icon/icon_order@3x.png" class="orderList-null-icon"></image>
+              <view class="orderListNullTitle">您目前没有已经过期的优惠券</view>
+            </view>
+          </view>  
+        </swiper-item>  
+    </swiper>  
+  </view>
+</view>

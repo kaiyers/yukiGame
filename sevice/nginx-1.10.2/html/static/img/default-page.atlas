@@ -1,0 +1,178 @@
+{
+    "frames": {
+        "address@2x.png": {
+            "frame": {
+                "h": 259,
+                "idx": 0,
+                "w": 243,
+                "x": 366,
+                "y": 741
+            },
+            "sourceSize": {
+                "h": 300,
+                "w": 300
+            },
+            "spriteSourceSize": {
+                "x": 29,
+                "y": 20
+            }
+        },
+        "address@3x.png": {
+            "frame": {
+                "h": 389,
+                "idx": 0,
+                "w": 365,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 450,
+                "w": 451
+            },
+            "spriteSourceSize": {
+                "x": 44,
+                "y": 30
+            }
+        },
+        "cart@2x.png": {
+            "frame": {
+                "h": 259,
+                "idx": 0,
+                "w": 243,
+                "x": 610,
+                "y": 741
+            },
+            "sourceSize": {
+                "h": 300,
+                "w": 300
+            },
+            "spriteSourceSize": {
+                "x": 29,
+                "y": 20
+            }
+        },
+        "cart@3x.png": {
+            "frame": {
+                "h": 389,
+                "idx": 0,
+                "w": 365,
+                "x": 0,
+                "y": 390
+            },
+            "sourceSize": {
+                "h": 450,
+                "w": 451
+            },
+            "spriteSourceSize": {
+                "x": 44,
+                "y": 30
+            }
+        },
+        "common@2x.png": {
+            "frame": {
+                "h": 259,
+                "idx": 0,
+                "w": 243,
+                "x": 732,
+                "y": 390
+            },
+            "sourceSize": {
+                "h": 300,
+                "w": 300
+            },
+            "spriteSourceSize": {
+                "x": 29,
+                "y": 20
+            }
+        },
+        "common@3x.png": {
+            "frame": {
+                "h": 389,
+                "idx": 0,
+                "w": 365,
+                "x": 366,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 450,
+                "w": 451
+            },
+            "spriteSourceSize": {
+                "x": 44,
+                "y": 30
+            }
+        },
+        "order@2x.png": {
+            "frame": {
+                "h": 259,
+                "idx": 0,
+                "w": 243,
+                "x": 854,
+                "y": 650
+            },
+            "sourceSize": {
+                "h": 300,
+                "w": 300
+            },
+            "spriteSourceSize": {
+                "x": 29,
+                "y": 20
+            }
+        },
+        "order@3x.png": {
+            "frame": {
+                "h": 389,
+                "idx": 0,
+                "w": 365,
+                "x": 732,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 450,
+                "w": 451
+            },
+            "spriteSourceSize": {
+                "x": 44,
+                "y": 30
+            }
+        },
+        "shibai@2x.png": {
+            "frame": {
+                "h": 234,
+                "idx": 0,
+                "w": 243,
+                "x": 0,
+                "y": 780
+            },
+            "sourceSize": {
+                "h": 300,
+                "w": 300
+            },
+            "spriteSourceSize": {
+                "x": 29,
+                "y": 20
+            }
+        },
+        "shibai@3x.png": {
+            "frame": {
+                "h": 350,
+                "idx": 0,
+                "w": 365,
+                "x": 366,
+                "y": 390
+            },
+            "sourceSize": {
+                "h": 450,
+                "w": 451
+            },
+            "spriteSourceSize": {
+                "x": 44,
+                "y": 30
+            }
+        }
+    },
+    "meta": {
+        "image": "default-page.png",
+        "prefix": "mobile-2018-01-12/static/img/default-page/"
+    }
+}

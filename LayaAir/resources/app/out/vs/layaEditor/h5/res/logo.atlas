@@ -1,0 +1,59 @@
+{
+    "frames": {
+        "logo_gray_transparent.png": {
+            "frame": {
+                "h": 311,
+                "idx": 0,
+                "w": 465,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 311,
+                "w": 465
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "logo_gray_transparent0.png": {
+            "frame": {
+                "h": 87,
+                "idx": 0,
+                "w": 107,
+                "x": 466,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 99,
+                "w": 121
+            },
+            "spriteSourceSize": {
+                "x": 7,
+                "y": 6
+            }
+        },
+        "logo_gray_transparent_auto.png": {
+            "frame": {
+                "h": 311,
+                "idx": 0,
+                "w": 465,
+                "x": 0,
+                "y": 312
+            },
+            "sourceSize": {
+                "h": 311,
+                "w": 465
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "logo.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/res/logo/"
+    }
+}

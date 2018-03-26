@@ -1,0 +1,106 @@
+<view class="container">
+  <view class='guessLikeContain'>
+    <view class="swiper-tab ">  
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}} " data-current="0" bindtap="swichNav">未使用
+        <view class="swiper-tab-lists"></view>
+      </view>  
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}} " data-current="1" bindtap="swichNav">已使用
+        <view class="swiper-tab-lists"></view>
+      </view>  
+      <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已过期
+        <view class="swiper-tab-lists"></view>
+      </view>  
+</view>  
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+    <!-- 未使用 -->  
+        <swiper-item>  
+          <view>
+            <view class="headerSeach">
+                <view class="headerSeachLeft" bindtap="toSerch">
+                  <view class="section">
+                    <input type='text' placeholder='请输入优惠码' placeholder-class="mplaceholder" class="headerSeachLeftText"  bindchange="text" value="{{searchinput}}"/>
+                  </view>
+                </view>
+              <view class='headerSeachRight' bindtap="seachClick">兑换</view>
+            </view>
+            <view class="coupenContain nouse">
+              <view class="coupenStyle"  wx:for="{{usefulCoupon}}" wx:key="idx" wx:for-item="itemName"  wx:if="{{!tipsShowaF}}">
+                <view class="top  topF">
+                  <image src='http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/unuserCoupon.png' class="unuserCoupon"></image>
+                  <view class="clearfix">
+                    <view class="coupenPrice fl"><span class="detailPrice">{{itemName.couponMoney}}元</span></view>
+                    <view class="descriptCoupen fl">
+                      <view class="CoupenName">{{itemName.couponName}}(满{{itemName.couponLimitMoney}}元可用)</view>
+                    </view>
+                  </view>
+                   <view class="expiry">{{itemName.startDate}}-{{itemName.validate}}</view>
+                </view>
+                <view class="bont bontF">
+                  <view class="noactive {{!clickIcnStateF[index]?'newDescript' : ''}}">适用范围：{{itemName.couponDetail}}</view>
+                  <view class="clickIcn" bindtap="clickIcnF" data-id="{{itemName.id}}">{{clickIcnStateF[index]?'︿':'﹀'}}</view>
+                </view>
+              </view>
+            </view>
+            <view  wx:if="{{tipsShowaF}}" class="tipsShowa">
+              <image src="http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/nocoupon.png" class="orderList-null-icon"></image>
+              <view class="orderListNullTitle">还没有任何优惠券呢</view>
+            </view>
+          </view>  
+        </swiper-item>  
+        <!-- 已经使用 -->  
+        <swiper-item>  
+          <view >
+            <view class="coupenContain">
+              <view class="coupenStyle"  wx:for="{{usedCoupon}}" wx:key="idx" wx:for-item="itemName"  wx:if="{{!tipsShowaS}}">
+                <view  class="top topSecond">
+                  <view class="clearfix">
+                    <image src='http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/usedCoupon.png' class="unuserCoupon"></image>
+                    <view class="coupenPrice fl"><span class="detailPrice">{{itemName.couponMoney}}元</span></view>
+                    <view class="descriptCoupen fl">
+                      <view class="CoupenName">{{itemName.couponName}}(满{{itemName.couponLimitMoney}}元可用)</view>
+                    </view>
+                  </view>
+                  <view class="expiry ">{{itemName.startDate}}-{{itemName.validate}}</view>
+                </view>
+                <view class="bont bontSecond">
+                  <view class="noactive {{!clickIcnStateS[index]?'newDescript' : ''}}">适用范围：{{itemName.couponDetail}}</view>
+                  <view class="clickIcn" bindtap="clickIcnS" data-id="{{itemName.id}}">{{clickIcnStateS[index]?'︿':'﹀'}}</view>
+                </view>
+              </view>
+            </view>
+            <view  wx:if="{{tipsShowaS}}" class="tipsShowa">
+              <image src="http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/nocoupon.png" class="orderList-null-icon"></image>
+              <view class="orderListNullTitle">还没有任何优惠券呢</view>
+            </view>
+          </view>  
+        </swiper-item>  
+        <!-- 已经过期 -->  
+        <swiper-item>  
+          <view>
+            <view class="coupenContain">
+              <view class="coupenStyle"  wx:for="{{validateCoupon}}" wx:key="idx" wx:for-item="itemName"  wx:if="{{!tipsShowaT}}">
+                <view  class="top topSecond">
+                  <view class="clearfix">
+                    <image src='http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/overdueCoupon.png' class="unuserCoupon"></image>
+                    <view class="coupenPrice fl"><view class="detailPrice">{{itemName.couponMoney}}元</view></view>
+                    <view class="descriptCoupen fl">
+                      <view class="CoupenName">{{itemName.couponName}}(满{{itemName.couponLimitMoney}}元可用)</view>
+                    </view>
+                  </view>
+                  <view class="expiry">{{itemName.startDate}}-{{itemName.validate}}</view>
+                </view>
+                <view class="bont bontSecond">
+                  <view class="noactive {{!clickIcnStateT[index]?'newDescript' : ''}}">适用范围：{{itemName.couponDetail}}</view>
+                  <view class="clickIcn" bindtap="clickIcnT" data-id="{{itemName.id}}">{{clickIcnStateT[index]?'︿':'﹀'}}</view>
+                </view>
+              </view>
+            </view>
+            <view  wx:if="{{tipsShowaT}}" class="tipsShowa">
+              <image src="http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/nocoupon.png" class="orderList-null-icon"></image>
+              <view class="orderListNullTitle">还没有任何优惠券呢</view>
+            </view>
+          </view>  
+        </swiper-item>  
+    </swiper>  
+  </view>
+</view>

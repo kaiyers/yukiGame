@@ -1,0 +1,23 @@
+<!--pages/security/security.wxml-->
+<image src='../../img/newicon/security.png' class='headImg'></image>
+
+<navigator url="../changePassword/changePassword" class='se-list se-border'>
+  <view class="ddf">
+    <image src='../../img/newicon/lock.png' class="img1"></image>
+    <view>
+      <view class="txt1">账号与密码</view>
+      <view class="txt2">用于保护账户信息和登录安全</view>
+    </view>
+  </view>
+  <image src='../../img/newicon/particulars.png'  class="img2"></image>
+</navigator>
+<navigator url="../authentication/authentication" class='se-list'>
+  <view class="ddf">
+    <image src='../../img/newicon/tel24.png' class="img1"></image>
+    <view>
+      <view class="txt1">安全手机</view>
+      <view class="txt2">用于登录/重置密码或其他安全验证</view>
+    </view>
+  </view>
+  <image src='../../img/newicon/particulars.png'  class="img2"></image>
+</navigator>

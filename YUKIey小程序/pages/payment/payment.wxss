@@ -1,0 +1,76 @@
+/* pages/payment/payment.wxss */
+.needPri{
+  height:100rpx;
+  padding:0 30rpx;
+  line-height: 100rpx;
+}
+
+.box{
+  display: flex;
+  justify-content: flex-start;
+  padding:30rpx;
+  align-items: center;
+  border-top: 1px solid darkgray;
+}
+.thumb{
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 40rpx; 
+}
+.pro-name{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.pro-style{
+  font-size: 16px;
+  width:470rpx;
+  color:#666;
+}
+
+.orderinfo{
+  margin: 0 auto;
+  width:90%;
+  background: #f0f0f0;
+  border-radius: 5px;
+  padding:6px 10px;
+}
+.orderinfo view{
+  font-size: 16px;
+  margin-top: 6px;
+  line-height: 20px;
+  color:#666;
+  overflow: hidden;
+}
+.left{
+  width:150rpx;
+  display: inline-block;
+}
+.right{
+  display: inline-block;
+  width:520rpx;
+}
+.lastleft{
+  width:150rpx;
+  float:left;
+}
+.lastright{
+  width:520rpx;
+  float:left;
+}
+.lastright .gname{
+  width:510rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  margin-top: 0
+}
+.play{
+  background: #4595e5;
+  color:#fff;
+  width:90%;
+  height:80rpx;
+  position: fixed;
+  bottom:10rpx;
+  left:5%;
+  line-height: 2.3;
+}

@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "comp.png": {
+            "frame": {
+                "h": 256,
+                "idx": 0,
+                "w": 479,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 256,
+                "w": 479
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "assets.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/code/ts/facebook/laya/assets/"
+    }
+}

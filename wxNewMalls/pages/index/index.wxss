@@ -1,0 +1,418 @@
+/**index.wxss**/
+Page {
+  background: #E6E6E6;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.container{
+  background: #E6E6E6;
+}
+.headerSeach{
+  position: fixed;
+  margin:0 ;
+  top:0; 
+  left:0;
+  width:100%;
+  height: 90rpx;
+  background: #fff;
+  z-index: 99;
+  overflow: hidden
+}
+.sheaderSeach{
+  padding-left:32rpx;
+  padding-right: 32rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.headerSeachLeft{
+  float: left;
+  width:44rpx;
+  height: 90rpx;
+  margin-right:30rpx;
+  overflow: hidden;
+}
+.headerSeachLeft image{
+  display:block;
+  margin-top: 29rpx;
+  width: 44rpx;
+  height: 32rpx;
+}
+.headerSeachcoupon{
+  font-size: 24rpx;
+  color:#2c3e50;
+  text-align: center;
+}
+.headerSeachRight{
+  position: relative;
+  height: 64rpx;
+  float:right;
+  padding-left: 80rpx;
+  overflow: hidden;
+  width: 536rpx;
+  border-radius: 64rpx;
+  margin: 13rpx 0;
+  background: #e0e0e0;
+}
+.searchIcon{
+  position: absolute;
+  top: 18rpx;
+  left: 32rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.headerSeachRightText{
+  height: 64rpx;
+  font-size: 26rpx;
+  color: #999999;
+  text-align: left;
+  line-height: 64rpx;
+}
+swiper{
+  margin-top:90rpx;
+  height:420rpx;
+  width: 100%;
+  overflow: hidden;
+}
+swiper image{
+  width:100%;
+  height: 420rpx;
+}
+.limitoday,.newGoods,.guessLike{
+  background: #fff;
+  padding: 0 30rpx;
+  margin-bottom: 18rpx;
+}
+.containerPart{
+  background-color: #fff;  
+}
+.mainTitle{
+  padding-top:17rpx;
+}
+.recommend {
+    margin: 0;
+    font-size: 32rpx;
+    color: #000;
+    height: 66rpx;
+    line-height: 66rpx;
+    text-align: center;
+    font-weight: 900;
+}
+.news_recommend_icon {
+    position: absolute;
+    right: 0;
+    top:21rpx;
+    display: inline-block;
+    width: 14rpx;
+    height:24rpx;
+}
+.recommend .fr{
+  position: relative;
+  padding-right: 24rpx;
+  color:#666;
+  height: 66rpx;
+  font-size:24rpx;
+  line-height: 66rpx;
+  font-weight: normal;
+}
+.mainTitle_bottom{
+  font-size:26rpx;
+  color:#ccc;
+  line-height: 26rpx; 
+  margin-bottom:34rpx;
+}
+.containerPartDet {
+    padding-top: 60rpx;
+    padding-bottom: 40rpx;
+    text-align: left;
+}
+.limitoday .limitoday_contentL {
+    width: 320rpx;
+}
+.limitoday view{
+    font-size: 30rpx;
+    color: #333;
+}
+.limitoday .fl view.overTime {
+    height: 60rpx;
+    width: 230rpx;
+    font-size: 35rpx;
+    color: #000;
+    font-weight: 900;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    border: 2rpx solid #ccc;
+    border-radius: 8rpx;
+    text-align: center;
+    line-height: 60rpx;
+}
+.limitoday .fl view.limitmsg{
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    height: 100rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+}
+.limitoday .fl view.limitPrice{
+    height: 50rpx;
+
+}
+.limitPrice .newPrice{
+    margin-right: 20rpx;
+    font-size: 40rpx;
+    color: #ff0000;
+    line-height: 50rpx;
+}
+.oldPrice{
+  font-size: 24rpx;
+  color: #ccc;
+  margin-left:16rpx;
+  line-height: 36rpx;
+  font-style: normal ;
+  text-decoration: line-through;
+  transform: scale(0.8)
+}
+.limitoday .fr view{
+    display: block;
+    padding: 24rpx;
+    width: 300rpx;
+    height: 300rpx;
+    background: #fff;
+    border: 2rpx solid #ccc;
+    border-radius: 8rpx;
+}
+.limitoday .fr view image{
+  width:100%;
+  height: 100%;
+}
+.newGoods{
+  background:#fafafa;
+  height: 650rpx;
+}
+.newGoodsContain{
+  position:relative;
+  height: 453rpx;
+  width:100%;
+}
+.newGoodsContainer{
+  position: absolute;
+  left:0;
+  top:0;
+  width:720rpx;
+}
+.newLf{
+  display:inline-block;
+  height:17rpx;
+  color:#000;
+  border-bottom:17rpx solid #fff0be;
+  line-height:34rpx;
+}
+
+.newGoodsContains{
+  height: 480rpx;
+  width: 2838rpx;
+  overflow: hidden;
+  white-space:nowrap;
+}
+.newGoodsContainsGood{
+  position: relative;
+  display: inline-block;
+  width: 340rpx;
+  height: 480rpx;
+  margin-right: 18rpx;
+  overflow: hidden;
+  background:#fff;
+  border-radius: 15rpx;
+  background:#fff;
+}
+.newGoodsContainsText1,.newGoodsContainsText3{
+  display: block;
+  max-width: 260rpx;
+  height: 26rpx;
+  margin: 0 18rpx;
+  font-size: 26rpx;
+  color: #000;
+  line-height: 26rpx;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.newGoodsContainsText1{
+  margin:12rpx 18rpx 0;
+}
+.newGoodsContainsText3{
+  height: 24rpx;
+  font-size:24rpx;
+  color:#9b9b9b;
+  margin: 10rpx 18rpx 0rpx;
+  line-height: 24rpx;
+}
+.smllfont{
+  margin:-8rpx 18rpx 0;
+}
+.newGoodsContainsText2{
+  display:inline-block;
+  height:15rpx;
+  font-size: 24rpx;
+  color:#000;
+  border-bottom:15rpx solid #fff0be;
+  line-height:30rpx;
+}
+.PopularityContain{
+  padding: 0 30rpx;
+}
+.PopularityContains{
+  padding-top: 22rpx;
+  padding-bottom:22rpx;
+  border-top:2rpx solid #E6E6E6;
+}
+.PopularityContains:nth-child(1){
+  border:none;
+}
+.PopularityContainsPart{
+  display: flex;
+}
+.PopularityContainsPartL{
+  width: 200rpx;
+  height: 200rpx;
+  margin-right:20rpx;
+}
+.PopularityContainsPartM{
+  padding-top:40rpx;
+  width:310rpx;
+}
+.PopularityContainsPartR{
+  width: 36rpx;
+  height: 36rpx;
+  margin-top:82rpx;
+  margin-left:64rpx;
+}
+.PopularityContainsPartRT{
+  color: #333;
+  text-align: left;
+  font-size: 30rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.PopularityContainsPartRB{
+  margin-top: 50rpx;
+  color: red;
+  font-size: 24rpx;
+}
+.Popularity{
+  margin-bottom:0;
+}
+
+swiper-item{
+  width:375rpx;
+}
+.scollMsg{
+  height: 64rpx;
+  background: #fff;
+  margin-bottom:15rpx;
+}
+.noticeMsg{
+  width:94rpx;
+}
+.noticeMsg image{
+  width:48rpx;
+  height: 48rpx;
+  margin-top:8rpx;
+  margin-left:23rpx
+}
+ .swiper_container {
+  width: 656rpx;
+  height: 64rpx;
+  margin-top:0;
+} 
+.swiper_item {
+  font-size: 30rpx;
+  line-height: 64rpx;
+  color:#666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bagCloth{
+  width:100%;
+  height: 320rpx;
+  margin-bottom:16rpx;
+  margin-top:16rpx;
+}
+.gue.newGoodsContainer{
+  position: static;
+}
+.gue.newGoodsContain{
+  height: auto;
+}
+.guessLike .newGoodsContainsGood {
+  width:336rpx;
+  height: 480rpx;
+ 
+}
+.guessLike{
+  background: #fafafa;
+}
+.limitTrade{
+  height: 506rpx;
+  padding:32rpx 30rpx;
+  background:#fafafa;
+  margin-bottom:18rpx;
+}
+.limitGood,.trade{
+  width:336rpx;
+  height: 492rpx;
+  padding-top:14rpx;
+  background:#fff;
+  border-radius: 12rpx;
+}
+.limitTrade .recommender{
+  padding-left:30rpx;
+  padding-right:30rpx;
+}
+.limitTrade .recommender .fr{
+  margin-top:16rpx;
+  padding-right: 0;
+  height: 36rpx;
+  line-height: 36rpx;
+  color:#ff7700;
+}
+.limitTrade .recommender .fr view{
+  text-align: center;
+}
+.recommender .fr view.overTime{
+  width:36rpx;
+  height: 36rpx;
+  background:#000;
+  color:#fff;
+  font-size:24rpx;
+  border-radius: 6rpx;
+  line-height: 36rpx;
+}
+.limitTrade .recommender .fr view.colon{
+  font-size:26rpx;
+  color:#000;
+  width:16rpx;
+  height: 36rpx;
+  font-weight: 900;
+  line-height: 36rpx;
+}
+.limitTrade .recommender .newLf{
+  font-weight: 900;
+  font-size:30rpx;
+}
+.limitTrade .mainTitle_bottom{
+  padding-left:30rpx;
+  padding-right:30rpx;
+  margin-bottom:12rpx;
+}
+.limitTrade .smllfont {
+  margin:0 18rpx;
+}
+.limitPic{
+  width:336rpx;
+  height: 336rpx;
+}

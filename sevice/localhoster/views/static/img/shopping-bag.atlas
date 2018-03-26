@@ -1,0 +1,246 @@
+{
+    "frames": {
+        "bag_icon_arrow@2x.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 22,
+                "x": 467,
+                "y": 312
+            },
+            "sourceSize": {
+                "h": 22,
+                "w": 22
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 5
+            }
+        },
+        "bag_icon_arrow@3x.png": {
+            "frame": {
+                "h": 18,
+                "idx": 0,
+                "w": 33,
+                "x": 0,
+                "y": 462
+            },
+            "sourceSize": {
+                "h": 33,
+                "w": 33
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 8
+            }
+        },
+        "bag_icon_cat_empty@2x.png": {
+            "frame": {
+                "h": 185,
+                "idx": 0,
+                "w": 204,
+                "x": 0,
+                "y": 276
+            },
+            "sourceSize": {
+                "h": 210,
+                "w": 210
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 13
+            }
+        },
+        "bag_icon_cat_empty@3x.png": {
+            "frame": {
+                "h": 275,
+                "idx": 0,
+                "w": 306,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 315,
+                "w": 315
+            },
+            "spriteSourceSize": {
+                "x": 5,
+                "y": 21
+            }
+        },
+        "bag_icon_close@2x.png": {
+            "frame": {
+                "h": 27,
+                "idx": 0,
+                "w": 27,
+                "x": 205,
+                "y": 276
+            },
+            "sourceSize": {
+                "h": 48,
+                "w": 48
+            },
+            "spriteSourceSize": {
+                "x": 11,
+                "y": 11
+            }
+        },
+        "bag_icon_close@3x.png": {
+            "frame": {
+                "h": 41,
+                "idx": 0,
+                "w": 41,
+                "x": 205,
+                "y": 416
+            },
+            "sourceSize": {
+                "h": 72,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 16,
+                "y": 16
+            }
+        },
+        "common_icon_chose@2x.png": {
+            "frame": {
+                "h": 40,
+                "idx": 0,
+                "w": 40,
+                "x": 369,
+                "y": 416
+            },
+            "sourceSize": {
+                "h": 40,
+                "w": 40
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "common_icon_chose@3x.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 60,
+                "x": 247,
+                "y": 416
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "common_icon_empty@2x.png": {
+            "frame": {
+                "h": 40,
+                "idx": 0,
+                "w": 40,
+                "x": 410,
+                "y": 416
+            },
+            "sourceSize": {
+                "h": 40,
+                "w": 40
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "common_icon_empty@3x.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 60,
+                "x": 308,
+                "y": 416
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "sold-out@3x.png": {
+            "frame": {
+                "h": 155,
+                "idx": 0,
+                "w": 195,
+                "x": 307,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 155,
+                "w": 195
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "understock@3x.png": {
+            "frame": {
+                "h": 155,
+                "idx": 0,
+                "w": 195,
+                "x": 307,
+                "y": 156
+            },
+            "sourceSize": {
+                "h": 155,
+                "w": 195
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "已下架@2x.png": {
+            "frame": {
+                "h": 103,
+                "idx": 0,
+                "w": 130,
+                "x": 205,
+                "y": 312
+            },
+            "sourceSize": {
+                "h": 103,
+                "w": 130
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "库存不足@2x.png": {
+            "frame": {
+                "h": 103,
+                "idx": 0,
+                "w": 130,
+                "x": 336,
+                "y": 312
+            },
+            "sourceSize": {
+                "h": 103,
+                "w": 130
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "shopping-bag.png",
+        "prefix": "sevice/localhoster/views/static/img/shopping-bag/"
+    }
+}

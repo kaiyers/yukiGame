@@ -1,0 +1,165 @@
+ <!--index.wxml-->
+<wxs module="m1">
+  var dealString = function(s){
+    var asting=(s/100).toFixed(2)
+    return asting
+  }
+  module.exports.dealString = dealString;
+</wxs>
+<view class="container">
+<!-- 搜索导航 -->
+  <view class="headerSeach clearfix">
+    <view class="sheaderSeach">
+      <view class="headerSeachLeft" bindtap="tomycoupencc">
+        <image src="../../img/icon/coupon.png"></image>
+      </view>
+      <view class="headerSeachRight" bindtap="toSerch">
+        <image class="searchIcon" src="../../img/newicon/seach_samll.png"></image>
+        <view class="headerSeachRightText">Yuki原创</view>
+      </view>
+    </view>
+  </view>
+<!-- 轮播图 -->
+   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" class="swiper-box">
+    <block wx:for="{{imgUrls}}" wx:key="idx" wx:for-item="itemName">
+      <swiper-item>
+        <navigator url="../details/details?gsid={{itemName.targetId}}">
+          <image src="{{itemName.picUrl}}" title="{{itemName.title}}"/>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper> 
+  <!--滚动消息  -->
+  <view class="scollMsg clearfix" wx:if="{{msgList.length}}">
+    <view class="noticeMsg fl">
+      <image src='../../img/icon/notice.png'></image>
+    </view>
+    <swiper class="swiper_container fl" vertical="true" autoplay="true" circular="true" interval="4000">
+      <block wx:for="{{msgList}}">
+        <navigator url="" open-type="navigate">
+          <swiper-item>
+            <view class="swiper_item">{{item.content}}</view>
+          </swiper-item>
+        </navigator>
+      </block>
+    </swiper>
+  </view>
+  <!-- 限时购 -->
+  <view class="limitTrade clearfix" wx:if="{{limitodayShow}}">
+    <navigator class="limitGood fl" url="/pages/flashSale/flashSale">
+      <view class="recommender clearfix">
+          <view class="fl"><view class="newLf">限时福利</view></view>
+          <view class="fr clearfix">
+            <view class="overTime fl">{{lh}}</view>
+            <view class="colon fl">:</view>
+            <view class="overTime fl">{{lm}}</view>
+            <view class=" colon fl">:</view>
+            <view class="overTime fl">{{ls}}</view>
+          </view>
+      </view>
+      <view class="mainTitle_bottom">还在等什么</view>
+      <view class="smllfont clearfix">
+        <view class="newGoodsContainsText2 fl">￥{{newPrice}}</view><view class="oldPrice fl">￥{{oldPrice}}</view>
+      </view>
+      <image src="{{goodPicUrl}}" class="limitPic"></image>
+    </navigator>
+    <view class="trade fr limitGood" bindtap='tradeFun'>
+        <view class="recommender clearfix">
+          <view class="fl"><view class="newLf">工会专区</view></view>
+      </view>
+      <view class="mainTitle_bottom">你的专属福利</view>
+      <view class="smllfont clearfix">
+        <view class="newGoodsContainsText2 fl">￥{{m1.dealString(laborGood.goodMinPrice)}}</view>
+      </view>
+      <image src="{{laborGood.goodPicUrl}}" class="limitPic"></image>
+    </view>
+  </view>
+  <!-- 新品推荐 -->
+    <view class="newGoods"> 
+      <navigator url="../newGoods/newGoods" class="mainTitle">
+        <view class="recommend clearfix">
+          <view class="fl"><view class="newLf">新品推荐</view></view>
+          <view class="fr">查看全部<image src="../../img/icon/particulars.png"  class="news_recommend_icon"></image></view>
+        </view>
+        <view class="mainTitle_bottom">每周新品上线</view>
+      </navigator>
+      <view class='newGoodsContain'>
+        <view class="newGoodsContainer">
+          <scroll-view class='newGoodsContains'  scroll-x="true" bindscroll="scroll" style="width: 100%">
+          
+            <view class="newGoodsContainsGood " wx:for="{{listnews}}"  wx:for-index="idx" wx:for-item="itemName" >
+              <image src="../../img/newicon/collect_no.png" class='danyuan_icon' wx:if="{{itemName.isCollected=='0'}}" data-goodId="{{itemName.goodId}}" data-isCollected="0" data-idx="{{idx}}" data-name="listnews" bindtap='addLike'></image>
+            <image src="../../img/newicon/collect_yes.png" class='danyuan_icon' wx:if="{{itemName.isCollected=='1'}}"  data-goodId="{{itemName.goodId}}" data-isCollected="1" data-idx="{{idx}}" data-name="listnews" bindtap='addLike'></image>
+              <navigator url="../details/details?gsid={{itemName.goodId}}">
+                <image src="{{itemName.goodPicUrl}}" class="danyuan_img"></image>
+                <view class="danyuan_tittle">{{itemName.goodName}}</view>
+                <view class="danyuan_secondName">{{itemName.goodSecondName}}　</view>
+                <view class="danyuan_prie"> 
+                    <text class="newpric">￥{{m1.dealString(itemName.goodMinPrice)}}</text>
+                </view> 
+              </navigator>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>  
+  <!-- 人气推荐 -->
+    <view class="newGoods"> 
+      <navigator url="../humanQi/humanQi"  class="mainTitle">
+        <view class="recommend clearfix">
+          <view class="fl">
+            <view class="newLf">人气推荐</view>
+          </view>
+          <view class="fr">查看全部<image src="../../img/icon/particulars.png"  class="news_recommend_icon"></image></view>
+        </view>
+        <view class="mainTitle_bottom">大家都在看什么</view>
+      </navigator>
+      <view class='newGoodsContain'>
+        <view class="newGoodsContainer">
+          <scroll-view class='newGoodsContains'  scroll-x="true" bindscroll="scroll" style="width: 100%">
+            <view class="newGoodsContainsGood " wx:for="{{recommend_list}}"  wx:for-index="idx" wx:for-item="itemName" >
+              <image src="../../img/newicon/collect_no.png" class='danyuan_icon' wx:if="{{itemName.isCollected=='0'}}" data-goodId="{{itemName.goodId}}" data-isCollected="0" data-idx="{{idx}}" data-name="recommend_list" bindtap='addLike'></image>
+              <image src="../../img/newicon/collect_yes.png" class='danyuan_icon' wx:if="{{itemName.isCollected=='1'}}"  data-goodId="{{itemName.goodId}}" data-isCollected="1" data-idx="{{idx}}" data-name="recommend_list" bindtap='addLike'></image>
+              <navigator url="../details/details?gsid={{itemName.goodId}}">
+                <image src="{{itemName.goodPicUrl}}"  class="danyuan_img"></image>
+                <view class="danyuan_tittle">{{itemName.goodName}}</view>
+                <view class="danyuan_secondName">{{itemName.goodSecondName}}　</view>
+                <view class="danyuan_prie"> 
+                    <text class="newpric">￥{{m1.dealString(itemName.goodMinPrice)}}</text>
+                </view> 
+              </navigator>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+    <image class="bagCloth" src="http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/index.jpg"></image>
+    <!-- 猜你喜欢 -->
+    <view class="guessLike"> 
+      <navigator url="../guessY/guessY"  class="mainTitle">
+        <view class="recommend clearfix">
+          <view class="fl">
+            <view class="newLf">猜你喜欢</view>
+          </view>
+          <view class="fr">查看全部<image src="../../img/icon/particulars.png"  class="news_recommend_icon"></image></view>
+        </view>
+        <view class="mainTitle_bottom">最懂你</view>
+      </navigator>
+      <view class='newGoodsContain gue'>
+        <view class="newGoodsContainer gue ">
+          <view class="newGoodsContainsGood " wx:for="{{guess_list}}"  wx:for-index="idx" wx:for-item="itemName" >
+            <image src="../../img/newicon/collect_no.png" class='danyuan_icon' wx:if="{{itemName.isCollected=='0'}}" data-goodId="{{itemName.goodId}}" data-isCollected="0" data-idx="{{idx}}" data-name="guess_list" bindtap='addLike'></image>
+            <image src="../../img/newicon/collect_yes.png" class='danyuan_icon' wx:if="{{itemName.isCollected=='1'}}"  data-goodId="{{itemName.goodId}}" data-isCollected="1" data-idx="{{idx}}" data-name="guess_list" bindtap='addLike'></image>
+            <navigator url="../details/details?gsid={{itemName.goodId}}">
+              <image src="{{itemName.goodPicUrl}}" class="danyuan_img" ></image>
+              <view class="danyuan_tittle">{{itemName.goodName}}</view>
+              <view class="danyuan_secondName">{{itemName.goodSecondName}}　</view>
+              <view class="danyuan_prie"> 
+                    <text class="newpric">￥{{m1.dealString(itemName.goodMinPrice)}}</text>
+                </view> 
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>

@@ -1,0 +1,124 @@
+<view class="pheader">
+  <navigator url="../userCenter/userCenter">
+    <image src="../../img/icon/setting@3x.png" class="setting"></image>
+  </navigator>
+  <view class='uinfo'> 
+    <image src="{{uimg}}" class='uimg'></image>
+    <view class="btn">{{uNickName}}</view>
+    <view class="btn">
+      <image src="{{vlogo}}" class="logo"></image>
+      {{vName}}
+    </view>
+  </view> 
+</view>
+
+<view class="page__bd">
+  <navigator url="../myOrder/myOrder?orderState=0" class="morder" >
+    <view>我的订单</view>
+    <view class="weui-cell__ft_in-access"></view>
+  </navigator>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <navigator url="../myOrder/myOrder?orderState=1" class='ordertag ' >
+        <image src='../../img/icon/my_icon_payment@3x.png' class="listiconk"></image>
+        <view class="staktxt">待付款</view>
+        <view class="rednum" wx:if="{{qpA}}">{{qpA}}</view>
+      </navigator>
+      <navigator url="../myOrder/myOrder?orderState=2" class='ordertag'>
+        <image src='../../img/icon/my_icon_wait@3x.png' class="listiconk"></image>
+        <view class="staktxt">待发货</view>
+        <view class="rednum"  wx:if="{{qpB}}">{{qpB}}</view>
+      </navigator>
+      <navigator url="../myOrder/myOrder?orderState=3" class='ordertag'>
+        <image src='../../img/icon/my_icon_send@3x.png' class="listiconk"></image>
+        <view class="staktxt">待收货</view>
+        <view class="rednum" wx:if="{{qpC}}">{{qpC}}</view>
+      </navigator>
+      <navigator url="../myOrder/myOrder?orderState=4" class='ordertag'>
+        <image src='../../img/icon/my_icon_comment@3x.png' class="listiconk"></image>
+        <view class="staktxt">待评价</view>
+        <view class="rednum" wx:if="{{qpD}}">{{qpD}}</view>
+      </navigator>
+      <!-- <view class='ordertag'>
+        <image src='../../img/icon/my_icon_aftermarket@3x.png' class="listiconk"></image>
+        <view class="staktxt">售后服务</view>
+      </view> -->
+    </view>
+  </view>
+  <view class="parting_line"></view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="../Coupon/Coupon?userId={{userID}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+      <image src="../../img/icon/my_list_icon_ticket@3x.png" class="listicon"></image>
+      </view>
+      <view class="weui-cell__bd">我的优惠券</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+    <view class="parting_line"></view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="../collect/collect" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+      <image src="../../img/icon/my_list_icon_collect@3x.png" class="listicon"></image>
+      </view>
+      <view class="weui-cell__bd">我的收藏</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <view url="../../pages/address/address" class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='goAdress'>
+      <view class="weui-cell__hd">
+      <image src="../../img/icon/my_list_icon_address@3x.png" class="listicon"></image>
+      </view>
+      <view class="weui-cell__bd">我的地址</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <!-- <view class="weui-cell weui-cell_access sumSer" hover-class="weui-cell_active">
+       <view class="weui-cell__hd">
+        <image src="../../img/icon/my_list_icon_kefu@3x.png" class="listicon"></image>
+      </view>  -->
+      <!-- <view class="contact_view">
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+      </view> -->
+      <!-- <view class="weui-cell__bd">我的客服</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      <view class="contacts">
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button> -->
+        <!-- <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button> -->
+        <!-- <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+         -->
+      <!-- </view> -->
+    <!-- </view> -->
+  </view>
+</view>

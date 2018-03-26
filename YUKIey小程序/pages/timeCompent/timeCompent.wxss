@@ -1,0 +1,6 @@
+/* pages/address/address.wxss */
+.inner {
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 54rpx;
+}

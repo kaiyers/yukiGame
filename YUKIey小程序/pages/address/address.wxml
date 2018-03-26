@@ -1,0 +1,40 @@
+<!--pages/address/address.wxml-->
+<!-- 彩条 -->
+<image src="../../img/warehouse/color-line.png" class="colourBar"></image>
+<view class='addressInfo' wx:if="{{addrss.length}}">
+  <view class='saddress' wx:for='{{addrss}}'>
+    <view class='uinfo' bindtap='goder' data-index="{{index}}">
+      <view>{{item.name}}</view>
+      <view>{{item.phone}}</view>
+    </view>
+    <view class='add' bindtap='goder' data-index="{{index}}">
+      <text>{{item.address}}</text>
+    </view>
+    <view class='operation'>
+      <view class='flexs' bindtap='setDefault' data-index="{{index}}">
+        <image src='../../img/warehouse/my_add_icon_empty@3x.png' class="addicon" wx:if="{{!item.isAvalible}}"></image>
+        <image src='../../img/icon/common_icon_chose@3x.png' class="addicon" wx:else></image>
+        <view class="text">设为默认</view>
+      </view>
+      <view class='flexs'>
+        <navigator url="../../pages/alterAddress/alterAddress?adid={{item.addrid}}">
+          <view class='flexs' bindtap='editAddress' data-index="{{index}}">
+            <image src='../../img/icon/my_address_icon_edit@3x.png' class="addicon"></image>
+            <view class="text">编辑</view>
+          </view>
+        </navigator>
+        <view class='flexs del'  bindtap='delAddress' data-index="{{index}}">
+          <image src='../../img/warehouse/search_icon_clear@3x.png' class="addicon"></image>
+          <view class="text">删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view style="margin: 50rpx auto" wx:else>你还没有添加地址哦!</view>
+<view class="diandi"></view>
+<view class='foot'>
+  <navigator url="../../pages/newlyAddress/newlyAddress">
+    <button bindtap="newlyAddress" class="play">+新增收货地址</button>
+  </navigator>  
+</view>                  

@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "tpls.png": {
+            "frame": {
+                "h": 54,
+                "idx": 0,
+                "w": 56,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 54,
+                "w": 56
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "laya.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/"
+    }
+}

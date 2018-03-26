@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "html.png": {
+            "frame": {
+                "h": 254,
+                "idx": 0,
+                "w": 430,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 254,
+                "w": 430
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "nginx-1.10.2.png",
+        "prefix": "sevice/nginx-1.10.2/"
+    }
+}

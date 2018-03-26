@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "dhxcp_colors.png": {
+            "frame": {
+                "h": 120,
+                "idx": 0,
+                "w": 210,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 210
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxcp_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxcp_material/"
+    }
+}

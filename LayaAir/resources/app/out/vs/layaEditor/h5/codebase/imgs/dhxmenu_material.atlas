@@ -1,0 +1,127 @@
+{
+    "frames": {
+        "dhxmenu_arrow_down.png": {
+            "frame": {
+                "h": 5,
+                "idx": 0,
+                "w": 10,
+                "x": 0,
+                "y": 30
+            },
+            "sourceSize": {
+                "h": 10,
+                "w": 10
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 2
+            }
+        },
+        "dhxmenu_arrow_down_dis.png": {
+            "frame": {
+                "h": 5,
+                "idx": 0,
+                "w": 10,
+                "x": 11,
+                "y": 30
+            },
+            "sourceSize": {
+                "h": 10,
+                "w": 10
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 2
+            }
+        },
+        "dhxmenu_arrow_up.png": {
+            "frame": {
+                "h": 5,
+                "idx": 0,
+                "w": 10,
+                "x": 22,
+                "y": 30
+            },
+            "sourceSize": {
+                "h": 10,
+                "w": 10
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 2
+            }
+        },
+        "dhxmenu_arrow_up_dis.png": {
+            "frame": {
+                "h": 5,
+                "idx": 0,
+                "w": 10,
+                "x": 33,
+                "y": 30
+            },
+            "sourceSize": {
+                "h": 10,
+                "w": 10
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 2
+            }
+        },
+        "dhxmenu_chrd.png": {
+            "frame": {
+                "h": 18,
+                "idx": 0,
+                "w": 143,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 144
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 0
+            }
+        },
+        "dhxmenu_loader.gif": {
+            "frame": {
+                "h": 14,
+                "idx": 0,
+                "w": 14,
+                "x": 57,
+                "y": 19
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "dhxmenu_subar.png": {
+            "frame": {
+                "h": 10,
+                "idx": 0,
+                "w": 56,
+                "x": 0,
+                "y": 19
+            },
+            "sourceSize": {
+                "h": 10,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxmenu_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxmenu_material/"
+    }
+}

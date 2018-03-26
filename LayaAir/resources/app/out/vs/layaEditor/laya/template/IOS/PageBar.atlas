@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "res.png": {
+            "frame": {
+                "h": 53,
+                "idx": 0,
+                "w": 16,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 53,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "PageBar.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/template/IOS/PageBar/"
+    }
+}

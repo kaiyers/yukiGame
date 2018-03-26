@@ -1,0 +1,35 @@
+<!--pages/payment/payment.wxml-->
+<wxs module="numfilter" src="../../filter/price.wxs"></wxs>
+<view class='needPri'>
+  应付金额: ￥ {{numfilter.numfilter(orderinfo.needPay)}}
+</view>     
+<view class="box">
+  <image class="thumb" src="../../img/warehouse/flc_icon_pay_orderok@3x@3x.png"></image>
+  <view class="list">
+    <view class="pro-name">订单提交成功，去付款喽~~</view>
+    <view class="pro-style">预计5天内发货</view>
+    <view class="pro-style">请在{{countdowns}}内完成支付，超时将取消订单</view>
+  </view>
+</view>
+<view class="orderinfo">
+  <view>
+    <text class="left">订单号:</text>
+    <text class="right">{{orderinfo.ordercode}}</text>
+  </view>
+  <view>
+    <text class="left">收货信息:</text>
+    <text class="right">{{orderinfo.receiveName}}  {{orderinfo.receivePhone}}</text>
+  </view>
+  <view>
+    <text class="left"></text>
+    <text class="right">{{orderinfo.receiveAddress}}</text>
+  </view>
+  <view>
+    <view class="lastleft">商品名称:</view>
+    <view class="lastright">
+      <view wx:for="{{goodsinfo}}" class="gname">{{item.name}}</view>
+    </view>
+  </view>
+</view>
+
+<button bindtap="play" class="play">支付</button>  

@@ -1,0 +1,134 @@
+<wxs module="m1">
+  var dealString = function(s){
+    var asting=(s/100).toFixed(2)
+    return asting
+  }
+  module.exports.dealString = dealString;
+</wxs>
+<wxs module="m3">
+  var dealString = function(s){
+    var asting=s.toFixed(2)
+    return asting
+  }
+  module.exports.dealString = dealString;
+</wxs>
+<wxs module="m2">
+  var getString = function(s){
+    var asting=s.join(' 、')
+    return asting
+  }
+  module.exports.getString = getString;
+</wxs>
+<wxs module="m4">
+  var getString = function(value,type){
+    var dataTime="";
+    var data = getDate(value);
+    var year   =  data.getFullYear();
+    var month  =  data.getMonth() + 1;
+    var day    =  data.getDate();
+    var hour   =  data.getHours();
+    var minute =  data.getMinutes();
+    var second =  data.getSeconds();
+    month  =  month>9?month:'0'+month;
+    day    =  day>9?day:'0'+day;
+    hour   =  hour>9?hour:'0'+hour;
+    minute =  minute>9?minute:'0'+minute;
+    second =  second>9?second:'0'+second;
+    if(type == "YMD"){
+      dataTime =  year + "年"+ month + "月" + day + "日";
+    }else if(type == "YMDHMS"){
+      dataTime = year + "年"+month + "月" + day + "日 " +hour+ ":"+minute+":" +second;
+    }else if(type == "HMS"){
+      dataTime = hour + ":" + minute + ":" + second;
+    }else if(type == "YM") {
+      dataTime = year + "年" + month + "月";
+    }else if(type == "Y-M") {
+      dataTime = year + "-"+month + "-" + day + " " +hour+ ":"+minute+":" +second;
+    }else if(type == "MM-SS") {
+      dataTime = minute+"分" +second+"秒";
+    }
+    return dataTime;
+  }
+  module.exports.getString = getString;
+</wxs>
+<view class="container">
+  <view class="playstatetext">{{orderStateText}}</view>
+  <view class="peopleDet" >
+    <view class="peopleDetCon">
+      <view class="peopleDetTop clearfix">
+        <image src='../../img/tabbar/me_n.png' class="fl"></image>
+        <view  class="peopleDetS fl" style="margin:0 10rpx">{{userName}}</view>
+        <view class="peopleDetS fl">{{name}}{{phone}}</view>
+      </view>
+      <view class="peopleDetbottom clearfix">
+        <image src='../../img/icon/my_orderdetail_icon_add@3x.png' class="fl"></image>
+        <view class="address fl">{{address}}</view>
+      </view>
+    </view>
+    <view class="leaveMsg clearfix" wx:if="{{leaveMessage}}">
+      <image src="../../img/icon/my_orderdetail_icon_msg@3x.png" class="fl"> </image>
+      <view class="fl">买家留言:{{leaveMessage}}</view>
+    </view>
+  </view>
+  <view class="goodMes">
+    <navigator url="../details/details?gsid={{itemNamex.goodId}}" class="containTop clearfix" wx:for="{{goodsList}}" wx:key="idx" wx:for-item="itemNamex" >
+      <image class="fl orderMPic" src="{{itemNamex.skuPic}}"></image>
+      <view class="fr containTopR">
+        <view class="orderMF">{{itemNamex.name}}</view>
+        <view class="orderMS">{{m2.getString(itemNamex.skuText)}}</view>
+        <view class="goodPrice clearfix">
+          <view class="goodPriceL fl">价格：￥{{m1.dealString(itemNamex.unitPrice)}}</view>
+          <view class="goodPriceR fr">X{{itemNamex.count}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="crashDeatil">
+    <view class="crashDeatilF clearfix">
+      <view class="fl">订单总价</view>
+      <view class="fr">￥{{m1.dealString(orderPrice)}}</view>
+    </view>
+    <view class="crashDeatilF clearfix">
+      <view class="fl">商品总价</view>
+      <view class="fr">￥{{m1.dealString(goodPrice)}}</view>
+    </view>
+    <view class="crashDeatilF clearfix">
+      <view class="fl">运费</view>
+      <view class="fr">￥{{m1.dealString(freight)}}</view>
+    </view>
+  </view>
+  <view class="orderHeader">
+    <view class="orderHeaderL">订单编号:<span>{{orderNumber}}</span></view>
+    <view class="orderHeaderR">下单时间:<span>{{m4.getString(orderTime,'Y-M')}}</span></view>
+  </view> 
+  <view class="guessLike">
+    <view class="recommend"> 猜你喜欢</view>
+    <view class='guessLikeContain clearfix'>
+        <navigator  wx:for="{{guess_list}}" wx:key="idx" wx:for-item="itemName" class="fl">
+          <image src="{{itemName.goodPicUrl}}"></image>
+          <view class="guessLikeContainText1">{{itemName.goodName}}</view>
+          <view class="guessLikeContainText2">{{m1.dealString(itemName.goodMinPrice)}}</view>
+        </navigator>
+    </view>
+  </view>
+  <!-- <view class="fixedBlock clearfix"> -->
+    <!-- 待付款-->
+    <!-- <view class="btnwai fr clearfix" wx:if="{{orderState==1}}">
+      <view class="btn btn1">取消订单</view>
+      <view class="btn btn2" >立即支付</view>
+    </view> -->
+    <!-- 待发货-->
+    <!-- <view class="btnwai fr clearfix"  wx:if="{{orderState==2}}">
+      <view class="btn btn2" >提醒发货</view>
+    </view> -->
+    <!-- 待收货-->
+    <!-- <view class="btnwai fr clearfix" w:if="{{orderState==3}}">
+      <view class="btn btn2">确认收货</view>
+      <view class="btn btn2">查看物流</view>
+    </view> -->
+    <!-- 待评价-->
+    <!-- <view class="btnwai fr clearfix" wx:if="{{orderState==4}}">
+      <view class="btn btn2">去评价</view>
+    </view> -->
+  <!-- </view> -->
+</view>

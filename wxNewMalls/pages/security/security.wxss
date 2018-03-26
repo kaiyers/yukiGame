@@ -1,0 +1,44 @@
+/* pages/security/security.wxss */
+page{
+  background: #fafafa
+}
+.headImg{
+  width: 100%;
+  height:320rpx;
+  margin-bottom: 15rpx;
+}
+.se-list{
+  background: #fff;
+  height:125rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.se-border{
+  border-bottom: 2rpx solid #e0e0e0;
+}
+.ddf{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.img1{
+  width:45rpx;
+  height:45rpx;
+  margin-right: 50rpx;
+}
+.img2{
+  width:30rpx;
+  height:30rpx;
+}
+.txt1{
+  font-size: 26rpx;
+  color: #222222;
+  font-weight: bold
+}
+.txt2{
+  font-size: 21rpx;
+  color: #999999;
+  font-weight: bold
+}

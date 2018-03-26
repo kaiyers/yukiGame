@@ -1,0 +1,101 @@
+<!--pages/confirmorder/confirmorder.wxml-->
+<wxs module="numfilter" src="../../filter/price.wxs"></wxs>
+<view class="main">
+  <!-- 商品信息 -->
+    <view class="cart-box">
+      <view class="cart-list" wx:for="{{orders}}">
+        <image class="cart-thumb" src="{{item.skuPic}}"></image>
+        <view class='cart-pro-info'>
+          <view class="cart-pro-name">{{item.name}}</view>
+          <view class="cart-pro-sst">
+            <text class="cart-pro-style">{{item.skuText}}</text>
+            <text class="cart-pro-count">X <text class="countLL">{{item.count}}</text></text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="parting_line"></view>
+  <!-- 收货地址 --> 
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_access" wx:if="{{address.length}}">
+        <scroll-view class='newGoodsContains'  scroll-x="true" bindscroll="scroll" style='width:100%'>
+          <view wx:for="{{address}}" wx:key="idx" wx:for-item="item" class="{{item.isSle ? 'order-bgp' : 'order-bgn'}}" bindtap='goAddress' data-index="{{index}}"> 
+            <image src='../../img/icon/common_icon_chose@3x.png' wx:if="{{item.isSle}}" class='listicon or-img'></image>
+            <image src='../../img/icon/my_collect_icon_empty@3x.png' wx:else class='listicon or-img'></image>
+            <view class='or-name'>
+              <view class='orname'>{{item.name}}</view>
+              <view class="or-moren asedd" wx:if="{{item.isAvalible}}">默认</view>
+            </view>
+            <view class="or-address">
+              <view class="yya">
+                <text>{{item.phone}}</text>
+                <navigator url="../../pages/alterAddress/alterAddress?adid={{item.addrid}}">
+                  <image src='../../img/newicon/redact.png' class='listicon'></image>
+                </navigator>
+              </view>
+              <view class="asedd">
+                {{item.address}}
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>                         
+      <navigator url="../../pages/newlyAddress/newlyAddress" class="weui-cell weui-cell_access">
+        <view class="weui-cell__hd">
+          <image src="../../img/newicon/add_address.png" class="listicon"></image>
+        </view>
+        <view class="weui-cell__bd" style='margin-left:20rpx'>添加新地址</view>
+      </navigator>
+    </view>
+  
+    <view class="parting_line"></view>
+  <!-- 其他信息 -->
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">商品合计</view>
+      <view class="weui-cell__ft newpric">￥ {{numfilter.numfilter(orderinfo.totalPriceNow)}}</view>
+    </view>                         
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">运费</view>
+      <view class="weui-cell__ft">￥ {{orderinfo.freight}}.00</view>
+    </view>
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">
+        优惠券
+        <text class='orders-address-phone' wx:if="{{youhuiName!='kong'}}">{{youhuiName}}</text>
+      </view>
+      <view class="weui-cell__ft" wx:if='{{couponsList.length == 0}}'>{{youhuiInfo}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"  bindtap="actionSheetTap" wx:else>{{youhuiInfo}}</view>
+    </view>
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">买家留言</view>
+    </view>
+    <textarea bindinput="leaveMessage" placeholder="选填：对本次交易的说明" value='{{leaveMessage}}' class="liuyan"/>
+  </view>
+  <view class='diandi'></view>
+  <view class="orders-footer">
+      <view class="orders-footer-total">实付：<text class="newpric">￥{{numfilter.numfilter(needpay)}}</text></view>
+      <form bindsubmit="toPay" report-submit>
+        <button formType="submit" class="orders-footer-btn">提交订单</button>
+      </form>
+  </view>
+</view>
+<!-- 遮罩 -->
+<view class="{{popShow ? 'mask' : ''}}" catchtouchmove="preventTouchMove"></view>
+<!-- 弹出框 -->
+<view class='popupMenu' wx:if='{{popShow}}'> 
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd xuaze">选择</view>
+      <view class="weui-cell__ft queding"  bindtap='coloser'>确定</view>
+    </view>        
+  </view>
+  <radio-group bindchange="radiogroupBindchange">
+    <view class='coupenList' wx:if='{{manJianName}}'>
+      <radio value="manjian">{{manJianName}}</radio>
+    </view>
+    <view class='coupenList' wx:for="{{couponsList}}">
+      <radio value="{{item.id}}">{{item.couponName}}</radio>
+    </view>
+  </radio-group>
+</view>

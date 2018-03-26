@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "res.png": {
+            "frame": {
+                "h": 115,
+                "idx": 0,
+                "w": 138,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 115,
+                "w": 138
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "List.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/template/IOS/List/"
+    }
+}

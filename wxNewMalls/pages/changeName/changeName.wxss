@@ -1,0 +1,41 @@
+/* pages/changeName/changeName.wxss */
+page{
+  padding: 0 50rpx
+}
+.inp{
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  width:645rpx;
+  font-size: 31rpx;
+  padding: 20rpx 0
+}
+.shuoming{
+  margin-top: 15rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center
+}
+.qiu{
+  width:18rpx;
+  height:18rpx;
+  background: #fff0be;
+  border-radius: 18rpx;
+  margin-right: 15rpx
+}
+.wenzi{
+  font-size: 22rpx;
+  color: #666666;
+}
+.tijiao{
+  width: 690rpx;
+  height:80rpx;
+  border: 2rpx solid #ff9701;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  border-radius: 80rpx;
+  position: absolute;
+  bottom: 32rpx;
+  left:30rpx;
+  color: #ff9701
+}

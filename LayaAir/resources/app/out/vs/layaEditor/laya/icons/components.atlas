@@ -1,0 +1,756 @@
+{
+    "frames": {
+        "Animation.png": {
+            "frame": {
+                "h": 31,
+                "idx": 0,
+                "w": 24,
+                "x": 146,
+                "y": 123
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 0
+            }
+        },
+        "Box.png": {
+            "frame": {
+                "h": 18,
+                "idx": 0,
+                "w": 32,
+                "x": 76,
+                "y": 172
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 6
+            }
+        },
+        "Button.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 32,
+                "x": 109,
+                "y": 155
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 6
+            }
+        },
+        "CheckBox.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 113,
+                "y": 122
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "Clip.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 36,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "ColorPicker.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 142,
+                "y": 155
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "ComboBox.png": {
+            "frame": {
+                "h": 14,
+                "idx": 0,
+                "w": 29,
+                "x": 109,
+                "y": 176
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 8
+            }
+        },
+        "Database.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 175,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "Grid.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 175,
+                "y": 33
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "HBox.png": {
+            "frame": {
+                "h": 18,
+                "idx": 0,
+                "w": 32,
+                "x": 175,
+                "y": 66
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 6
+            }
+        },
+        "HScrollBar.png": {
+            "frame": {
+                "h": 14,
+                "idx": 0,
+                "w": 32,
+                "x": 175,
+                "y": 85
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 10
+            }
+        },
+        "HSlider.png": {
+            "frame": {
+                "h": 22,
+                "idx": 0,
+                "w": 32,
+                "x": 175,
+                "y": 100
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 6
+            }
+        },
+        "Image.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 97,
+                "y": 89
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "Label.png": {
+            "frame": {
+                "h": 21,
+                "idx": 0,
+                "w": 21,
+                "x": 33,
+                "y": 66
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 5,
+                "y": 6
+            }
+        },
+        "LinkButton.png": {
+            "frame": {
+                "h": 24,
+                "idx": 0,
+                "w": 26,
+                "x": 146,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 4
+            }
+        },
+        "List.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 175,
+                "y": 123
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "Menu.png": {
+            "frame": {
+                "h": 30,
+                "idx": 0,
+                "w": 32,
+                "x": 175,
+                "y": 156
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "MenuBar.png": {
+            "frame": {
+                "h": 10,
+                "idx": 0,
+                "w": 18,
+                "x": 90,
+                "y": 155
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 4
+            }
+        },
+        "MovieClip.png": {
+            "frame": {
+                "h": 18,
+                "idx": 0,
+                "w": 18,
+                "x": 121,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "NumericStepper.png": {
+            "frame": {
+                "h": 22,
+                "idx": 0,
+                "w": 26,
+                "x": 146,
+                "y": 25
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 4,
+                "y": 6
+            }
+        },
+        "Panel.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 114,
+                "y": 48
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "ProgressBar.png": {
+            "frame": {
+                "h": 14,
+                "idx": 0,
+                "w": 32,
+                "x": 130,
+                "y": 81
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 10
+            }
+        },
+        "RadioButton.png": {
+            "frame": {
+                "h": 18,
+                "idx": 0,
+                "w": 18,
+                "x": 57,
+                "y": 172
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 7,
+                "y": 7
+            }
+        },
+        "RadioButtonGroup.png": {
+            "frame": {
+                "h": 27,
+                "idx": 0,
+                "w": 27,
+                "x": 0,
+                "y": 89
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 2
+            }
+        },
+        "Skeleton.png": {
+            "frame": {
+                "h": 31,
+                "idx": 0,
+                "w": 32,
+                "x": 0,
+                "y": 117
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "SkeletonPlayer.png": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 16,
+                "x": 66,
+                "y": 122
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "Sound.png": {
+            "frame": {
+                "h": 30,
+                "idx": 0,
+                "w": 31,
+                "x": 0,
+                "y": 149
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 1
+            }
+        },
+        "Sprite.png": {
+            "frame": {
+                "h": 30,
+                "idx": 0,
+                "w": 24,
+                "x": 32,
+                "y": 149
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 1
+            }
+        },
+        "SpriteHolder.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 33,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "Swf.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 33,
+                "y": 33
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "Tab.png": {
+            "frame": {
+                "h": 24,
+                "idx": 0,
+                "w": 32,
+                "x": 28,
+                "y": 89
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 6
+            }
+        },
+        "TabBar.png": {
+            "frame": {
+                "h": 24,
+                "idx": 0,
+                "w": 32,
+                "x": 33,
+                "y": 114
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 6
+            }
+        },
+        "Text.png": {
+            "frame": {
+                "h": 24,
+                "idx": 0,
+                "w": 24,
+                "x": 61,
+                "y": 66
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 5
+            }
+        },
+        "TextArea.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 57,
+                "y": 139
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "TextInput.png": {
+            "frame": {
+                "h": 22,
+                "idx": 0,
+                "w": 32,
+                "x": 0,
+                "y": 66
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 6
+            }
+        },
+        "Tile.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 0,
+                "y": 33
+            },
+            "sourceSize": {
+                "h": 36,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "TileList.png": {
+            "frame": {
+                "h": 30,
+                "idx": 0,
+                "w": 30,
+                "x": 66,
+                "y": 91
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 2
+            }
+        },
+        "Tree.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 30,
+                "x": 66,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "VBox.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 18,
+                "x": 66,
+                "y": 33
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 8,
+                "y": 0
+            }
+        },
+        "VRule.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 8,
+                "x": 97,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 12,
+                "y": 0
+            }
+        },
+        "VScrollBar.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 14,
+                "x": 106,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 10,
+                "y": 0
+            }
+        },
+        "VSlider.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 22,
+                "x": 90,
+                "y": 122
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 6,
+                "y": 0
+            }
+        },
+        "View.png": {
+            "frame": {
+                "h": 28,
+                "idx": 0,
+                "w": 28,
+                "x": 85,
+                "y": 33
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 2
+            }
+        },
+        "ViewStack.png": {
+            "frame": {
+                "h": 26,
+                "idx": 0,
+                "w": 27,
+                "x": 86,
+                "y": 62
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 3
+            }
+        }
+    },
+    "meta": {
+        "image": "components.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/icons/components/"
+    }
+}

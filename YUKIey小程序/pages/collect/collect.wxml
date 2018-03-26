@@ -1,0 +1,23 @@
+<!--pages/collect/collect.wxml-->
+<wxs module="numfilter" src="../../filter/price.wxs"></wxs>
+<view class="list-box">
+  <view wx:if='{{collectList.length == 0}}'>亲,您还未收藏任何商品哦....</view>
+  <view  wx:else>
+    <view wx:for='{{collectList}}' class="newest-list">
+    <icon wx:if="{{item.selected}}" type="success" color="#4595e5" data-index="{{index}}"  class="cart-pro-select" bindtap="selectList"/>
+    <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectList"/>
+      <image src="{{item.goodPicUrl}}"></image>
+    <view  data-index="{{index}}" bindtap='godetail'>
+      <view class="newest-text"><text>{{item.goodName}}</text></view>
+      <view class="newest-price">￥ {{numfilter.numfilter(item.nowPrice)}}</view>
+    </view>         
+  </view>
+  </view>
+</view>
+<view class="diandi"></view>
+<view class="cart-footer">
+  <icon wx:if="{{selectAllStatus}}" type="success" color="#4595e5" class="total-select" bindtap="selectAll"/>
+  <icon wx:else type="circle" class="total-select" bindtap="selectAll"/>
+  <text>全选</text>
+  <text class="cart-toatl-price" bindtap='deleteGoods'>删除所选</text>
+</view>

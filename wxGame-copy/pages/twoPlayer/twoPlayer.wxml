@@ -1,0 +1,94 @@
+<!--pages/twoPlayer/twoPlayer.wxml-->
+<import src="../../utils/util.wxml"/>
+<template is="coinPopup" data="{{lackCoin: lackCoin,popTips:popTips,confirm:confirm}}"/>
+<view class="txy">
+  <!-- 标题区 -->
+<image bindtap='setInfomation' animation="{{animationTitle}}" src='../../img/images/biaoti01_02.png' class="biaoti"></image>  
+
+<view wx:if="{{jishiShow}}" class="wrap">  
+    <canvas canvas-id="canvasArc"></canvas>  
+    <view class="{{num_show < 4 ? 'cc_H' : 'cc'}}">{{num_show}}</view>   
+</view> 
+<!-- 玩家区 -->
+<view animation="{{playerup}}" class='playerArea'>
+  <view class="playerArea1">
+    <view animation="{{animationBlue}}" class="pla player01">
+      <!-- <view class="round"></view> -->
+      <!-- <image src='{{playerImg}}' class="playerLogo pll01"></image> -->
+      <view class="circleContainR fl">
+        <view class="face"></view>
+        <image src="{{playerImg}}" class="logo"></image>
+        <view class="smove smoveR">
+          <span></span>
+        </view>
+      </view>
+      <view class="playerName">{{playerName}}</view>
+    </view>
+    <view animation="{{animationRed}}" class="player02 pla">
+      <!-- <image src='../../img/greyFace.png' class="playerLogo pll02"></image> -->
+      <view class="circleContain fl">
+        <view class="face"></view>
+        <image src="{{player02Img}}" class="logo"></image>
+        <view class="smove">
+          <span></span>
+        </view>
+      </view>
+
+      <view class="playerName02">{{player02Name}}</view>
+    </view>
+  <image wx:if="{{!jishiShow}}" animation="{{vsAnma}}" src='../../img/images/1v1_vs_05.png' class="vs"></image> 
+  </view>
+  <view wx:if="{{gameAreaShow}}" class="jifen">
+    <view class="jifen_left jfcv">
+      <progress percent="{{player01_bar}}" active-mode="forwards" stroke-width="16" active="true" backgroundColor="#1d1654" class="artL" activeColor="#33e46d"/>
+      <view class="fenshu fsL">{{player01_score}}</view>
+    </view>
+    <view class="jifen_right jfcv">
+      <progress animation="{{cuanzhuan}}" percent="{{player02_bar}}" stroke-width="16" class="artR" active="true" backgroundColor="#1d1654" activeColor="#33e46d"/>
+      <view class="fenshu fsR">{{player02_score}}</view>
+    </view>
+  </view>
+</view>
+<!-- 准备区 -->
+<view animation="{{loading}}" class="tips" bindtap='matchingComplete'>1名玩家已就绪</view>
+<view animation="{{loading}}" class="loading">匹配对手中</view>
+
+<!-- 作答--结算区 -->
+<view class="jiange"></view>
+ <view wx:if="{{gameAreaShow}}" class="game_area">
+ <!-- 作答区 -->
+    <view wx:if="{{timu_jieshuan_show}}" class="datiqu">
+      <view animation="{{qtAnma}}" class="question_types">
+      {{xuanti.questiontypesText}}
+      </view>
+      <view animation="{{qaaAnma}}" class="question_answer">
+        <view class="question">{{xuanti.question}}</view>
+        <view class="answer_area">
+          <view bindtap='selectA' class="answer oppt">
+            <image src='{{btnbgiSelctA}}' class="answer"></image>
+            <view class="answerText">{{xuanti.optiona}}</view>
+          </view>
+          <view bindtap='selectB' class="answer oppt">
+            <image src='{{btnbgiSelctB}}' class="answer"></image>
+            <view class="answerText">{{xuanti.optionb}}</view>
+          </view>
+          <view bindtap='selectC' class="answer oppt">
+            <image src='{{btnbgiSelctC}}' class="answer"></image>
+            <view class="answerText">{{xuanti.optionc}}</view>
+          </view>
+        </view>
+      </view>
+    </view> 
+  <!-- 结算区 -->
+  <view animation="{{accounts}}" wx:else class="jishuan">
+    <view class="sheli" wx:if="{{isWin}}">
+      <image src='../../img/images/shengli.png' class="shengshi"></image>
+      <view class="jieshuanFen">10</view> 
+    </view>
+      <image wx:else src='../../img/images/shibai.png' class="shengshi"></image> 
+      <image bindtap='rmrematch' src='../../img/images/jieshuanBtn_agin.png' class="jieshuanBtn"></image>
+      <button data-name="shareBtn" open-type="share" class="shallBtn"></button>
+    </view>   
+  </view>  
+  
+</view>

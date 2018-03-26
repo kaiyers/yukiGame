@@ -1,0 +1,76 @@
+{
+    "frames": {
+        "dnd_selector.png": {
+            "frame": {
+                "h": 141,
+                "idx": 0,
+                "w": 7,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 141,
+                "w": 7
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dnd_selector_cells.png": {
+            "frame": {
+                "h": 50,
+                "idx": 0,
+                "w": 6,
+                "x": 8,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 50,
+                "w": 6
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dnd_selector_lines.png": {
+            "frame": {
+                "h": 6,
+                "idx": 0,
+                "w": 50,
+                "x": 8,
+                "y": 51
+            },
+            "sourceSize": {
+                "h": 6,
+                "w": 50
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "marker.png": {
+            "frame": {
+                "h": 55,
+                "idx": 0,
+                "w": 1,
+                "x": 8,
+                "y": 58
+            },
+            "sourceSize": {
+                "h": 55,
+                "w": 1
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxdataview_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxdataview_material/"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "res.png": {
+            "frame": {
+                "h": 229,
+                "idx": 0,
+                "w": 189,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 229,
+                "w": 189
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "ToolBar.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/template/IOS/ToolBar/"
+    }
+}

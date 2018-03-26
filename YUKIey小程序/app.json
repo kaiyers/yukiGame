@@ -1,0 +1,75 @@
+{
+  "pages":[
+    "pages/index/index",                                
+    "pages/personal/personal",                            
+    "pages/userCenter/userCenter",                        
+    "pages/changePhone/changePhone",                    
+    "pages/bindingAccount/bindingAccount",    
+    "pages/collect/collect",                           
+    "pages/register/register",      
+    "pages/seekTransit/seekTransit",                    
+    "pages/seekDetail/seekDetail",                      
+    "pages/newGoods/newGoods",                            
+    "pages/humanQi/humanQi",                              
+    "pages/Coupon/Coupon",                             
+    "pages/flashSale/flashSale",                       
+    "pages/classify/classify",                           
+    "pages/classifyD/classifyD",                        
+    "pages/details/details",                             
+    "pages/cart/cart",                                
+    "pages/address/address",                            
+    "pages/myOrder/myOrder",                           
+    "pages/orderDetail/orderDetail",                     
+    "pages/newlyAddress/newlyAddress",                    
+    "pages/alterAddress/alterAddress",                  
+    "pages/payment/payment",                           
+    "pages/confirmorder/confirmorder",
+    "pages/getAppraise/getAppraise",  
+    "pages/writeAppraise/writeAppraise"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Yuki动漫",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#4595e5",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/tabbar/home_n.png",
+        "selectedIconPath":"img/tabbar/home_p.png",
+        "text": "福利袋"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "iconPath": "img/tabbar/column_n.png",
+        "selectedIconPath": "img/tabbar/column_p.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "img/tabbar/bag_n.png",
+        "selectedIconPath": "img/tabbar/bag_p.png",
+        "text": "购物袋"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "img/tabbar/me_n.png",
+        "selectedIconPath": "img/tabbar/me_p.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

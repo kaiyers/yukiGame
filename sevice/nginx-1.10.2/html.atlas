@@ -1,0 +1,110 @@
+{
+    "frames": {
+        "icon-114.png": {
+            "frame": {
+                "h": 114,
+                "idx": 0,
+                "w": 114,
+                "x": 251,
+                "y": 129
+            },
+            "sourceSize": {
+                "h": 114,
+                "w": 114
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "icon-128.png": {
+            "frame": {
+                "h": 128,
+                "idx": 0,
+                "w": 128,
+                "x": 251,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 128,
+                "w": 128
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "icon-16.png": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 16,
+                "x": 366,
+                "y": 227
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "icon-256.png": {
+            "frame": {
+                "h": 254,
+                "idx": 0,
+                "w": 250,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 256,
+                "w": 256
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 1
+            }
+        },
+        "icon-32.png": {
+            "frame": {
+                "h": 32,
+                "idx": 0,
+                "w": 32,
+                "x": 366,
+                "y": 194
+            },
+            "sourceSize": {
+                "h": 32,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "loading-logo.png": {
+            "frame": {
+                "h": 64,
+                "idx": 0,
+                "w": 64,
+                "x": 366,
+                "y": 129
+            },
+            "sourceSize": {
+                "h": 64,
+                "w": 64
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "html.png",
+        "prefix": "sevice/nginx-1.10.2/html/"
+    }
+}

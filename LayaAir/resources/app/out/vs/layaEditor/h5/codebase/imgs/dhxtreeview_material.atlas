@@ -1,0 +1,178 @@
+{
+    "frames": {
+        "icon_chbx_0.gif": {
+            "frame": {
+                "h": 13,
+                "idx": 0,
+                "w": 13,
+                "x": 0,
+                "y": 16
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 3
+            }
+        },
+        "icon_chbx_1.gif": {
+            "frame": {
+                "h": 13,
+                "idx": 0,
+                "w": 14,
+                "x": 7,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 3
+            }
+        },
+        "icon_chbx_dis_0.gif": {
+            "frame": {
+                "h": 13,
+                "idx": 0,
+                "w": 13,
+                "x": 0,
+                "y": 30
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 3
+            }
+        },
+        "icon_chbx_dis_1.gif": {
+            "frame": {
+                "h": 13,
+                "idx": 0,
+                "w": 14,
+                "x": 0,
+                "y": 44
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 3
+            }
+        },
+        "icon_file.gif": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 13,
+                "x": 14,
+                "y": 14
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 1
+            }
+        },
+        "icon_folder_closed.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 14,
+                "x": 22,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 3
+            }
+        },
+        "icon_folder_opened.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 16,
+                "x": 14,
+                "y": 31
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 3
+            }
+        },
+        "icon_minus.gif": {
+            "frame": {
+                "h": 6,
+                "idx": 0,
+                "w": 6,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 24,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 5,
+                "y": 9
+            }
+        },
+        "icon_plus.gif": {
+            "frame": {
+                "h": 8,
+                "idx": 0,
+                "w": 5,
+                "x": 0,
+                "y": 7
+            },
+            "sourceSize": {
+                "h": 24,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 6,
+                "y": 8
+            }
+        },
+        "loading.gif": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 16,
+                "x": 28,
+                "y": 13
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxtreeview_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxtreeview_material/"
+    }
+}

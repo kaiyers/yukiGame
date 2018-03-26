@@ -1,0 +1,40 @@
+<!--pages/classify/classify.wxml-->
+<view class="headerSeach clearfix">
+    <view class="sheaderSeach">
+      <view class="headerSeachLeft" bindtap="tomycoupencc">
+        <image src="../../img/icon/coupon.png"></image>
+      </view>
+      <navigator url="../seekTransit/seekTransit" class="headerSeachRight">
+        <image class="searchIcon" src="../../img/newicon/seach_samll.png"></image>
+        <view class="headerSeachRightText">Yuki原创</view>
+      </navigator>
+    </view>
+  </view>
+
+<view class="page_bd">
+  <view class="nav_left"> 
+    <block wx:for="{{navLeftItems}}">    
+      <view class="nav_left_items {{curNav == item.typeId ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.typeId}}">
+      <view wx:if="{{curNav == item.typeId}}" class="biaoji"></view>
+      {{item.typeName}}</view>  
+    </block>  
+  </view>  
+  <scroll-view scroll-y class="nav_right">
+    <image src='{{showImg}}' class="tututu"></image>  
+    <view class="className">{{claName}}</view>
+   <block wx:for="{{navRightItems[curIndex].typeList}}">  
+      <view class="nav_right_items">  
+        <navigator url="../classifyD/classifyD?twoid={{item.typeId}}&oneid={{navRightItems[curIndex].typeId}}&ln={{item.typeName}}"> 
+          <view>                
+            <image src="{{item.typePicUrl}}"></image>  
+          </view>  
+          <view>  
+            <text>{{item.typeName}}</text>  
+          </view>   
+        </navigator>  
+      </view>  
+    </block>  
+  </scroll-view>  
+</view>  
+
+

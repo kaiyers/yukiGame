@@ -1,0 +1,21 @@
+  <template name="checkPopup">
+    <view class="popUp" animation="{{animationData}}">
+      <view class="curtain"></view>
+      <view class="popUp_block">
+        <view class="popUp_title space">价格</view>
+        <view class="popUp_price space clearfix">
+          <input type="digit" class="popUp_price_low fl" value="{{minPriceText}}" placeholder="最低价" placeholder-class="placeholderNew" bindfocus="methfoc" bindinput="textF" data-ins="2"/>
+          <view class="popUp_price_section fl">-</view>
+          <input type="digit" class="popUp_price_up fl" value="{{maxPriceText}}" placeholder="最高价" placeholder-class="placeholderNew" bindfocus="methfoc" bindinput="textF" data-ins="3"/>
+        </view>
+        <view class="popUp_title space">品牌</view>
+        <view class="brank space clearfix">
+          <view class="singleBclock fl {{brank.boolean==2?'active':''}}" wx:for="{{poBrands}}" wx:for-index="branksIdx" wx:for-item="brank" data-ins="{{branksIdx}}" bindtap='brankchecks' data-id="{{brank.id}}" data-name="{{brank.brandName}}">{{brank.brandName}}</view>
+        </view>
+        <view class="clearfix bottomBtn">
+          <view class="fl" bindtap='clearmsg'>重置</view>
+          <view class="fr" bindtap='tabClick'>完成</view>
+        </view>
+      </view>
+    </view>
+  </template>

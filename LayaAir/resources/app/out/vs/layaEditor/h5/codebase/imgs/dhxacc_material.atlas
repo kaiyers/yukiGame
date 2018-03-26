@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "dhxacc_btns.png": {
+            "frame": {
+                "h": 8,
+                "idx": 0,
+                "w": 28,
+                "x": 32,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 4
+            }
+        },
+        "dhxacc_cell_progress.gif": {
+            "frame": {
+                "h": 31,
+                "idx": 0,
+                "w": 31,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 31,
+                "w": 31
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxacc_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxacc_material/"
+    }
+}

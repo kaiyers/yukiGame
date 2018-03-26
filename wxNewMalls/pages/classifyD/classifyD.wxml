@@ -1,0 +1,60 @@
+<!--pages/classifyD/classifyD.wxml-->
+<wxs module="numfilter" src="../../filter/price.wxs"></wxs>
+<view class="page" class="{{open ? 'contentdet' : ''}}" >
+  <view class="page__hd">
+    <view class="filter">
+      <view class="tab {{tab == 0 ? 'active' : ''}}" bindtap="sortByPopularity">人气</view>
+      <view class="tab {{tab == 1 ? 'active' : ''}} tab-price" data-direction="{{direction}}" bindtap="sortByPrice">
+        价格<image src="{{priceIcon}}" class="icon1" wx:if="{{tab != 1}}"></image>
+        <span wx:if="{{tab == 1}}" style="diaplay:inline">
+          <image src="{{priceIconUp}}" class="icon1" wx:if="{{direction == 1}}"></image>
+          <image src="{{priceIconDown}}" class="icon1" wx:if="{{direction == 0}}"></image>
+        </span>
+      </view>
+      <view class="tab {{tab == 2 ? 'active' : ''}}" bindtap="sortByScreen">
+        筛选<image src="{{screenIcon}}" class="icon" wx:if="{{tab != 2}}"></image>
+        <image src="{{screenIconP}}" class="icon" wx:if="{{tab == 2}}"></image>
+      </view>
+    </view> 
+  </view>
+  <view class="page_bd" wx:if="{{goodList.length}}">
+    <view wx:for="{{goodList}}" class="newGoodsContainsGood">
+      <image src="../../img/newicon/collect_yes.png" wx:if="{{item.isLike}}" class="danyuan_icon" data-index="{{index}}" bindtap='addLike'/>
+      <image src="../../img/newicon/collect_no.png" wx:else class="danyuan_icon" data-index="{{index}}" bindtap='addLike'/>
+      <navigator url="../details/details?gsid={{item.goodId}}">
+        <image src="{{item.goodPicUrl}}" class="danyuan_img" />
+        <view class="danyuan_tittle">{{item.goodName}}</view>
+        <view class="danyuan_secondName">{{item.goodSecondName}}　</view>
+        <view class="danyuan_prie">
+          <text class="newpric"> ￥{{numfilter.numfilter(item.goodMinPrice)}}</text>
+          <!-- <text class="oldpric">￥{{numfilter.numfilter(item.goodMinPrice)}}</text> -->
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 该分类下无商品时显示 -->
+  <view wx:else class='nopage'>
+    <image src='http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/noseek.png' class='nocollectImg'></image>
+    <view class='noText'>没有找到相关产品哦~</view>
+  </view>
+</view>
+<view animation="{{animationTitle}}" class="slide">
+    <view class='geshi'>分类</view>
+    <view class='pinpaibiaoqian'>
+      <view class="{{item.checked?'biaoqian':'biaoqia'}}" wx:for="{{typeList}}" bindtap='choseType' data-index="{{index}}">{{item.typeName}}</view>
+    </view>
+    <view class='geshi1'>价格区间</view>
+    <view class='pricebeto'>
+      <input type='digit'  placeholder='最低价格' bindchange="minPr" bindfocus="minDejiao" bindblur="minShijiao" value='{{minprice}}' class="{{mindejiao?'inptdejiao':'inpt'}}"></input>-
+      <input type='digit' placeholder='最高价格' bindchange="maxPr"  bindfocus="maxDejiao" bindblur="maxShijiao" value='{{maxprice}}' class="{{maxdejiao?'inptdejiao':'inpt'}}"></input>
+    </view>
+    <view class='geshi1'>品牌</view>
+    <view class='pinpaibiaoqian'>
+      <view class="{{item.checked?'biaoqian':'biaoqia'}}" wx:for="{{brandList}}" bindtap='chosePinpai' data-index="{{index}}">{{item.brandName}}</view>
+    </view>
+  <view class='geshiA'>
+    <view class='geshiAa' bindtap="replacement">重置</view>
+    <view class='geshiAb' bindtap="determine">完成</view>
+  </view>
+</view>
+<view class="modal-mask" bindtap="hideMask" catchtouchmove="preventTouchMove" wx:if="{{showMask}}"></view>

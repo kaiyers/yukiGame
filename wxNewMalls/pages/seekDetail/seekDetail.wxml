@@ -1,0 +1,54 @@
+<wxs module="m1">
+  var dealString = function(s){
+    var asting=(s/100).toFixed(2)
+    return asting
+  }
+  module.exports.dealString = dealString;
+</wxs>
+<import src="../../utils/util.wxml"/>
+<template is="checkPopup" data="{{animationData:animationData,poBrands:poBrands,minPriceText:minPriceText,maxPriceText:maxPriceText}}"/>
+<view class="container">
+  <view class="headerSeach">
+    <view class="headerSeachLeft" bindtap="toSerch">
+      <image class="searchIcon" src="../../img/newicon/seach_samll.png"></image>
+      <view class="section">
+        <input type='text' value="{{searchinput}}" class="headerSeachLeftText" bindfocus="methfoc" bindinput="textF" bindconfirm="enterClick"  data-ins="1"/>
+      </view>
+    </view>
+  </view>
+  <view class="page__hd" wx:if="{{!detailListB}}">
+    <view class="filter clearfix">
+      <view class="fl filterLeft {{popularSort?'active':''}}" data-id="1" bindtap='hunmanqi'>人气</view>
+      <view class="fl filterMiddle" data-id="2"  bindtap='priceSort'>
+        <view class="filterMiddleW {{priceSort?'active':''}}">价格</view>
+        <image src="{{priceSortPic}}" class="filterMiddlePic"></image>
+      </view>
+      <view class="fl filterright" data-id="3"  bindtap='totalSort'>
+        <view class="filterrightW {{checkIcon?'active':''}}">筛选</view>
+        <image src="{{totalSortPic}}" class="filterrightPic"></image>
+      </view>
+    </view>
+  </view>
+  <view class="guessLikeC">
+    <scroll-view class='guessLikeContain'  scroll-y="true" bindscrolltolower="pullUpLoad" bindscroll="scroll"  style="height: {{winHeight - 31}}px" >
+      <view class='clearfix' style="width:720rpx;">
+        <view class="newGoodsContainsGood fl" wx:for="{{detailList}}"  wx:key="idx" wx:for-item="itemName" wx:if="{{!detailListB}}">
+          <image src="../../img/newicon/collect_no.png" class='hearts' wx:if="{{itemName.isCollected=='0'}}"></image>
+          <image src="../../img/newicon/collect_yes.png" class='hearts' wx:if="{{itemName.isCollected=='1'}}"></image>
+          <navigator url="../details/details?gsid={{itemName.goodId}}">
+            <image src="{{itemName.goodPicUrl}}" ></image>
+            <view class="newGoodsContainsText1">{{itemName.goodName}}</view>
+            <view class="newGoodsContainsText3" wx:if="{{itemName.goodSecondName}}">{{itemName.goodSecondName}}</view>
+            <view class="smllfont"> 
+                <text class="newGoodsContainsText2">￥{{m1.dealString(itemName.goodMinPrice)}}</text>
+            </view> 
+          </navigator>
+        </view>
+        <view class="orderList-null" wx:if="{{detailListB}}">
+          <image class="orderList-null-icon" src="http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/noseek.png"></image>
+          <view class="orderList-null-title">没有找到相关商品哦~</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

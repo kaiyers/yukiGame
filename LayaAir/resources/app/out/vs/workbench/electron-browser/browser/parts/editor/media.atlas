@@ -1,0 +1,76 @@
+{
+    "frames": {
+        "letterpress-dark.png": {
+            "frame": {
+                "h": 484,
+                "idx": 0,
+                "w": 440,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 512,
+                "w": 512
+            },
+            "spriteSourceSize": {
+                "x": 37,
+                "y": 15
+            }
+        },
+        "letterpress-dark@2x.png": {
+            "frame": {
+                "h": 508,
+                "idx": 0,
+                "w": 508,
+                "x": 0,
+                "y": 485
+            },
+            "sourceSize": {
+                "h": 512,
+                "w": 512
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 3
+            }
+        },
+        "letterpress.png": {
+            "frame": {
+                "h": 484,
+                "idx": 0,
+                "w": 440,
+                "x": 441,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 512,
+                "w": 512
+            },
+            "spriteSourceSize": {
+                "x": 37,
+                "y": 15
+            }
+        },
+        "letterpress@2x.png": {
+            "frame": {
+                "h": 508,
+                "idx": 0,
+                "w": 508,
+                "x": 509,
+                "y": 485
+            },
+            "sourceSize": {
+                "h": 512,
+                "w": 512
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 3
+            }
+        }
+    },
+    "meta": {
+        "image": "media.png",
+        "prefix": "LayaAir/resources/app/out/vs/workbench/electron-browser/browser/parts/editor/media/"
+    }
+}

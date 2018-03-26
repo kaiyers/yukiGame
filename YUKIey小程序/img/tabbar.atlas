@@ -1,0 +1,144 @@
+{
+    "frames": {
+        "bag_n.png": {
+            "frame": {
+                "h": 57,
+                "idx": 0,
+                "w": 57,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 72,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 8,
+                "y": 8
+            }
+        },
+        "bag_p.png": {
+            "frame": {
+                "h": 57,
+                "idx": 0,
+                "w": 55,
+                "x": 58,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 72,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 9,
+                "y": 8
+            }
+        },
+        "column_n.png": {
+            "frame": {
+                "h": 57,
+                "idx": 0,
+                "w": 57,
+                "x": 114,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 72,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 8,
+                "y": 8
+            }
+        },
+        "column_p.png": {
+            "frame": {
+                "h": 57,
+                "idx": 0,
+                "w": 57,
+                "x": 0,
+                "y": 58
+            },
+            "sourceSize": {
+                "h": 72,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 8,
+                "y": 8
+            }
+        },
+        "home_n.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 57,
+                "x": 58,
+                "y": 58
+            },
+            "sourceSize": {
+                "h": 72,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 8,
+                "y": 6
+            }
+        },
+        "home_p.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 57,
+                "x": 116,
+                "y": 58
+            },
+            "sourceSize": {
+                "h": 72,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 8,
+                "y": 6
+            }
+        },
+        "me_n.png": {
+            "frame": {
+                "h": 63,
+                "idx": 0,
+                "w": 48,
+                "x": 174,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 72,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 12,
+                "y": 5
+            }
+        },
+        "me_p.png": {
+            "frame": {
+                "h": 63,
+                "idx": 0,
+                "w": 48,
+                "x": 174,
+                "y": 64
+            },
+            "sourceSize": {
+                "h": 72,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 12,
+                "y": 5
+            }
+        }
+    },
+    "meta": {
+        "image": "tabbar.png",
+        "prefix": "YUKIey小程序/img/tabbar/"
+    }
+}

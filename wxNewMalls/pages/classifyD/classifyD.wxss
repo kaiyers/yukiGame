@@ -1,0 +1,249 @@
+/* pages/classifyD/classifyD.wxss */
+page {
+  height: 100%;
+  background: #fafafa
+}
+.contentdet{
+  height:100vh;
+  width:100vw;
+  overflow: hidden;
+}
+.active {
+  color: #ff9700 !important;
+}
+.icon {
+  vertical-align: middle;
+  width:18px;
+  height: 18px;
+  margin-left: 10rpx
+}
+.icon1 {
+  vertical-align: middle;
+  width:12px;
+  height: 18px;
+  margin-left: 10rpx
+}
+.filter {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+}
+.tab {
+  width: 33%;
+  float: left;
+  text-align: center;
+  font-size: 14px;
+}
+.slide{
+  width:548rpx;
+  padding: 0 30rpx;
+  position: absolute;
+  top:0;
+  left: 100%;
+  background: #fff;
+  opacity: 0;
+  height:100%;
+  z-index: 9999;
+  font-size: 26rpx;
+}
+.pricebeto{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.pinpaibiaoqian{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap:wrap;
+}
+.inpt{
+  width:236rpx;
+  border: 2rpx solid #666666;
+  text-align: center;
+  font-size: 24rpx;
+  color:#cccccc;
+  height:44rpx;
+  border-radius: 44rpx;
+}
+.inptdejiao{
+  width:236rpx;
+  border: 2rpx solid #ff9700;
+  text-align: center;
+  font-size: 24rpx;
+  color:#222;
+  height:44rpx;
+  border-radius: 44rpx;
+}
+.geshi{
+  margin: 30rpx 0;
+}
+.geshi1{
+  margin: 60rpx 0 30rpx 0;
+}
+.biaoqia{
+  height:44rpx;
+  padding: 0 30rpx;
+  line-height: 44rpx;
+  border:2rpx solid #666666;
+  border-radius: 44rpx;
+  font-size: 24rpx;
+  margin: 0 30rpx 30rpx 0;
+}
+.biaoqian{
+  height:44rpx;
+  padding: 0 30rpx;
+  line-height: 44rpx;
+  border:2rpx solid #ff9700;
+  color: #ff9700;
+  border-radius: 44rpx;
+  font-size: 24rpx;
+  margin: 0 30rpx 30rpx 0;
+}
+
+
+.service_selection {  
+  background: #fff;  
+}  
+  
+.service_selection .free-radio {  
+  background: #f0f1ec;
+  margin: 5px;  
+  padding: 4px 9px;  
+  font-size: 14px;
+  text-align: center;  
+  border-radius: 4px;
+  margin-right: 5px;
+  display: block;
+  float: left;  
+}  
+  
+.service_selection .is_checked{    
+  color: #fff;  
+  background: red;  
+}
+
+.geshiA{
+  width:548rpx;
+  position: fixed;
+  bottom: 30rpx;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.geshiAa{
+  width:204rpx;
+  height:60rpx;
+  font-size: 26rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border: 2rpx solid #666666;
+  border-radius: 60rpx
+}
+.geshiAb{
+  width:208rpx;
+  height:64rpx;
+  font-size: 26rpx;
+  line-height: 64rpx;
+  text-align: center;
+  border-radius: 60rpx;
+  background: #ffc800;
+  color:#fff;
+}    
+.checkbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #b2b2b2;
+  padding: 5px;
+}
+.checkboxq{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkbox image{
+  width:40px;
+  height:40px;
+  margin-right: 10px;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 600rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -420rpx 85rpx;
+  border-radius: 20rpx;
+}
+
+.modal-title {
+  padding:10rpx;
+  text-align: right;
+}
+.iconimg{
+  width:25px;
+  height:25px;
+}
+.modal-content, .modal-footer {
+  padding:0 20rpx 10rpx 20rpx;
+}
+.modelimg{
+  width:100%;
+  height:450rpx;
+}
+.modelname{
+  font-size: 32rpx;
+  display: -webkit-box ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+.modelname1{
+  font-size: 28rpx;
+  color: #b2b2b2;
+  margin: 10rpx
+}
+.modelname2{
+  font-size: 34rpx;
+  color:red;
+}
+
+
+.page_bd{
+  padding:30rpx 0 30rpx 30rpx;
+  overflow: hidden;
+}
+.nopage{
+  margin: 380rpx auto;
+  text-align: center;
+}
+.nocollectImg{
+  width:180rpx;
+  height:180rpx;
+  margin-bottom: 30rpx
+}
+.noText{
+  font-size: 26rpx;
+  color: #999999;
+}

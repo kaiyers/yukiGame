@@ -1,0 +1,93 @@
+{
+    "frames": {
+        "dhxcarousel_arrow_left.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 12,
+                "x": 0,
+                "y": 32
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 2
+            }
+        },
+        "dhxcarousel_arrow_left_dis.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 12,
+                "x": 0,
+                "y": 45
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 2
+            }
+        },
+        "dhxcarousel_arrow_right.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 12,
+                "x": 13,
+                "y": 32
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 2
+            }
+        },
+        "dhxcarousel_arrow_right_dis.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 12,
+                "x": 13,
+                "y": 45
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 2
+            }
+        },
+        "dhxcarousel_cell_progress.gif": {
+            "frame": {
+                "h": 31,
+                "idx": 0,
+                "w": 31,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 31,
+                "w": 31
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxcarousel_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxcarousel_material/"
+    }
+}

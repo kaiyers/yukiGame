@@ -1,0 +1,79 @@
+<!--pages/classifyD/classifyD.wxml-->
+<wxs module="numfilter" src="../../filter/price.wxs"></wxs>
+<view class="page" class="{{open ? 'contentdet' : ''}}" >
+  <view class="page__hd">
+    <view class="filter">
+      <view class="tab {{tab == 0 ? 'active' : ''}}" bindtap="sortByPopularity">人气</view>
+      <view class="tab {{tab == 1 ? 'active' : ''}} tab-price" data-direction="{{direction}}" bindtap="sortByPrice">
+        价格<image src="{{priceIcon}}" class="icon" wx:if="{{tab != 1}}"></image>
+        <span wx:if="{{tab == 1}}" style="diaplay:inline">
+          <image src="{{priceIconUp}}" class="icon" wx:if="{{direction == 1}}"></image>
+          <image src="{{priceIconDown}}" class="icon" wx:if="{{direction == 0}}"></image>
+        </span>
+      </view>
+      <view class="tab {{tab == 2 ? 'active' : ''}}" bindtap="sortByScreen">
+        筛选<image src="{{screenIcon}}" class="icon" wx:if="{{tab != 2}}"></image>
+        <image src="{{screenIconP}}" class="icon" wx:if="{{tab == 2}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view wx:for="{{goodList}}" class="weui-media-box weui-media-box_appmsg">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" bindtap="showDialogBtn" data-index="{{index}}">
+        <image class="weui-media-box__thumb" src="{{item.goodPicUrl}}" />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg" bindtap='godetail' data-index="{{index}}" hover-class="weui-cell_active">
+        <view class="weui-media-box__title">{{item.goodName}}</view>
+        <view class="weui-media-box__desc prie">
+          ￥ {{numfilter.numfilter(item.goodMinPrice)}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="slide {{open ? 'slideShow' : ''}}" wx:if='{{open}}'>
+    <view class='geshi'>价格区间</view>
+    <view class='pricebeto'>
+      <input type='text' placeholder='最低价格' bindchange="minPr" value='{{minprice}}' class='inpt'></input>---
+      <input type='text' placeholder='最高价格' bindchange="maxPr" value='{{maxprice}}' class='inpt'></input>
+    </view>
+    <view class="parting_line"></view>
+    <view class='geshi'>品牌</view>
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for-items="{{brandList}}">
+        <view class="checkboxq">
+          <image src='{{item.brandLogo}}'></image>
+          <span>{{item.brandName}}</span>
+        </view>
+        <checkbox value="{{item.brandid}}" checked="{{item.checked}}"/>
+      </label>
+      <label class="checkbox" >
+        <view class="checkboxq">
+          <image src='../../img/icon/other.png'></image>
+          <span>其他</span>
+        </view>
+        <checkbox value="-1"/>
+      </label>
+    </checkbox-group>
+  <view class='geshiA'>
+      <view class='geshiAa' bindtap="replacement">返回</view>
+      <view class='geshiAb' bindtap="determine">确定</view>
+    </view>
+  </view>
+
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">
+    <image src='../../img/icon/my_comment_icon_delete@3x.png' class='iconimg' bindtap="onCancel"></image>
+  </view>
+  <view class="modal-content" bindtap='gotodeteli'>
+    <image src='{{modeldata.goodPicUrl}}' class='modelimg'></image>
+  </view>
+  <view class="modal-footer">
+    <view class='modelname'>{{modeldata.goodName}}</view>
+    <view  class='modelname1'>{{modeldata.goodSecondName}}</view>
+    <view  class='modelname2'>￥ {{numfilter.numfilter(modeldata.goodMinPrice)}}</view> 
+  </view>
+</view>

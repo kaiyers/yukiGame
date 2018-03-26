@@ -1,0 +1,144 @@
+{
+    "frames": {
+        "dhxform_arrow_down.gif": {
+            "frame": {
+                "h": 5,
+                "idx": 0,
+                "w": 9,
+                "x": 121,
+                "y": 77
+            },
+            "sourceSize": {
+                "h": 5,
+                "w": 14
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxform_arrow_down_dis.gif": {
+            "frame": {
+                "h": 5,
+                "idx": 0,
+                "w": 9,
+                "x": 121,
+                "y": 83
+            },
+            "sourceSize": {
+                "h": 5,
+                "w": 14
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxform_chbxrd.png": {
+            "frame": {
+                "h": 24,
+                "idx": 0,
+                "w": 284,
+                "x": 0,
+                "y": 103
+            },
+            "sourceSize": {
+                "h": 24,
+                "w": 288
+            },
+            "spriteSourceSize": {
+                "x": 4,
+                "y": 0
+            }
+        },
+        "dhxform_image_calendar.png": {
+            "frame": {
+                "h": 14,
+                "idx": 0,
+                "w": 13,
+                "x": 121,
+                "y": 32
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 19
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 1
+            }
+        },
+        "dhxform_image_calendar_dis.png": {
+            "frame": {
+                "h": 14,
+                "idx": 0,
+                "w": 13,
+                "x": 121,
+                "y": 47
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 19
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 1
+            }
+        },
+        "dhxform_image_uploading.gif": {
+            "frame": {
+                "h": 31,
+                "idx": 0,
+                "w": 31,
+                "x": 121,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 31,
+                "w": 31
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxform_upload_buttons.png": {
+            "frame": {
+                "h": 102,
+                "idx": 0,
+                "w": 120,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 102,
+                "w": 132
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxform_upload_uploading.gif": {
+            "frame": {
+                "h": 14,
+                "idx": 0,
+                "w": 14,
+                "x": 121,
+                "y": 62
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxform_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxform_material/"
+    }
+}

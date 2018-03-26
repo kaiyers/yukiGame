@@ -1,0 +1,255 @@
+.container{
+  overflow: hidden;
+}
+.limitTimeTitle{
+  width:100%;
+  height: 320rpx;
+  border-top:2rpx solid #e0e0e0;
+  border-bottom:16rpx solid #eee;
+}
+.limitTimeTitle image{
+  width:100%;
+  height: 320rpx;
+}
+.guessLikeContain{
+  width: 100%;
+  overflow: hidden;
+}
+swiper {
+  height:420rpx;
+  width:100%;
+  overflow:hidden;
+}
+swiper-item{
+  overflow-y: auto;
+}
+.swiper-tab{  
+  display:-webkit-box;
+  width: 100%;   
+  text-align: center;  
+  background:#fcfcfc;
+}  
+.swiper-tab-list{ 
+  -webkit-box-flex:1;
+  font-size: 30rpx;   
+  color: #777777;
+  padding:12rpx 0 10rpx 0;
+}  
+.swichNavF{
+  font-size:26rpx;
+  color:#666;
+  line-height: 38rpx;
+}
+.on .swichNavF{
+  color:#222;
+}
+.swichNavS{
+  font-size:24rpx;
+  color:#9c9c9c;
+  line-height: 36rpx;
+}
+.on{ 
+  color: #222;
+  background:#fff0be;
+}  
+.swiper-box{ 
+  display: block; 
+  height: 100%;
+  overflow: hidden;
+}  
+.swiper-box view{  
+    text-align: center;  
+}
+swiper image {
+  width:100%;
+  height:420rpx;
+}
+.limitTimeMes{
+  padding: 15rpx; 
+  background: rgb(255, 255, 255); 
+  font-size: 30rpx; 
+  font-weight: bolder;
+  margin-bottom:20rpx;
+  text-align:center;
+}
+.limitGoods{
+  height: 272rpx;
+  border-radius: 8rpx;
+  background: #fff;
+  margin-top:30rpx;
+}
+.limitGoods.limitGoodN{
+  border:none;
+}
+.limitGoodsImage{
+  width: 272rpx;
+  height: 272rpx;
+  margin-right:32rpx;
+  position: relative;
+}
+.limitGoodsImage view{
+  position: absolute;
+  left:0;
+  top: 0;
+  width: 272rpx;
+  height:272rpx;
+  line-height: 272rpx;
+  border-radius: 50%;
+  background: rgba(0,0,0,.3);
+  font-weight: bolder;
+  font-size: 40rpx;
+  color: #fff;
+}
+.limitGoodsMes{
+  width: 176rpx;
+  height:48rpx;
+  background:#ffc800;
+  font-size:24rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 48rpx;
+}
+.limitGoodsMes.limitGoodsMes_to{
+  background:#30d28b;
+}
+.limitGoodsMes.limitGoodsMes_ye{
+  background:#b3b3b3;
+}
+.limitGoodsMes view{
+  display:inline-block;
+}
+.limitGoodsMesIcon{
+  width:24rpx;
+  height: 24rpx;
+  margin-right: 24rpx;
+  margin-top:-6rpx;
+  vertical-align: middle;
+}
+.saleListGoodsName{
+  font-size: 26rpx;
+  text-align: left;
+  line-height: 40rpx;
+  color:#222;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.saleListGoodsNameS{
+  font-size: 24rpx;
+  text-align: left;
+  line-height: 44rpx;
+  color:#999;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.limPrice{
+  line-height: 82rpx;
+  margin-left:-70rpx;
+}
+.limPrice view{
+  display: inline-block;
+  color: #222;
+  font-size: 24rpx;
+  transform:scale(0.8);
+}
+.limPrice view.liPrice{
+  height: 8rpx;
+  border-bottom:16rpx solid #fff0be;
+  line-height: 24rpx;
+  margin-left:6rpx;
+  margin-right: 18rpx;
+}
+.limPrice view.poPrice,.limPrice view.purchasePriceTh{
+  color:#9a9a9a;
+}
+.limPrice view.poPrice{
+  margin-right: 4rpx;
+}
+.purchasePriceL {
+  color: #9d9d9d;
+  font-size: 20rpx;
+  margin: 10rpx 0;
+}
+.purchasePriceTh{
+  text-decoration: line-through;
+}
+.limitGoodsMesL{
+  text-align: center;
+  line-height: 55rpx;
+  width: 165rpx;
+  height: 55rpx;
+  border: 4rpx solid #4595e5;
+  display: block;
+  color: #4595e5;
+  background: #fff;
+  border-radius: 50rpx;
+  overflow: hidden;
+  position: relative;
+}
+.limitGoodsMesL .progressM{
+  position: absolute;
+  top:0;
+  left:0;
+  height: 55rpx;
+  background:#dcebfa;
+}
+.limitGoodsMesL .progressPer{
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size:24rpx;
+  width:165rpx;
+  line-height: 55rpx;
+  color: #4595e5;
+  text-align: center;
+  z-index: 99;
+}
+.limitGoodsMesR{
+  font-size:24rpx;
+  text-align: center;
+  line-height: 48rpx;
+  color: #fff;
+}
+.limitGoodsMesPr{
+  width: 386rpx;
+  padding-top:26rpx;
+  text-align: left;
+}
+.activeBlank{
+  font-size:30rpx;
+  color:#000;
+  padding:20rpx;
+}
+.Htitle{
+  padding-top:32rpx;
+  padding-bottom:32rpx;
+  background: #fff;
+  text-align: center;
+  border:2rpx solid #e0e0e0;
+}
+.overTime{
+  width:48rpx;
+  height: 56rpx;
+  font-size:24rpx;
+  background:#666;
+  border-radius: 8rpx;
+  color:#fff;
+  text-align: center;
+  line-height: 56rpx;
+}
+.colon{
+  width:20rpx;
+  height: 56rpx;
+  font-size:24rpx;
+  text-align: center;
+  line-height: 56rpx;
+}
+.overTimeTitle{
+  margin-right: 34rpx;
+  font-size:26rpx;
+  line-height: 56rpx;
+}
+.Htitle view{
+  display: inline-block;
+}

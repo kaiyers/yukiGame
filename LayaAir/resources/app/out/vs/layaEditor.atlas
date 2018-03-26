@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "h5.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "layaEditor.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/"
+    }
+}

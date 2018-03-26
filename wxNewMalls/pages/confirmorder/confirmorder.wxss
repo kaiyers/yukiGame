@@ -1,0 +1,213 @@
+/* pages/confirmorder/confirmorder.wxss */
+.parting_line{height:10px;width:100%;background:#f0f0f0}
+.newGoodsContains{
+  width:100%; 
+  overflow: hidden;
+  white-space: nowrap;
+}
+.orname{
+  color: #222222;
+  font-size: 24rpx;
+  margin-bottom: 25rpx;
+  width:90rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.or-moren{
+  width:64rpx;
+  height:32rpx;
+  border-radius: 32rpx;
+  background: #ffc800;
+  color: #ffffff;
+  text-align: center;
+  line-height: 32rpx;
+  font-size: 20rpx;
+}
+.or-img{
+  float: left;
+  margin-top: 33rpx;
+}
+.or-name{
+  float: left;
+  margin: 0 35rpx 0 50rpx;
+}
+.yya{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.yya text{
+  color: #222222;
+  font-size: 24rpx;
+}
+.or-address .asedd{
+  white-space:pre-line;
+  
+}
+.or-address{
+  color: #999999;
+  width: 390rpx;
+  font-size: 22rpx;
+  float: left
+}
+
+.orders-box{
+    padding-bottom: 105rpx;
+}
+.cart-list{
+    padding: 30rpx; 
+    overflow: hidden;
+}
+
+.cart-list .cart-thumb{
+    float: left;
+    width: 135rpx;
+    height: 135rpx;
+}
+.cart-list .cart-pro-info{
+    float: right;
+    width:515rpx;
+}
+.cart-list .cart-pro-name{
+    display: inline-block;
+    font-size: 25rpx
+}
+.weui-cell__ft{
+   color: #222222;
+}
+.liuyan{
+  border:2px solid #999999;
+  border-radius: 15rpx;
+  margin:0 30rpx;
+  width:650rpx;
+  height:160rpx;
+  padding: 15rpx;
+  font-size: 25rpx;
+}
+.newpric{
+  height:16rpx;
+  padding-top: -10rpx;
+  border-bottom: 16rpx solid #fff0be;
+  line-height: 32rpx;
+  display: inline-block;
+}
+.cart-pro-sst{
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+.cart-list .cart-pro-style{
+    display: inline-block;
+    font-size: 26rpx;
+    color:#999999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+.cart-list .cart-pro-count{
+    display: inline-block;
+    color:#222222;
+    font-size: 15rpx;
+}
+.cart-list .cart-pro-count .countLL{
+  color:#222222;
+  font-size: 24rpx;
+}
+.orders-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 95rpx;
+    border-top: 2rpx solid #ededed;
+    background: #fff;
+    z-index: 50;
+    font-size: 26rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.diandi{
+  height: 110rpx;
+  background: #fff;
+}
+.orders-footer .orders-footer-total{
+    padding-left: 30rpx;
+    color: #000;
+}
+.orders-footer .orders-footer-btn{
+  width:190rpx;
+  text-align:center;
+  color:#fff;
+  background:#ffc800;
+  height:65rpx;
+  line-height:65rpx;
+  border-radius:65rpx;
+  font-size:25rpx;
+  margin-right: 30rpx;
+}
+.listicon{
+  vertical-align: middle;width:32rpx; height: 32rpx;
+}
+.weui-cell{
+  font-size: 14px;
+}
+.orders-address-detail{
+  padding-left: 25px;
+}
+/* 遮罩 */
+.mask{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  z-index: 99;
+  background: rgba(0,0,0,0.5)
+}
+/* 弹出菜单 */
+.popupMenu{
+  position: absolute;
+  width:100%;
+  z-index: 100;
+  background: #fff;
+  bottom: 0;
+  min-height: 600rpx;
+}
+.queding{
+  font-size: 35rpx;
+  color: #4595e5
+}
+.xuaze{
+  font-size: 38rpx;
+}
+.coupenList{
+  padding:1rpx 10px;
+}
+
+
+.order-bgn{
+  font-size: 16px;
+    padding:45rpx 30rpx 30rpx 30rpx;
+    width:606rpx;
+    overflow: hidden;
+    color: #666;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15rpx;
+    background-image: url(http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/confirm1.png);
+    background-size: 100% 100%
+}
+.order-bgp{
+  font-size: 16px;
+  padding:45rpx 30rpx 30rpx 30rpx;
+  width:606rpx;
+  vertical-align: top;
+  color: #666;
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 15rpx;
+  background-image: url(http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/xcx/confirm2.png);
+  background-size: 100% 100%
+}

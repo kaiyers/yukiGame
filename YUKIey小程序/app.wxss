@@ -1,0 +1,27 @@
+/**app.wxss**/
+@import 'style/weui.wxss';
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} */
+body{
+  padding: 0;
+  margin: 0;
+}
+.clearfix:after { content: ""; display: block; clear: both; }
+.clearfix { zoom: 1; }
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}
+.container{
+  display:block;
+  background:#E6E6E6;
+}

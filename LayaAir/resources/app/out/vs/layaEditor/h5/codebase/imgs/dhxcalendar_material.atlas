@@ -1,0 +1,110 @@
+{
+    "frames": {
+        "dhxcalendar_arrow_left.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 7,
+                "x": 501,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 12,
+                "w": 10
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 0
+            }
+        },
+        "dhxcalendar_arrow_right.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 7,
+                "x": 501,
+                "y": 13
+            },
+            "sourceSize": {
+                "h": 12,
+                "w": 10
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 0
+            }
+        },
+        "dhxcalendar_clock.png": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 16,
+                "x": 0,
+                "y": 20
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "dhxcalendar_marker.gif": {
+            "frame": {
+                "h": 6,
+                "idx": 0,
+                "w": 6,
+                "x": 0,
+                "y": 37
+            },
+            "sourceSize": {
+                "h": 6,
+                "w": 6
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxcalendar_selector_bottom.gif": {
+            "frame": {
+                "h": 9,
+                "idx": 0,
+                "w": 500,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 9,
+                "w": 500
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxcalendar_selector_top.gif": {
+            "frame": {
+                "h": 9,
+                "idx": 0,
+                "w": 500,
+                "x": 0,
+                "y": 10
+            },
+            "sourceSize": {
+                "h": 9,
+                "w": 500
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxcalendar_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxcalendar_material/"
+    }
+}

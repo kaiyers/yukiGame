@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<wxs module="m1">
+  var dealString = function(s){
+    var asting=(s/100).toFixed(2)
+    return asting
+  }
+  module.exports.dealString = dealString;
+</wxs>
+<view class="container">
+  <view class="mask" wx:if="{{mask}}">
+    <image src='../../img/icon/loading.gif'></image>
+    <span>发表中...</span>
+  </view>
+  <form bindsubmit="bindFormSubmit">
+    <view class="containerContent" wx:for="{{goodsList}}"  wx:for-index="idx" wx:for-item="itemNamex" >
+      <view class="clearfix goodIntro">
+        <view class="goodIntro_img">
+          <image src="{{itemNamex.skuPic}}" alt=""></image>
+        </view>
+        <view class="goodIntro_des">
+          <view class="goodIntro_des_F">{{itemNamex.name}}</view>
+          <view class="goodIntro_des_S">价格：￥{{m1.dealString(itemNamex.unitPrice)}}</view>
+        </view>
+      </view>
+      <view class="choooseIcon" >
+        <view class="choooseIconI choooseIcons {{look[idx]==3?'active':''}}" bindtap='swichNav'   data-index="{{idx}}"  data-cur='3'>
+          <span class="choooseIconsF" ></span>
+          <span class="choooseIconsS">好评</span>
+        </view>
+        <view class="choooseIconII choooseIcons {{look[idx]==2?'active':''}}" bindtap='swichNav'  data-index="{{idx}}"  data-cur='2'>
+          <span class="choooseIconsF"></span>
+          <span class="choooseIconsS">中评</span>
+        </view>
+        <view class="choooseIconIII choooseIcons {{look[idx]==1?'active':''}}" bindtap='swichNav'  data-index="{{idx}}"  data-cur='1'>
+          <span class="choooseIconsF"></span>
+          <span class="choooseIconsS">差评</span>
+        </view>
+      </view>
+      <view class="write">
+        <textarea  class="writeIn" placeholder="选填：输入您的评论(不超过200字)" bindinput='textF' maxlength="{{maxlength}}" value='{{comment[idx]}}' data-index="{{idx}}"/>
+      </view>
+      <view class="fileIf">
+        <span class="filetitle">有图有真相</span>
+        <view class="clearfix fileIfPIC">
+            <view  class="pushL"  wx:for="{{pics[idx]}}" wx:for-index="idxs" wx:for-item="itemName" wx:if="{{picsNum[idx]>0}}" >
+                <image src='{{itemName}}' data-index="{{idxs}}" bindtap='previewImage'></image>
+                <span bindtap="decparent" data-index="{{idx}}" data-curparent="{{idxs}}">×</span>
+            </view>
+            <view class="pushL" bindtap='upload' wx:if="{{dePic[idx]}}" data-index="{{idx}}">+</view>
+        </view>
+      </view>
+      <view class="spacing" wx:if="{{idx!=count}}"></view>
+    </view>
+    <button form-type="submit" class="issue"> 发布 </button>
+  </form>
+</view>

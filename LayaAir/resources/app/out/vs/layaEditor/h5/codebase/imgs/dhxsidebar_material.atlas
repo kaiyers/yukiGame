@@ -1,0 +1,76 @@
+{
+    "frames": {
+        "dhxsidebar_arrow_down.gif": {
+            "frame": {
+                "h": 6,
+                "idx": 0,
+                "w": 9,
+                "x": 47,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 6,
+                "w": 9
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxsidebar_arrow_up.gif": {
+            "frame": {
+                "h": 6,
+                "idx": 0,
+                "w": 9,
+                "x": 47,
+                "y": 7
+            },
+            "sourceSize": {
+                "h": 6,
+                "w": 9
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxsidebar_cell_progress.gif": {
+            "frame": {
+                "h": 31,
+                "idx": 0,
+                "w": 31,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 31,
+                "w": 31
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxsidebar_side_icon.gif": {
+            "frame": {
+                "h": 10,
+                "idx": 0,
+                "w": 14,
+                "x": 32,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 3
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxsidebar_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxsidebar_material/"
+    }
+}

@@ -1,0 +1,93 @@
+<!--index.wxml-->
+ <view class="contain">
+  <view class="popUp " wx:if="{{login}}"><!-- 登录弹窗 -->
+    <view class="curtain"></view>
+    <view class="popUpContent_login" >
+      <image class="popUpContent_loginBg" src="../../img/indexBg.png"></image>
+      <view class="popUPContent_loginCon">
+        <view class="title">获得</view>
+        <view class="clearfix popUpContentS">
+          <image class="fl" src='../../img/smallGold.png'></image>
+          <span class="fl">{{dayGetGod}}</span>
+        </view>
+        <image class="confirmBtn" src="../../img/{{confirm}}"  bindtouchstart='touchStart' bindtouchend='touchEnd' data-idx="8" bindtap='ckickFun'></image>
+      </view>
+    </view>
+  </view>
+  <view class="popUp " wx:if="{{inviteFriend}}"><!-- 被邀请者一进来弹出 -->
+    <view class="curtain"></view>
+    <view class="popUpContent_inviteFriend" >
+      <image class="popUpContent_inviteFriendBg" src="../../img/Sorry.png"></image>
+      <view class="popUPContent_inviteFriendCon">
+        <image class="VS" src="../../img/images/1v1_vs_05.png"></image>
+        <view class="inviteTitle">
+           好友邀请
+           <image src="../../img/nail.png" class="nail"></image>
+        </view>
+        <view class="clearfix inviteFriendCons">
+          <view class="inviteUser clearfix">
+            <view class="sface fl">
+              <image src="{{inviteFace}}" class="slogo"></image>
+            </view>
+            <view class="userNameIn fr">{{inviteName}}</view>
+          </view>
+          <view class="clearfix inviteRoom">
+            <view class="roomCoin clearfix fl">
+              <image src="../../img/smallGold.png" class="roomCoins fl"></image>
+              <view class="fr">{{matchCoin}}</view>
+            </view>
+            <view class='invitePeoples fr'>{{roomPeople}}人</view>
+          </view>
+          <image class="confirmBtn" src="../../img/{{confirm}}"  bindtouchstart='touchStart' bindtouchend='touchEnd' bindtap='ckickFun' data-idx="10"></image>
+          <image class="backBtn" src="../../img/{{back}}"  bindtouchstart='touchStart' bindtouchend='touchEnd' bindtap='ckickFun' data-idx="11"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <import src="../../utils/util.wxml"/>
+  <template is="coinPopup" data="{{lackCoin: lackCoin,popTips:popTips,confirm:confirm}}"/>
+  <!--正文  -->
+  <view class="userInfo">
+    <view class="userInfos clearfix">
+      <view class="circleContain fl">
+        <view class="face"></view>
+        <image src="{{vlogo}}" class="logo"></image>
+        <view class="smove">
+          <span></span>
+        </view>
+      </view>
+      <view class="userName fl">{{name}}</view>
+    </view>
+    <view class="accountCoins">
+      <image src="../../img/smallGold.png" class="accountCoins_Image"></image>
+      <span class="accountCoins_quantity">{{accountCoins_quantity}}</span>
+    </view> 
+  </view>
+  <view class="contents clearfix">
+    <view class="content_L fl">
+      <image src="../../img/{{gameFriend}}" class="sPartFirst" bindtouchstart='touchStart' bindtouchend='touchEnd' bindtap='ckickFun' data-idx='1'></image>
+      <image src='../../img/{{quickEnter}}' class="sPartSecond"  bindtouchstart='touchStart' bindtouchend='touchEnd' bindtap='ckickFun' data-idx='2'></image>
+      <image src='../../img/{{gifts}}' class="sPartThird"  bindtouchstart='touchStart' bindtouchend='touchEnd' bindtap='ckickFun' data-idx='3'></image>
+      <image src='../../img/{{expect}}' class="sPartForthd"  bindtouchstart='touchStart' bindtouchend='touchEnd' bindtap='ckickFun' data-idx='4'></image>
+    </view>
+    <view class="content_R fr">
+      <image src='../../img/{{gamePeoples}}' class="sPartFirst"  bindtouchstart='touchStart' bindtouchend='touchEnd' bindtap='ckickFun'  data-idx='5'></image>
+      <view class="treeCoin"  bindtouchstart='touchStart' bindtouchend='touchEnd' bindtap='ckickFun' data-idx='6'>
+          <view class="sPartSecondImg">
+            <image src='../../img/{{Ytree}}' class="sPartSecond"></image>
+            <view class="taxtMsg clearfix"><!-- 金币数字 -->
+              <image src="../../img/smallGold.png" class="secondCoin fl" wx:if="{{clickEND}}"></image>
+              <view class="texts fl">{{currentCoin}}/500</view>
+            </view>
+            <view class="progress">
+              <view class="progressIn" style="width:{{progress*1.06}}rpx"></view>
+              <view class="Msg">{{countdowns}}</view>
+            </view> 
+          </view>
+      </view>
+      <image src='../../img/{{rangs}}' class="sPartThird"  bindtouchstart='touchStart' bindtouchend='touchEnd' bindtap='ckickFun' data-idx='7'></image>
+    </view>
+  </view>
+</view> 
+
+  

@@ -1,0 +1,19 @@
+<!--pages/setting/setting.wxml-->
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="../userCenter/userCenter" class="weui-cell">
+    <view class="weui-cell__bd">个人设置</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="../security/security" class="weui-cell">
+    <view class="weui-cell__bd">安全中心</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="../feedback/feedback" class="weui-cell">
+    <view class="weui-cell__bd">意见反馈</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">当前版本</view>
+    <view class="weui-cell__ft">V 1.1.2</view>
+  </view>
+</view>

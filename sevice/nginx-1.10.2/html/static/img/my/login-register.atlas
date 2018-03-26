@@ -1,0 +1,212 @@
+{
+    "frames": {
+        "QQ@2x.png": {
+            "frame": {
+                "h": 80,
+                "idx": 0,
+                "w": 80,
+                "x": 413,
+                "y": 213
+            },
+            "sourceSize": {
+                "h": 80,
+                "w": 80
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "QQ@3x.png": {
+            "frame": {
+                "h": 120,
+                "idx": 0,
+                "w": 120,
+                "x": 292,
+                "y": 213
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "login_icon_eye_close@2x.png": {
+            "frame": {
+                "h": 14,
+                "idx": 0,
+                "w": 31,
+                "x": 242,
+                "y": 318
+            },
+            "sourceSize": {
+                "h": 48,
+                "w": 48
+            },
+            "spriteSourceSize": {
+                "x": 9,
+                "y": 17
+            }
+        },
+        "login_icon_eye_close@3x.png": {
+            "frame": {
+                "h": 21,
+                "idx": 0,
+                "w": 47,
+                "x": 242,
+                "y": 415
+            },
+            "sourceSize": {
+                "h": 72,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 13,
+                "y": 26
+            }
+        },
+        "login_icon_eye_open@2x.png": {
+            "frame": {
+                "h": 23,
+                "idx": 0,
+                "w": 31,
+                "x": 371,
+                "y": 334
+            },
+            "sourceSize": {
+                "h": 48,
+                "w": 48
+            },
+            "spriteSourceSize": {
+                "x": 9,
+                "y": 13
+            }
+        },
+        "login_icon_eye_open@3x.png": {
+            "frame": {
+                "h": 35,
+                "idx": 0,
+                "w": 47,
+                "x": 323,
+                "y": 334
+            },
+            "sourceSize": {
+                "h": 72,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 13,
+                "y": 19
+            }
+        },
+        "logo@2x.png": {
+            "frame": {
+                "h": 212,
+                "idx": 0,
+                "w": 194,
+                "x": 292,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 212,
+                "w": 194
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "logo@3x.png": {
+            "frame": {
+                "h": 317,
+                "idx": 0,
+                "w": 291,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 317,
+                "w": 291
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "wechat@2x.png": {
+            "frame": {
+                "h": 80,
+                "idx": 0,
+                "w": 80,
+                "x": 413,
+                "y": 294
+            },
+            "sourceSize": {
+                "h": 80,
+                "w": 80
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "wechat@3x.png": {
+            "frame": {
+                "h": 120,
+                "idx": 0,
+                "w": 120,
+                "x": 0,
+                "y": 318
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "weibo@2x.png": {
+            "frame": {
+                "h": 80,
+                "idx": 0,
+                "w": 80,
+                "x": 242,
+                "y": 334
+            },
+            "sourceSize": {
+                "h": 80,
+                "w": 80
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "weibo@3x.png": {
+            "frame": {
+                "h": 120,
+                "idx": 0,
+                "w": 120,
+                "x": 121,
+                "y": 318
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "login-register.png",
+        "prefix": "mobile-2018-01-12/static/img/my/login-register/"
+    }
+}

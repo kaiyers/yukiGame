@@ -1,0 +1,13 @@
+{
+	"client": "./client",
+	"svr": "./server",
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wx8f4b6458c4b25fa6",
+	"projectname": "myXiaoyouxi",
+	"libVersion": "1.9.93",
+	"condition": {}
+}

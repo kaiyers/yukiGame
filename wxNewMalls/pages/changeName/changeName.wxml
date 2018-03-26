@@ -1,0 +1,6 @@
+<input type='text' maxlength='10' class='inp' placeholder='{{uname}}' bindinput="inputChange"></input>
+<view class='shuoming'>
+  <view class="qiu"></view>
+  <view class="wenzi">昵称长度不超过10个字</view>
+</view>
+<view bindtap='onConfirm' class='tijiao'>提交</view>

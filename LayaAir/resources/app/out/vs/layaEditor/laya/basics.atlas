@@ -1,0 +1,59 @@
+{
+    "frames": {
+        "2D.png": {
+            "frame": {
+                "h": 62,
+                "idx": 0,
+                "w": 62,
+                "x": 84,
+                "y": 80
+            },
+            "sourceSize": {
+                "h": 62,
+                "w": 62
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "Graphics.png": {
+            "frame": {
+                "h": 62,
+                "idx": 0,
+                "w": 83,
+                "x": 0,
+                "y": 80
+            },
+            "sourceSize": {
+                "h": 62,
+                "w": 83
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "UI.png": {
+            "frame": {
+                "h": 79,
+                "idx": 0,
+                "w": 95,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 79,
+                "w": 95
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "basics.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/basics/"
+    }
+}

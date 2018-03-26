@@ -1,0 +1,114 @@
+.container{
+  overflow: hidden;
+}
+.headerSeach{
+  position:fixed;
+  top:0;
+  height: 90rpx;
+  width:690rpx;
+  background:#fff;
+  padding-left:30rpx;
+  padding-right: 30rpx;
+  z-index: 99;
+}
+/* swiper-item{
+  overflow-y: auto
+} */
+.headerSeachLeft{
+  position: relative;
+  height: 66rpx;
+  float:left;
+  padding-left: 30rpx;
+  overflow: hidden;
+  width: 386rpx;
+  border: 2rpx solid #d4d4d4;
+  border-radius: 64rpx;
+  margin: 10rpx 0;
+  background: #EBEBEB;
+}
+.headerSeachLeft icon{
+  position: absolute;
+  top: 16rpx;
+  left: 16rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.headerSeachLeftText{
+  color: #8f8f94;
+    height: 66rpx;
+    line-height: 66rpx;
+    text-align: left;
+    font-size: 30rpx;
+    padding-left: 30rpx;
+}
+.headerSeachRight{
+  float: right;
+  height: 90rpx;
+  font-size: 40rpx;
+  color:#007aff;
+  line-height: 90rpx;
+}
+.guessLikeContain{
+  margin-top:110rpx;
+  background: none;
+  width: 100%;
+  padding-left:11rpx;
+  padding-right: 11rpx;
+  /* margin-bottom:18rpx; */
+  overflow: hidden;
+}
+.guessLikeContain navigator{
+  width: 344rpx;
+  height: 456rpx;
+  border-radius: 6rpx;
+  background: #ffffff;
+  margin-bottom: 20rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.guessLikeContain image{
+  width:344rpx;
+  height: 344rpx;
+}
+.guessLikeContainText1{
+  max-width: 312rpx;
+  height: 60rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0 16rpx;
+  font-size: 28rpx;
+  color: #333333;
+  line-height: 60rpx;
+}
+.guessLikeContainText2{
+    max-width: 312rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 28rpx;
+    color: #e54560;
+    margin: 0 16rpx;
+}
+.orderList-null{
+    width: 600rpx;
+    margin: 0 auto;
+    padding-top: 400rpx;
+}
+.guessLikeContain image.orderList-null-icon{
+    display: block;
+    width: 300rpx;
+    height: 300rpx;
+    margin: 0 auto;
+}
+.orderList-null-title{
+    width: 100%;
+    margin-top: 20rpx;
+    font-size:28rpx;
+    line-height: 28rpx;
+    color: #666;
+    text-align: center;
+}
+.guessLikeC{
+  background:#fff;
+}

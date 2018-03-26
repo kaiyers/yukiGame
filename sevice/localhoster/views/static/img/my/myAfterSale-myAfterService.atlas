@@ -1,0 +1,110 @@
+{
+    "frames": {
+        "applied@3x.png": {
+            "frame": {
+                "h": 155,
+                "idx": 0,
+                "w": 195,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 155,
+                "w": 195
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "my_icon_huan@2x.png": {
+            "frame": {
+                "h": 40,
+                "idx": 0,
+                "w": 40,
+                "x": 131,
+                "y": 217
+            },
+            "sourceSize": {
+                "h": 40,
+                "w": 40
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "my_icon_huan@3x.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 60,
+                "x": 131,
+                "y": 156
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "my_icon_tui@2x.png": {
+            "frame": {
+                "h": 40,
+                "idx": 0,
+                "w": 40,
+                "x": 172,
+                "y": 217
+            },
+            "sourceSize": {
+                "h": 40,
+                "w": 40
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "my_icon_tui@3x.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 60,
+                "x": 192,
+                "y": 156
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "已申请@2x.png": {
+            "frame": {
+                "h": 103,
+                "idx": 0,
+                "w": 130,
+                "x": 0,
+                "y": 156
+            },
+            "sourceSize": {
+                "h": 103,
+                "w": 130
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "myAfterSale-myAfterService.png",
+        "prefix": "sevice/localhoster/views/static/img/my/myAfterSale-myAfterService/"
+    }
+}

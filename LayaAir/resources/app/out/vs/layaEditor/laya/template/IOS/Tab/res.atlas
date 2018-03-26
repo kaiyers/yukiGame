@@ -1,0 +1,76 @@
+{
+    "frames": {
+        "btn_Icon1.png": {
+            "frame": {
+                "h": 150,
+                "idx": 0,
+                "w": 55,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 196,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 8,
+                "y": 12
+            }
+        },
+        "btn_Icon2.png": {
+            "frame": {
+                "h": 148,
+                "idx": 0,
+                "w": 50,
+                "x": 56,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 196,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 12,
+                "y": 12
+            }
+        },
+        "btn_Icon3.png": {
+            "frame": {
+                "h": 151,
+                "idx": 0,
+                "w": 56,
+                "x": 107,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 196,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 9,
+                "y": 9
+            }
+        },
+        "btn_Icon4.png": {
+            "frame": {
+                "h": 145,
+                "idx": 0,
+                "w": 47,
+                "x": 164,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 196,
+                "w": 72
+            },
+            "spriteSourceSize": {
+                "x": 12,
+                "y": 14
+            }
+        }
+    },
+    "meta": {
+        "image": "res.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/template/IOS/Tab/res/"
+    }
+}

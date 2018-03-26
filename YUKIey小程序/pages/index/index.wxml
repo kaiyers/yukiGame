@@ -1,0 +1,99 @@
+<!--index.wxml-->
+<wxs module="m1">
+  var dealString = function(s){
+    var asting=(s/100).toFixed(2)
+    return asting
+  }
+  module.exports.dealString = dealString;
+</wxs>
+<view class="container">
+<!-- 搜索导航 -->
+  <view class="headerSeach clearfix">
+    <view class="sheaderSeach">
+      <view class="headerSeachLeft" bindtap="tomycoupencc">
+        <image src="../../img/warehouse/home_icon_ticket@3x.png"></image>
+        <view class="headerSeachcoupon">优惠券</view>
+      </view>
+      <view class="headerSeachRight" bindtap="toSerch">
+        <icon type="search" size="16"></icon>
+        <view class="headerSeachRightText">Yuki原创</view>
+      </view>
+    </view>
+  </view>
+<!-- 轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="idx" wx:for-item="itemName">
+      <swiper-item>
+        <navigator url="../details/details?gsid={{itemName.targetId}}">
+          <image src="{{itemName.picUrl}}" title="{{itemName.title}}"/>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 限时购 -->
+  <view  class="limitoday containerPart" wx:if="{{limitodayShow}}">
+    <navigator url="/pages/flashSale/flashSale" class="recommend" > 今日限时购<image src="../../img/warehouse/home_icon_next_circle@3x.png" class="news_recommend_icon"></image></navigator>
+    <navigator url="../details/details?gsid={{goodId}}" class="clearfix limitoday_content containerPartDet" >
+      <view class="fl limitoday_contentL">
+        <view class="limitTitle">距离结束还有</view>
+        <view class="overTime">
+          {{countdowns}}
+        </view>
+        <view class="limitmsg">{{limitmsg}}</view>
+        <view class="limitPrice">
+          <view class="newPrice fl">￥{{newPrice}}</view><view class="oldPrice fl">￥{{oldPrice}}</view>
+        </view>
+      </view>
+      <view class="fr">
+        <view>
+           <image src="{{goodPicUrl}}"></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <rich-text nodes="{{nodes}}" />
+  <!-- 新品推荐 -->
+   <view class="newGoods"> 
+    <navigator url="../newGoods/newGoods" class="recommend"> 新品推荐<image src="../../img/warehouse/home_icon_next_circle@3x.png"  class="news_recommend_icon"></image></navigator>
+    <view class='newGoodsContain'>
+      <scroll-view class='newGoodsContains'  scroll-x="true" bindscroll="scroll" style="width: 100%">
+        <view class="newGoodsContainsGood " wx:for="{{listnews}}"  wx:key="idx" wx:for-item="itemName" >
+          <navigator url="../details/details?gsid={{itemName.goodId}}">
+            <image src="{{itemName.goodPicUrl}}" ></image>
+            <view class="newGoodsContainsText1">{{itemName.goodName}}</view>
+            <view class="newGoodsContainsText2">￥{{m1.dealString(itemName.goodMinPrice)}}</view>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+  </view> 
+  <!-- 人气推荐 -->
+  <view class="Popularity">
+    <navigator url="../humanQi/humanQi"  class="recommend"> 人气推荐<image src="../../img/warehouse/home_icon_next_circle@3x.png"  class="news_recommend_icon"></image></navigator>
+    <view class="PopularityContain">
+      <view wx:for="{{recommend_list}}" wx:key="idx" wx:for-item="itemName" class="PopularityContains">
+        <navigator url="../details/details?gsid={{itemName.goodId}}" class="PopularityContainsPart">
+            <image class="PopularityContainsPartL" src="{{itemName.goodPicUrl}}"></image>
+            <view class="PopularityContainsPartM">
+              <view class="PopularityContainsPartRT">{{itemName.goodName}}</view>
+              <view class="PopularityContainsPartRB">{{m1.dealString(itemName.goodMinPrice)}}</view>
+            </view>
+            <image class="PopularityContainsPartR" src='../../img/icon/kbtn.png'></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 猜你喜欢 -->
+   <view class="guessLike">
+    <view class="recommend"> 猜你喜欢</view>
+    <view class='guessLikeContain clearfix'>
+        <navigator  url="../details/details?gsid={{itemName.goodId}}" wx:for="{{guess_list}}" wx:key="idx" wx:for-item="itemName" class="fl">
+          <image src="{{itemName.goodPicUrl}}"></image>
+          <view class="guessLikeContainText1">{{itemName.goodName}}</view>
+          <view class="guessLikeContainText2">{{m1.dealString(itemName.goodMinPrice)}}</view>
+        </navigator>
+    </view>
+  </view> 
+
+</view>

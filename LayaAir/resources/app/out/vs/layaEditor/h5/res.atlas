@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "icons.png": {
+            "frame": {
+                "h": 154,
+                "idx": 0,
+                "w": 176,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 154,
+                "w": 176
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "toolbar.png": {
+            "frame": {
+                "h": 89,
+                "idx": 0,
+                "w": 90,
+                "x": 0,
+                "y": 155
+            },
+            "sourceSize": {
+                "h": 89,
+                "w": 90
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "res.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/res/"
+    }
+}

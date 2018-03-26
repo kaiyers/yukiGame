@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "comp.png": {
+            "frame": {
+                "h": 508,
+                "idx": 0,
+                "w": 388,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 512,
+                "w": 512
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "play.png": {
+            "frame": {
+                "h": 230,
+                "idx": 0,
+                "w": 428,
+                "x": 389,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 256,
+                "w": 512
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        }
+    },
+    "meta": {
+        "image": "default.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/skins/default/"
+    }
+}

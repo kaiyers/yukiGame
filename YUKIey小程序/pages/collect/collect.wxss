@@ -1,0 +1,94 @@
+/* pages/collect/collect.wxss */
+page{
+    padding: 0 10rpx;
+    background: #f0f0f0
+}
+.list-box{
+  padding-top:15rpx
+}
+.newest-list{
+    display: inline-block;
+    width: 357rpx;
+    height: 447rpx;
+    margin:0 15rpx 15rpx 0;
+    text-align: center;
+    background: #fff;
+    position: relative;
+}
+.newest-list:nth-child(2n){
+    margin-right: 0;
+}
+.newest-list image{
+    width: 320rpx;
+    height: 300rpx;
+    margin: 10rpx 0 20rpx;
+}
+.newest-list .newest-text{
+    font-size: 32rpx;
+    line-height: 45rpx;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    width:320rpx;
+    padding-left: 20rpx;
+}
+.newest-list .newest-price{
+    font-size: 32rpx;
+    line-height: 45rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    width:320rpx;
+    text-align: left;
+    color: red;
+    padding-left: 20rpx;
+}
+.diandi{
+  height:100rpx;
+  background: #f0f0f0;
+}
+.cart-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 98rpx;
+    line-height: 98rpx;
+    padding:0 0 0 80rpx;
+    box-sizing: border-box;
+    background: #f0f0f0;
+    color: #000;
+    font-size: 16px;
+}
+.total-select{
+    position: absolute;
+    left: 20rpx;
+    top: 25rpx;
+    width: 45rpx;
+    height: 45rpx;
+}
+.order-icon{
+    position: absolute;
+    right: 40rpx;
+    top: 25rpx;
+    width: 45rpx;
+    height: 45rpx;
+}
+.order-icon image,.order-icon navigator{
+  display: block;
+  width: 45rpx;
+  height: 45rpx;
+}
+.cart-toatl-price{
+  float: right;
+  font-size: 16px;
+  background-color: #4595e5;
+  color:#fff;
+  padding: 0 20rpx
+}
+.cart-pro-select{
+  position: absolute;
+  top:20rpx;
+  left:20rpx;
+}

@@ -1,0 +1,263 @@
+{
+    "frames": {
+        "blank.gif": {
+            "frame": {
+                "h": 18,
+                "idx": 0,
+                "w": 18,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "but_cut.gif": {
+            "frame": {
+                "h": 14,
+                "idx": 0,
+                "w": 9,
+                "x": 0,
+                "y": 44
+            },
+            "sourceSize": {
+                "h": 15,
+                "w": 15
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 0
+            }
+        },
+        "folderClosed.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 14,
+                "x": 19,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 3
+            }
+        },
+        "folderOpen.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 16,
+                "x": 34,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 3
+            }
+        },
+        "iconCheckAll.gif": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 16,
+                "x": 13,
+                "y": 40
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "iconCheckDis.gif": {
+            "frame": {
+                "h": 13,
+                "idx": 0,
+                "w": 14,
+                "x": 19,
+                "y": 13
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 3
+            }
+        },
+        "iconCheckGray.gif": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 16,
+                "x": 30,
+                "y": 30
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "iconUncheckAll.gif": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 16,
+                "x": 30,
+                "y": 47
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "iconUncheckDis.gif": {
+            "frame": {
+                "h": 13,
+                "idx": 0,
+                "w": 13,
+                "x": 49,
+                "y": 26
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 2
+            }
+        },
+        "leaf.gif": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 13,
+                "x": 0,
+                "y": 19
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 1
+            }
+        },
+        "lock.gif": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 14,
+                "x": 34,
+                "y": 13
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 1
+            }
+        },
+        "minus.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 7,
+                "x": 14,
+                "y": 27
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 6,
+                "y": 3
+            }
+        },
+        "plus.gif": {
+            "frame": {
+                "h": 7,
+                "idx": 0,
+                "w": 12,
+                "x": 0,
+                "y": 36
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 6
+            }
+        },
+        "radio_off.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 12,
+                "x": 49,
+                "y": 13
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 3
+            }
+        },
+        "radio_on.gif": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 12,
+                "x": 51,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 18
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 3
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxtree_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxtree_material/"
+    }
+}

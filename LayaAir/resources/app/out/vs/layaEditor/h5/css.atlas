@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "lavalamp.png": {
+            "frame": {
+                "h": 16,
+                "idx": 0,
+                "w": 64,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 64
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "menu_line.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 2,
+                "x": 0,
+                "y": 17
+            },
+            "sourceSize": {
+                "h": 49,
+                "w": 2
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 2
+            }
+        }
+    },
+    "meta": {
+        "image": "css.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/css/"
+    }
+}

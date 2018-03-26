@@ -1,0 +1,51 @@
+<!--pages/userCenter/userCenter.wxml-->
+<view class="parting_line"></view>
+ <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_access" bindtap="setPhotoInfo">
+      <view class="weui-cell__bd">头像</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">
+        <image src="{{uimg}}" class="uicon"></image>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_access" bindtap="showDialogBtn">
+      <view class="weui-cell__bd">昵称</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{uname}}</view>
+    </view>
+    <view class="weui-cell weui-cell_access" bindtap='actioncnt'>
+      <view class="weui-cell__bd">性别</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{usex}}</view>
+    </view>
+    <view  class="weui-cell weui-cell_access">  
+      <picker mode="date" value="{{date}}" start="1978-01-01" end="2018-01-01" bindchange="bindDateChange">  
+        <view class="picker">  
+          <view>年龄</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">{{uage}}</view>
+        </view>  
+      </picker>  
+    </view>  
+  </view>
+
+  <view class="parting_line1"></view>
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="../changePhone/changePhone" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">手机号码</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">{{uphone}}</view>
+  </navigator>
+</view>
+
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">请输入新昵称</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text" maxlength="10" bindchange="inputChange" class="input" placeholder="{{uname}}"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+
+

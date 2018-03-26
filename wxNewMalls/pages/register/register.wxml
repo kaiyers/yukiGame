@@ -1,0 +1,16 @@
+<!--pages/register/register.wxml-->
+ <view class="main">
+  <view class="yamz">
+    <input class="input input1" placeholder="手机号" value="{{phoneNum}}" bindblur="methblurpl" bindinput='methblurpl' type='number'></input>
+    <view class="jia"  bindtap="ifLogin">{{!mesTime?durTime:btnText}}</view>
+  </view>
+  <view class="line"></view>
+  <input  class="input" placeholder="请输入验证码"  value="{{authCode}}" bindblur="methblura" bindinput='methblura' type='number'></input>
+  </view>  
+  <view class="main"  wx:if="{{phone==0}}">
+    <input  class="input" placeholder="输入密码"  value="{{password}}" bindblur="methblurp" bindinput='methblurp'></input>
+    <view class="line"></view>
+    <input class="input" placeholder="确认密码"  value="{{passwordagain}}" bindblur="methblurap" bindinput='methblurap'></input>
+    <button bindtap="userregister" class="primary"> 注册 </button>
+  </view> 
+  <button bindtap="bounding" class="primary"  wx:if="{{phone==1}}"> 绑定 </button>

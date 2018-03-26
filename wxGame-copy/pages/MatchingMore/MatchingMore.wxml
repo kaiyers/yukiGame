@@ -1,0 +1,130 @@
+<view class="contain">
+  <view class="mask" wx:if="{{mask}}">
+    <image src='../../img/loading.gif'></image>
+    <span>即将开始匹配...</span>
+  </view>
+  <import src="../../utils/util.wxml"/>
+  <template is="coinPopup" data="{{lackCoin: lackCoin,popTips:popTips,confirm:confirm}}"/>
+<!-- 匹配中  -->
+   <view class="matingBlock" wx:if='{{matingBlock}}'>  
+    <view class="title {{titleIn?'titleIn':''}} {{titleOut?'titleOut':''}}" ></view>
+    <view class="peopleArr {{peopleIn?'peopleIn':''}} {{peopleOut?'peopleOut':''}} clearfix" >
+      <view class="fl singlePeople" wx:for="{{usefulCoupon}}" wx:key="idx" wx:for-item="itemName" >
+        <view class="circleContain">
+          <view class="face"></view>
+          <image src="{{itemName.face}}" class="logo"></image> 
+          <view class="smove" wx:if="{{itemName.sMove}}">
+            <span></span>
+          </view>
+        </view> 
+        <view class="userName">{{itemName.name}}</view> 
+      </view>
+    </view>
+    <view class="bottomBlock {{matePeopleIn?'matePeopleIn':''}} {{matePeopleOut?'matePeopleOut':''}}">
+      <view class="tips">{{currentPeople}}名玩家已就绪</view>
+      <view class="loading">匹配对手中</view>
+    </view>
+   </view> 
+   <!-- 比赛中  -->
+  <view class="maching"> 
+    <view class="{{before?'before':''}}">
+      <view class="header clearfix {{headerIn?'headerIn':''}}">
+        <view wx:if="{{jishiShow}}" class="wrap fl">  
+          <canvas canvas-id="canvasArc" style='width:60px;height:60px;'></canvas>  
+          <view class="cc">{{num_show}}</view>   
+        </view> 
+        <view class="fl second">
+          <view></view>
+          <view></view>
+          <view></view>
+          <view></view>
+        </view>
+        <view class="circleContainMach fl">
+          <view class="face"></view>
+          <image src="{{vlogo}}" class="logo"></image> 
+          <view class="smove">
+            <span></span>
+          </view>
+        </view>
+        <view class="third fl">
+          <view class="name">{{name}}</view>
+          <view class="progress">
+            <view class="progressIn" style="width:{{progress*3/5}}rpx"></view>
+            <view class="Msg">{{progress}}</view>
+          </view> 
+        </view> 
+      </view>
+      <!-- 滚动 -->
+      <view class="newGoodsContain {{newGoodsContainIn?'newGoodsContainIn':''}}">
+        <scroll-view class='newGoodsContains'  scroll-x="true" bindscroll="scroll" style="width: 100%">
+          <view class="newGoodsContainsGood " wx:for="{{listnews}}"  wx:for-index="idx" wx:for-item="itemName" >
+            <view>
+              <view class="faceone">
+                <view class="facesN"></view>
+                <image class="{{idx==0?'faceoneInF':'faceNone'}}" src="../../img/championCircle.png" data-a="{{idx}}"></image>
+                <image class="{{idx==1?'faceoneInS':'faceNone'}}" src="../../img/runnerUp.png" data-a="{{idx}}"></image>
+                <image class="{{idx==2?'faceoneInT':'faceNone'}}" src="../../img/thirdPlace.png" data-a="{{idx}}"></image>
+                <image class="{{idx==0?'':'faceNone'}} spic" src="../../img/championCircles.png" data-a="{{idx}}" ></image>
+                <image class="{{idx==1?'':'faceNone'}} spic" src="../../img/runnerUps.png" data-a="{{idx}}"></image>
+                <image class="{{idx==2?'':'faceNone'}} spic" src="../../img/thirdPlaces.png" data-a="{{idx}}"></image>
+                <image src="{{itemName.pic}}" class="faceoneCon"></image>
+              </view>
+              <view class="newGoodsContainsText1">{{itemName.name}}</view>
+              <view class="newGoodsContainsText2">{{itemName.coin}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <!-- 答题 -->
+      <view class="game_area {{game_areaIn?'game_areaIn':''}}">
+        <!-- 作答区 -->
+        <view wx:if="{{timu_jieshuan_show}}" class="datiqu">
+          <view animation="{{qtAnma}}" class="question_types">
+            {{xuanti.questiontypesText}}
+          </view>
+          <view animation="{{qaaAnma}}" class="question_answer" wx:if="{{questionAnswer}}">
+            <view class="question">{{xuanti.question}}</view>
+            <view class="answer_area">
+              <view class="answer oppt" wx:for="{{btnS}}"  wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap='myAnswer'>
+                <image src='{{itemName.bg}}' class="answer"></image>
+                <view class="answerText">{{itemName.msg}}</view>
+              </view>
+            </view>
+          </view>
+        </view> 
+      </view>
+    </view>
+    <view class="conMsg {{balance?'balance':''}}" >
+      <view class="circleContain">
+        <view class="face"></view>
+        <image src="{{winFace}}" class="logo"></image>
+        <view class="smove">
+          <span></span>
+        </view>
+      </view>
+      <view class="name">{{winName}}</view>
+      <view class="progress ">
+        <view class="progressIn" style="width:{{winProgress*3/5}}rpx"></view>
+        <view class="Msg">{{winProgress}}</view>
+      </view> 
+      <view class="game_area game_areas">
+        <view class="sgame_area">
+          <view class="italicBlock">
+            <view class="clearfix smcontain">
+              <view class="fl getWord">本局获得</view>
+              <view class="taxtMsg clearfix fr"><!-- 金币数字 -->
+                <image src="../../img/smallGold.png" class="secondCoin fl"></image> 
+                <view class="texts fl">{{machCoin}}</view>
+              </view>
+            </view>
+            <image bindtap='rmrematch' src='../../img/images/jieshuanBtn_agin.png' class="jieshuanBtn"></image>
+            <view class="shareN"> 
+              <image bindtap='rmrematch' src='../../img/images/jieshuanBtn_shall.png'></image> 
+              <button data-name="shareBtn" open-type="share" class="shallBtn"></button>
+            </view> 
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,161 @@
+{
+    "frames": {
+        "ask.png": {
+            "frame": {
+                "h": 44,
+                "idx": 0,
+                "w": 44,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 44,
+                "w": 44
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "cmd.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 14,
+                "x": 45,
+                "y": 23
+            },
+            "sourceSize": {
+                "h": 13,
+                "w": 14
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "code.png": {
+            "frame": {
+                "h": 44,
+                "idx": 0,
+                "w": 42,
+                "x": 0,
+                "y": 45
+            },
+            "sourceSize": {
+                "h": 44,
+                "w": 44
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "debug.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 12,
+                "x": 60,
+                "y": 23
+            },
+            "sourceSize": {
+                "h": 13,
+                "w": 14
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 0
+            }
+        },
+        "error.png": {
+            "frame": {
+                "h": 11,
+                "idx": 0,
+                "w": 11,
+                "x": 64,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 13,
+                "w": 14
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 1
+            }
+        },
+        "line.png": {
+            "frame": {
+                "h": 35,
+                "idx": 0,
+                "w": 2,
+                "x": 88,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 35,
+                "w": 2
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "out.png": {
+            "frame": {
+                "h": 11,
+                "idx": 0,
+                "w": 14,
+                "x": 73,
+                "y": 12
+            },
+            "sourceSize": {
+                "h": 13,
+                "w": 14
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 1
+            }
+        },
+        "shop.png": {
+            "frame": {
+                "h": 22,
+                "idx": 0,
+                "w": 18,
+                "x": 45,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 22,
+                "w": 22
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 0
+            }
+        },
+        "view.png": {
+            "frame": {
+                "h": 44,
+                "idx": 0,
+                "w": 44,
+                "x": 43,
+                "y": 45
+            },
+            "sourceSize": {
+                "h": 44,
+                "w": 44
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "toolbar.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/res/toolbar/"
+    }
+}

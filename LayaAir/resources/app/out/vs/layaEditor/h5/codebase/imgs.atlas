@@ -1,0 +1,331 @@
+{
+    "frames": {
+        "dhxacc_material.png": {
+            "frame": {
+                "h": 31,
+                "idx": 0,
+                "w": 60,
+                "x": 366,
+                "y": 266
+            },
+            "sourceSize": {
+                "h": 31,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxcalendar_material.png": {
+            "frame": {
+                "h": 43,
+                "idx": 0,
+                "w": 508,
+                "x": 0,
+                "y": 128
+            },
+            "sourceSize": {
+                "h": 43,
+                "w": 508
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxcarousel_material.png": {
+            "frame": {
+                "h": 57,
+                "idx": 0,
+                "w": 31,
+                "x": 455,
+                "y": 208
+            },
+            "sourceSize": {
+                "h": 57,
+                "w": 31
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxcombo_material.png": {
+            "frame": {
+                "h": 15,
+                "idx": 0,
+                "w": 79,
+                "x": 427,
+                "y": 266
+            },
+            "sourceSize": {
+                "h": 15,
+                "w": 79
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxcp_material.png": {
+            "frame": {
+                "h": 120,
+                "idx": 0,
+                "w": 210,
+                "x": 285,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 210
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxdataview_material.png": {
+            "frame": {
+                "h": 141,
+                "idx": 0,
+                "w": 58,
+                "x": 192,
+                "y": 172
+            },
+            "sourceSize": {
+                "h": 141,
+                "w": 58
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxeditor_material.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 96,
+                "x": 251,
+                "y": 172
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 96
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxform_material.png": {
+            "frame": {
+                "h": 127,
+                "idx": 0,
+                "w": 284,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 127,
+                "w": 284
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxgrid_material.png": {
+            "frame": {
+                "h": 64,
+                "idx": 0,
+                "w": 96,
+                "x": 0,
+                "y": 242
+            },
+            "sourceSize": {
+                "h": 64,
+                "w": 96
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxlayout_material.png": {
+            "frame": {
+                "h": 47,
+                "idx": 0,
+                "w": 61,
+                "x": 348,
+                "y": 208
+            },
+            "sourceSize": {
+                "h": 47,
+                "w": 61
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxmenu_material.png": {
+            "frame": {
+                "h": 35,
+                "idx": 0,
+                "w": 143,
+                "x": 348,
+                "y": 172
+            },
+            "sourceSize": {
+                "h": 35,
+                "w": 143
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxpopup_material.png": {
+            "frame": {
+                "h": 36,
+                "idx": 0,
+                "w": 56,
+                "x": 309,
+                "y": 256
+            },
+            "sourceSize": {
+                "h": 36,
+                "w": 56
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxribbon_material.png": {
+            "frame": {
+                "h": 8,
+                "idx": 0,
+                "w": 29,
+                "x": 366,
+                "y": 256
+            },
+            "sourceSize": {
+                "h": 8,
+                "w": 29
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxsidebar_material.png": {
+            "frame": {
+                "h": 31,
+                "idx": 0,
+                "w": 56,
+                "x": 251,
+                "y": 278
+            },
+            "sourceSize": {
+                "h": 31,
+                "w": 56
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxtabbar_material.png": {
+            "frame": {
+                "h": 44,
+                "idx": 0,
+                "w": 57,
+                "x": 251,
+                "y": 233
+            },
+            "sourceSize": {
+                "h": 44,
+                "w": 57
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxtoolbar_material.png": {
+            "frame": {
+                "h": 4,
+                "idx": 0,
+                "w": 15,
+                "x": 309,
+                "y": 233
+            },
+            "sourceSize": {
+                "h": 4,
+                "w": 15
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxtree_material.png": {
+            "frame": {
+                "h": 63,
+                "idx": 0,
+                "w": 63,
+                "x": 97,
+                "y": 242
+            },
+            "sourceSize": {
+                "h": 63,
+                "w": 63
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxtreeview_material.png": {
+            "frame": {
+                "h": 57,
+                "idx": 0,
+                "w": 44,
+                "x": 410,
+                "y": 208
+            },
+            "sourceSize": {
+                "h": 57,
+                "w": 44
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxwins_material.png": {
+            "frame": {
+                "h": 69,
+                "idx": 0,
+                "w": 191,
+                "x": 0,
+                "y": 172
+            },
+            "sourceSize": {
+                "h": 69,
+                "w": 191
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "imgs.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/"
+    }
+}

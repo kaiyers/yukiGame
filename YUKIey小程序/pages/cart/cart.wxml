@@ -1,0 +1,63 @@
+<wxs module="numfilter" src="../../filter/price.wxs"></wxs>
+
+<view class="main">
+    <view wx:if="{{cartslist.length}}">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+              <view class="weui-cell__hd">
+               <icon wx:if="{{selectAllStatus}}" type="success" color="#4595e5" class="total-select" bindtap="selectAll"/>
+            <icon wx:else type="circle" class="total-select" bindtap="selectAll"/>
+              </view>
+              <view class="weui-cell__bd">全选</view>
+              <view class="weui-cell__ft" bindtap='editcat'>{{edittext}}</view>
+          </view>
+        </view>
+        <view class="cart-box">
+            <view class="cart-list" wx:for="{{cartslist}}" wx:key="{{index}}">
+              <image src="../../img/icon/sold-out@3x.png" class="understock" wx:if="{{!item.goodState}}"></image>
+  <image src="../../img/icon/understock@3x.png" class="understock" wx:if="{{item.skuStock==0}}"></image> 
+               <icon wx:if="{{item.selected}}" type="success" color="#4595e5" data-index="{{index}}"  class="cart-pro-select" bindtap="selectList"/>
+                <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectList"/> 
+               <image class="cart-thumb" src="{{item.goodDetailPicUrl}}"></image>
+                 <!-- 编辑 -->
+                <view wx:if="{{item.show}}" data-index="{{index}}" bindtap='godetail'>
+                  <view class="cart-pro-name">{{item.goodName}}</view>
+                  <view class="cart-pro-style">款式: {{item.valueText}}</view>
+                  <view class="cart-pro-price">￥{{numfilter.numfilter(item.priceNow)}}</view>
+                  <view class="cart-pro-count">X {{item.count}}</view>
+                </view>        
+                 <!-- 完成 -->
+                <view wx:else>
+                  <view class="cart-pro-styled">款式: {{item.valueText}}</view>
+                  <view class="cart-pro-price">￥{{numfilter.numfilter(item.priceNow)}}</view>
+                  <view class="cart-count-box">
+                    <text class="cart-count-down" bindtap="minusCount" data-obj="{{obj}}" data-index="{{index}}">-</text>
+                    <text class="cart-count-num">{{item.count}}</text>
+                    <text class="cart-count-add" bindtap="addCount" data-index="{{index}}">+</text>
+                  </view>
+                </view>
+            </view>
+        </view>
+        <view class="cart-footer">
+          <text class="cart-toatl-price" wx:if="{{!editoff}}">合计: <text style='color:red'>￥{{totalPrice}}</text></text>
+          <button class="button-blue" bindtap="toBuy" formType="submit" wx:if="{{!editoff}}">结算</button>
+          <button class="button-blue" bindtap="deleteGoods" formType="submit" wx:else>删除</button>
+        </view>
+    </view>
+    <view class='nogoods' wx:else>
+      <image src='../../img/icon/common@3x.png'></image>
+      <view class="cart-no-data">购物车是空的哦~</view>
+    </view>
+    <!-- 猜你喜欢 -->
+    <view class="guesslike">猜你喜欢</view>
+    <view class="list-box">
+      <view class="newest-list" wx:for='{{guessyoulike}}'>
+        <navigator url="../details/details?gsid={{item.goodId}}">
+            <image src="{{item.goodPicUrl}}"></image>
+            <view class="newest-text"><text>{{item.goodName}}</text></view>
+            <view class="newest-price">￥ {{numfilter.numfilter(item.goodMinPrice)}}</view>
+        </navigator>         
+      </view>
+    </view>
+     <view class="diandi"  wx:if="{{cartslist.length}}"></view> 
+</view>

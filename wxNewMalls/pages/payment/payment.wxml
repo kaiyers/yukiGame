@@ -1,0 +1,46 @@
+<!--pages/payment/payment.wxml-->
+ <wxs module="numfilter" src="../../filter/price.wxs"></wxs>
+<view class='main'>
+  <view class="listPay">
+    <image src='../../img/newicon/payicon.png'></image>
+    <view class="tips">
+      <view class='tips01'>订单提交成功！</view>
+      <view>预计5天内发货</view>
+      <view>请在{{countdowns}}内完成支付，超时订单自动取消</view>
+    </view>
+  </view>
+  <view class="listPay">
+    <view class='needpay'>应付总额: <text class="newpric">￥ {{numfilter.numfilter(orderinfo.needPay)}}</text></view>
+  </view>
+  <view class="listPay">
+    <view class='orderInfo'>
+      <view class="oif-up">
+        <view>
+          <text class="left">订单号</text>
+          <text class="right">{{orderinfo.ordercode}}</text>
+        </view>
+        <view>
+          <text class="left">收货信息</text>
+          <text class="right">{{orderinfo.receiveName}}  {{orderinfo.receivePhone}}</text>
+        </view>
+        <view>
+          <text class="left"></text>
+          <text class="right radd">{{orderinfo.receiveAddress}}</text>
+        </view>
+      </view>
+      <view class="oif-down">
+        <view class="left-d">商品名称</view>
+        <view class="right-d">
+          <view wx:for="{{goodsinfo}}" class="gname">
+            <view>{{item.name}}</view>
+            <view class="goodsStely">{{item.skuText}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='footer'>
+  <view class="play" bindtap="play">立即付款</view>
+  <view class="quxiao" bindtap='cancellation'>取消订单</view>
+</view>

@@ -1,0 +1,42 @@
+<!--pages/classify/classify.wxml-->
+<view class="page__hd">
+  <navigator url="../seekTransit/seekTransit" class="weui-search-bar" >
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <input type="text" class="weui-search-bar__input" />
+      </view>
+      <label class="weui-search-bar__label">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">从这里你会发现更多</view>
+      </label>
+    </view>
+  </navigator>
+</view>
+<!--主盒子-->  
+<view class="page__bd">
+  <!--左侧栏-->  
+  <view class="nav_left"> 
+    <block wx:for="{{navLeftItems}}">  
+      <!--当前项的id等于item项的id，那个就是当前状态-->  
+      <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->  
+      <view class="nav_left_items {{curNav == item.typeId ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.typeId}}">{{item.typeName}}</view>  
+    </block>  
+  </view>  
+  <!--右侧栏-->  
+  <view class="nav_right">  
+   <block wx:for="{{navRightItems[curIndex].typeList}}">  
+      <view class="nav_right_items">  
+        <navigator url="../classifyD/classifyD?twoid={{item.typeId}}&oneid={{navRightItems[curIndex].typeId}}&ln={{item.typeName}}"><!--用view包裹图片组合，如果有图片就用，无图片提供就使用50x30的这个默认图片-->  
+          <view>                
+            <image src="{{item.typePicUrl}}"></image>  
+          </view>  
+          <view>  
+            <text>{{item.typeName}}</text>  
+          </view>   
+        </navigator>  
+      </view>  
+    </block>  
+  </view>  
+</view>  
+
+

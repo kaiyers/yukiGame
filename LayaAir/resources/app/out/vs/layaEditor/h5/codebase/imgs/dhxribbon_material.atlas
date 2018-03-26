@@ -1,0 +1,59 @@
+{
+    "frames": {
+        "dhxribbon_arrow.gif": {
+            "frame": {
+                "h": 4,
+                "idx": 0,
+                "w": 7,
+                "x": 22,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 6,
+                "w": 9
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 2
+            }
+        },
+        "dhxribbon_checked.gif": {
+            "frame": {
+                "h": 8,
+                "idx": 0,
+                "w": 10,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 12,
+                "w": 12
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "dhxribbon_checked_dis.gif": {
+            "frame": {
+                "h": 8,
+                "idx": 0,
+                "w": 10,
+                "x": 11,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 12,
+                "w": 12
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxribbon_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxribbon_material/"
+    }
+}

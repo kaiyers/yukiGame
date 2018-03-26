@@ -1,0 +1,13 @@
+<template name="coinPopup">
+  <view class="popUp " wx:if="{{lackCoin}}"><!-- 金币不足 -->
+    <view class="curtain"></view>
+    <view class="popUpContent_lackCoin" >
+      <image class="popUpContent_lackCoinBg" src="../../img/Sorry.png"></image>
+      <view class="popUPContent_lackCoinCon">
+        <image class="triangle" src="../../img/triangle.png"></image>
+        <view class="lackCoinCue">{{popTips}}</view>
+        <image class="confirmBtn" src="../../img/{{confirm}}"  bindtouchstart='touchStart' bindtouchend='touchEnd' data-idx="9"></image>
+      </view>
+    </view>
+  </view>
+</template>

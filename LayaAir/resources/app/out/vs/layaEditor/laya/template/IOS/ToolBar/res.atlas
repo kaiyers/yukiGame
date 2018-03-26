@@ -1,0 +1,93 @@
+{
+    "frames": {
+        "btn_Add.png": {
+            "frame": {
+                "h": 229,
+                "idx": 0,
+                "w": 38,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 264,
+                "w": 62
+            },
+            "spriteSourceSize": {
+                "x": 12,
+                "y": 15
+            }
+        },
+        "btn_BackIcon.png": {
+            "frame": {
+                "h": 217,
+                "idx": 0,
+                "w": 23,
+                "x": 39,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 264,
+                "w": 62
+            },
+            "spriteSourceSize": {
+                "x": 20,
+                "y": 23
+            }
+        },
+        "btn_Bookmark.png": {
+            "frame": {
+                "h": 223,
+                "idx": 0,
+                "w": 52,
+                "x": 63,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 264,
+                "w": 62
+            },
+            "spriteSourceSize": {
+                "x": 5,
+                "y": 21
+            }
+        },
+        "btn_Forward.png": {
+            "frame": {
+                "h": 217,
+                "idx": 0,
+                "w": 23,
+                "x": 116,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 264,
+                "w": 62
+            },
+            "spriteSourceSize": {
+                "x": 20,
+                "y": 23
+            }
+        },
+        "btn_page.png": {
+            "frame": {
+                "h": 225,
+                "idx": 0,
+                "w": 49,
+                "x": 140,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 264,
+                "w": 62
+            },
+            "spriteSourceSize": {
+                "x": 7,
+                "y": 19
+            }
+        }
+    },
+    "meta": {
+        "image": "res.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/template/IOS/ToolBar/res/"
+    }
+}

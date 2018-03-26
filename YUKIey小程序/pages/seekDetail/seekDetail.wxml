@@ -1,0 +1,33 @@
+<wxs module="m1">
+  var dealString = function(s){
+    var asting=(s/100).toFixed(2)
+    return asting
+  }
+  module.exports.dealString = dealString;
+</wxs>
+<view class="container">
+  <view class="headerSeach">
+    <view class="headerSeachLeft" bindtap="toSerch">
+      <icon type="search" size="16"></icon>
+      <view class="section">
+        <input type='text' value="{{searchinput}}" class="headerSeachLeftText" bindfocus="methfoc"  bindinput="textF"/>
+      </view>
+    </view>
+    <view class='headerSeachRight' bindtap="seachClick">搜索</view>
+  </view>
+  <view class="guessLikeC">
+    <scroll-view class='guessLikeContain'  scroll-y="true" bindscrolltolower="pullUpLoad" bindscroll="scroll"  style="height: {{winHeight - 31}}px" >
+      <view class=' clearfix'>
+          <navigator  wx:for="{{detailList}}" wx:key="idx" wx:for-item="itemName" class="fl"  url="../details/details?gsid={{itemName.goodId}}">
+            <image src="{{itemName.goodPicUrl}}"></image>
+            <view class="guessLikeContainText1">{{itemName.goodName}}</view>
+            <view class="guessLikeContainText2">{{m1.dealString(itemName.goodMinPrice)}}</view>
+          </navigator>
+          <view class="orderList-null" wx:if="{{detailListB}}">
+            <image class="orderList-null-icon" src="../../img/icon/common@3x.png"></image>
+            <view class="orderList-null-title">您搜索的商品还未上架，敬请期待！</view>
+          </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

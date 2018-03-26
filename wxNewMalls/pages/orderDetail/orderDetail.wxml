@@ -1,0 +1,144 @@
+<wxs module="m1">
+  var dealString = function(s){
+    var asting=(s/100).toFixed(2)
+    return asting
+  }
+  module.exports.dealString = dealString;
+</wxs>
+<wxs module="m2">
+  var getString = function(s){
+    var asting=s.join(' 、')
+    return asting
+  }
+  module.exports.getString = getString;
+</wxs>
+<wxs module="m4">
+  var getString = function(value,type){
+    var dataTime="";
+    var data = getDate(value);
+    var year   =  data.getFullYear();
+    var month  =  data.getMonth() + 1;
+    var day    =  data.getDate();
+    var hour   =  data.getHours();
+    var minute =  data.getMinutes();
+    var second =  data.getSeconds();
+    if(type == "YMD"){
+      dataTime =  year + "年"+ month + "月" + day + "日";
+    }else if(type == "YMDHMS"){
+      dataTime = year + "年"+month + "月" + day + "日 " +hour+ ":"+minute+":" +second;
+    }else if(type == "HMS"){
+      dataTime = hour + ":" + minute + ":" + second;
+    }else if(type == "YM") {
+      dataTime = year + "年" + month + "月";
+    }else if(type == "Y-M") {
+      dataTime = year + "."+month + "." + day + " " +hour+ ":"+minute;
+    }else if(type == "MM-SS") {
+      dataTime = minute+"分" +second+"秒";
+    }
+    return dataTime;
+  }
+  module.exports.getString = getString;
+</wxs>
+<wxs module="m5">
+  var getString = function(s){
+    var asting=s.slice(0,3)+'****'+s.slice(s.length-3,s.length)
+    return asting
+  }
+  module.exports.getString = getString;
+</wxs>
+<view>
+  <view class="header">
+    <view class="headerInner">
+      <view class="headerTitle">
+          <view class="clearfix">
+            <view class="fl orderHeaderLs">订单编号：{{orderNumber}}</view>
+            <view class="fr orderHeaderRs">{{orderStateText}}</view>
+          </view>
+          <view class="orderTime">创建时间：{{m4.getString(orderTime,'Y-M')}}</view>
+      </view>
+      <navigator url="../details/details?gsid={{itemNamex.goodId}}" wx:for="{{goodsList}}" wx:for-key="idx" wx:for-item="itemNamex"  class="containTop clearfix">
+        <image class="fl orderMPic" src="{{itemNamex.skuPic}}"></image>
+        <view class="fr containTopR">
+          <view class="orderMF">{{itemNamex.name}}</view>
+          <view class="goodPrice clearfix">
+            <view class="goodPriceL fl">{{m2.getString(itemNamex.skuText)}}</view>
+            <view class="goodPriceR fr">X{{itemNamex.count}}</view>
+          </view>
+        </view>
+      </navigator>
+      <view class="containBot">
+        <view class="coin">
+          共{{quantity}}件商品 合计：
+          <view class="coinDetail">￥{{m1.dealString(orderPrice)}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="attchBloak" wx:if="{{orderState!=8}}">
+        <view wx:if="{{orderState==1}}" class="checks">
+          <view class="msgL" bindtap='cancellation' wx:if="{{!(leftTime<=0)}}">取消订单</view>
+          <view class="paying" bindtap='goplay' wx:if="{{!(leftTime<=0)}}">
+            <span>付款</span>
+            <time-compent inner-text="{{leftTime}}"></time-compent>
+          </view>
+        </view>
+        <view wx:elif="{{orderState==2}}" class="checks"> 
+            <view class="reminding" bindtap='asktips'>提醒发货</view>
+        </view>
+        <view wx:elif="{{orderState==3}}" class="checks"> 
+            <view class="confirmReceipt" bindtap='confirmReceipt'>确认收货</view>
+        </view>
+        <view wx:elif="{{orderState==4}}" class="checks">
+          <!-- <navigator url="/pages/writeAppraise/writeAppraise?orderid={{orderid}}"  class=" confirmReceipt"> 
+              <view>申请售后</view>
+          </navigator> -->
+          <navigator url="/pages/writeAppraise/writeAppraise?orderid={{orderid}}" class=" msgR"> 
+            <view>评价</view>
+          </navigator>
+        </view>
+        <!-- <view wx:elif="{{orderState==9}}" class="checks">
+          <navigator url="/pages/writeAppraise/writeAppraise?orderid={{orderid}}"  class=" confirmReceipt"> 
+              <view>申请售后</view>
+          </navigator>
+        </view> -->
+      </view>
+  </view>
+  <view class="personMsg">
+    <view class="personMsgs">
+      <image src="../../img/newicon/add1.png"></image>
+      <view class="name">{{userName}}</view>
+      <view class="phone">{{m5.getString(phone)}}</view>
+    </view>
+    <view class="trueAddress">{{address}}</view>
+  </view>
+  <view class="leaveMsg" wx:if="{{leaveMessage}}">
+    <view class="leaveMsgIn">
+      <image class="leaveMsgIcon" src="../../img/icon/leaveMsg.png"></image>
+      <view class="leaveMsgs">{{leaveMessage}}</view>
+    </view>
+  </view>
+  <view class="listMsgContain">
+    <view class="clearfix listMsg">
+      <view class="fl">商品总价：</view>
+      <view class="fr">￥{{m1.dealString(orderPrice)}}</view>
+    </view>
+    <view class="clearfix listMsg">
+      <view class="fl">运费：</view>
+      <view class="fr">￥{{freight}}</view>
+    </view>
+    <!-- <view class="clearfix listMsg">
+      <view class="fl">订单满减：</view>
+      <view class="fr">-￥4</view>
+    </view> -->
+    <view class="clearfix listMsg listMsgT">
+      <view class="fl">实付：</view>
+      <view class="fr"><view>￥{{m1.dealString(goodPrice)}}</view></view>
+    </view>
+  </view>
+  <!-- <view class="seviceBottom">
+    <view class="seviceTime">服务时间：9:00-18:00</view>
+    <view class="seviceBtn">
+      <image src="../../img/icon/customService.png"></image>
+      <view >联系客服</view>
+    </view>
+  </view> -->
+</view>

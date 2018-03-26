@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "btn_BackButton.png": {
+            "frame": {
+                "h": 126,
+                "idx": 0,
+                "w": 25,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 126,
+                "w": 133
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "label.png": {
+            "frame": {
+                "h": 18,
+                "idx": 0,
+                "w": 120,
+                "x": 26,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 18,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "res.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/template/IOS/Navigator/res/"
+    }
+}

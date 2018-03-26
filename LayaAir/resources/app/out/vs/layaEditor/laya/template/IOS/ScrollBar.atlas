@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "icon.png": {
+            "frame": {
+                "h": 49,
+                "idx": 0,
+                "w": 440,
+                "x": 0,
+                "y": 160
+            },
+            "sourceSize": {
+                "h": 49,
+                "w": 440
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "res.png": {
+            "frame": {
+                "h": 159,
+                "idx": 0,
+                "w": 159,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 159,
+                "w": 159
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "ScrollBar.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/template/IOS/ScrollBar/"
+    }
+}

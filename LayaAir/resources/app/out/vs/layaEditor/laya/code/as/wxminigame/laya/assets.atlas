@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "comp.png": {
+            "frame": {
+                "h": 254,
+                "idx": 0,
+                "w": 415,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 254,
+                "w": 415
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "assets.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/laya/code/as/wxminigame/laya/assets/"
+    }
+}

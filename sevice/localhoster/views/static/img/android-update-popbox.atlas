@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "close@2x.png": {
+            "frame": {
+                "h": 80,
+                "idx": 0,
+                "w": 80,
+                "x": 121,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 80,
+                "w": 80
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "close@3x.png": {
+            "frame": {
+                "h": 120,
+                "idx": 0,
+                "w": 120,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 120,
+                "w": 120
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "android-update-popbox.png",
+        "prefix": "sevice/localhoster/views/static/img/android-update-popbox/"
+    }
+}

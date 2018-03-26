@@ -1,0 +1,76 @@
+{
+    "frames": {
+        "dhxlayout_cell_btns.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 58,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 16,
+                "w": 64
+            },
+            "spriteSourceSize": {
+                "x": 2,
+                "y": 2
+            }
+        },
+        "dhxlayout_cell_progress.gif": {
+            "frame": {
+                "h": 31,
+                "idx": 0,
+                "w": 31,
+                "x": 0,
+                "y": 13
+            },
+            "sourceSize": {
+                "h": 31,
+                "w": 31
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxlayout_sep_hor.gif": {
+            "frame": {
+                "h": 2,
+                "idx": 0,
+                "w": 10,
+                "x": 0,
+                "y": 45
+            },
+            "sourceSize": {
+                "h": 2,
+                "w": 10
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "dhxlayout_sep_ver.gif": {
+            "frame": {
+                "h": 10,
+                "idx": 0,
+                "w": 2,
+                "x": 59,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 10,
+                "w": 2
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "dhxlayout_material.png",
+        "prefix": "LayaAir/resources/app/out/vs/layaEditor/h5/codebase/imgs/dhxlayout_material/"
+    }
+}
